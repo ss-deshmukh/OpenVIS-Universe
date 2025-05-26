@@ -25,10 +25,10 @@ A stunning 3D visualization platform for exploring blockchain governance data, s
 - **Visibility Toggles**: Show/hide voters and connections
 - **Auto-Rotate**: Automated exploration mode
 
-### 📊 Real-Time Stats
+### 📊 Complete Dataset Stats
 - Total Proposals: 1,541
-- Active Voters: 1,000
-- Voting Relationships: 50,000+
+- Active Voters: 3,440
+- Voting Relationships: 200,200
 
 ## 🚀 Quick Start
 

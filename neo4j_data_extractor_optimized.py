@@ -2,17 +2,18 @@ import json
 from neo4j import GraphDatabase
 import pandas as pd
 from typing import Dict, List, Any
+import time
 
-class OptimizedPolkadotDataExtractor:
+class CompletePolkadotDataExtractor:
     def __init__(self, uri: str, user: str, password: str):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
     
     def close(self):
         self.driver.close()
     
-    def get_voting_relationships_batch(self, limit: int = 10000, skip: int = 0) -> List[Dict[str, Any]]:
+    def get_voting_relationships_batch(self, limit: int = 5000, skip: int = 0) -> List[Dict[str, Any]]:
         """
-        Extract voting relationships in batches to avoid memory issues
+        Extract voting relationships in smaller batches to avoid memory issues
         """
         with self.driver.session() as session:
             query = """
@@ -27,7 +28,7 @@ class OptimizedPolkadotDataExtractor:
                    p.requested as requested_amount,
                    vote.decision as vote_type,
                    vote.votingPower as vote_weight
-            ORDER BY p.id
+            ORDER BY p.id, v.wallet_address
             SKIP $skip LIMIT $limit
             """
             
@@ -52,28 +53,44 @@ class OptimizedPolkadotDataExtractor:
     
     def get_all_voting_relationships(self) -> List[Dict[str, Any]]:
         """
-        Get all voting relationships by processing in batches
+        Get ALL voting relationships by processing in smaller batches with delays
         """
         all_relationships = []
-        batch_size = 5000  # Smaller batch size to avoid memory issues
+        batch_size = 3000  # Smaller batch size to avoid memory issues
         skip = 0
         
-        print(f"Extracting voting relationships in batches of {batch_size}...")
+        print(f"Extracting ALL voting relationships in batches of {batch_size}...")
+        print("This will take several minutes to complete...")
         
         while True:
-            batch = self.get_voting_relationships_batch(limit=batch_size, skip=skip)
-            if not batch:
-                break
-            
-            all_relationships.extend(batch)
-            skip += batch_size
-            print(f"Extracted {len(all_relationships)} relationships so far...")
-            
-            # Stop if we have enough for visualization (to avoid memory issues)
-            if len(all_relationships) >= 50000:
-                print(f"Limiting to {len(all_relationships)} relationships for visualization performance")
-                break
+            try:
+                print(f"Fetching batch starting at {skip}...")
+                batch = self.get_voting_relationships_batch(limit=batch_size, skip=skip)
+                
+                if not batch:
+                    print("No more data found. Extraction complete!")
+                    break
+                
+                all_relationships.extend(batch)
+                skip += batch_size
+                print(f"✅ Extracted {len(all_relationships)} relationships so far...")
+                
+                # Add a small delay to avoid overwhelming the database
+                time.sleep(0.5)
+                
+                # Progress indicator every 50k records
+                if len(all_relationships) % 50000 == 0:
+                    print(f"🎯 Milestone: {len(all_relationships)} relationships extracted!")
+                
+            except Exception as e:
+                print(f"❌ Error in batch starting at {skip}: {e}")
+                print("Retrying with smaller batch...")
+                # Try with smaller batch if we hit memory limits
+                batch_size = max(1000, batch_size // 2)
+                time.sleep(2)
+                continue
         
+        print(f"🎉 Complete! Extracted {len(all_relationships)} total relationships")
         return all_relationships
     
     def get_proposal_summary(self) -> List[Dict[str, Any]]:
@@ -107,9 +124,9 @@ class OptimizedPolkadotDataExtractor:
             
             return proposals
     
-    def get_voter_summary(self) -> List[Dict[str, Any]]:
+    def get_all_voters_summary(self) -> List[Dict[str, Any]]:
         """
-        Get a summary of voters with their vote counts
+        Get ALL voters with their vote counts (not limited to 1000)
         """
         with self.driver.session() as session:
             query = """
@@ -120,7 +137,6 @@ class OptimizedPolkadotDataExtractor:
                    vote_count,
                    avg_voting_power
             ORDER BY vote_count DESC
-            LIMIT 1000
             """
             
             result = session.run(query)
@@ -136,11 +152,11 @@ class OptimizedPolkadotDataExtractor:
             
             return voters
     
-    def calculate_simple_clusters(self, relationships: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def calculate_enhanced_clusters(self, relationships: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
-        Calculate simple proposal clusters based on shared voters (client-side processing)
+        Calculate proposal clusters based on shared voters (enhanced version)
         """
-        print("Calculating proposal clusters...")
+        print("Calculating enhanced proposal clusters...")
         
         # Group votes by proposal
         proposal_voters = {}
@@ -153,9 +169,15 @@ class OptimizedPolkadotDataExtractor:
         clusters = []
         proposal_ids = list(proposal_voters.keys())
         
+        print(f"Analyzing {len(proposal_ids)} proposals for clustering...")
+        
         # Compare proposals pairwise (limit to avoid too much computation)
-        for i, prop1 in enumerate(proposal_ids[:100]):  # Limit to first 100 proposals
-            for prop2 in proposal_ids[i+1:100]:
+        max_proposals = min(200, len(proposal_ids))  # Increased from 100 to 200
+        for i, prop1 in enumerate(proposal_ids[:max_proposals]):
+            if i % 50 == 0:
+                print(f"Clustering progress: {i}/{max_proposals} proposals analyzed")
+                
+            for prop2 in proposal_ids[i+1:max_proposals]:
                 if prop1 >= prop2:
                     continue
                 
@@ -167,7 +189,7 @@ class OptimizedPolkadotDataExtractor:
                 
                 if total > 0:
                     similarity = shared / total
-                    if similarity > 0.1:  # Only include if similarity > 10%
+                    if similarity > 0.05:  # Lowered threshold to 5% for more clusters
                         # Find proposal titles
                         prop1_title = next((r['proposal_title'] for r in relationships if r['proposal_id'] == prop1), f"Proposal {prop1}")
                         prop2_title = next((r['proposal_title'] for r in relationships if r['proposal_id'] == prop2), f"Proposal {prop2}")
@@ -177,10 +199,12 @@ class OptimizedPolkadotDataExtractor:
                             'proposal1_title': prop1_title,
                             'proposal2_id': prop2,
                             'proposal2_title': prop2_title,
-                            'similarity': similarity
+                            'similarity': similarity,
+                            'shared_voters': shared,
+                            'total_unique_voters': total
                         })
         
-        return sorted(clusters, key=lambda x: x['similarity'], reverse=True)[:50]  # Top 50 clusters
+        return sorted(clusters, key=lambda x: x['similarity'], reverse=True)[:100]  # Top 100 clusters
 
 def main():
     # Connection details
@@ -188,24 +212,31 @@ def main():
     USER = "neo4j"
     PASSWORD = "BJX7_gT3khz6BiBezhTrbi-dRl0l-_dfI3fUyuKiX5g"
     
-    extractor = OptimizedPolkadotDataExtractor(URI, USER, PASSWORD)
+    extractor = CompletePolkadotDataExtractor(URI, USER, PASSWORD)
     
     try:
-        print("Starting optimized data extraction...")
+        print("🚀 Starting COMPLETE data extraction...")
+        print("This will extract ALL available data from the Neo4j database")
+        print("Expected: ~200,000 relationships, ~3,400 voters, ~1,500 proposals")
+        print("-" * 60)
         
-        # Get voting relationships in batches
+        # Get ALL voting relationships in batches
+        print("\n📊 Step 1: Extracting ALL voting relationships...")
         relationships = extractor.get_all_voting_relationships()
         
-        print("Getting proposal summary...")
+        print(f"\n📋 Step 2: Getting all proposals...")
         proposals = extractor.get_proposal_summary()
+        print(f"✅ Extracted {len(proposals)} proposals")
         
-        print("Getting voter summary...")
-        voters = extractor.get_voter_summary()
+        print(f"\n👥 Step 3: Getting ALL voters...")
+        voters = extractor.get_all_voters_summary()
+        print(f"✅ Extracted {len(voters)} voters")
         
-        print("Calculating clusters...")
-        clusters = extractor.calculate_simple_clusters(relationships)
+        print(f"\n🔗 Step 4: Calculating enhanced clusters...")
+        clusters = extractor.calculate_enhanced_clusters(relationships)
+        print(f"✅ Calculated {len(clusters)} proposal clusters")
         
-        # Prepare data for visualization
+        # Prepare complete data for visualization
         visualization_data = {
             'relationships': relationships,
             'proposals': proposals,
@@ -215,23 +246,32 @@ def main():
                 'total_relationships': len(relationships),
                 'total_proposals': len(proposals),
                 'total_voters': len(voters),
-                'total_clusters': len(clusters)
+                'total_clusters': len(clusters),
+                'extraction_timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+                'data_completeness': 'FULL_DATASET'
             }
         }
         
         # Save to JSON file for the web visualization
-        with open('polkadot_voting_data.json', 'w') as f:
+        print(f"\n💾 Saving complete dataset to JSON...")
+        with open('polkadot_voting_data_complete.json', 'w') as f:
             json.dump(visualization_data, f, indent=2)
         
-        print(f"\n✅ Data extracted successfully!")
-        print(f"- {len(relationships)} voting relationships")
-        print(f"- {len(proposals)} proposals")
-        print(f"- {len(voters)} voters")
-        print(f"- {len(clusters)} proposal clusters")
-        print("Data saved to 'polkadot_voting_data.json'")
+        print(f"\n🎉 COMPLETE DATA EXTRACTION SUCCESSFUL!")
+        print("=" * 60)
+        print(f"📊 FINAL STATISTICS:")
+        print(f"   • Voting Relationships: {len(relationships):,}")
+        print(f"   • Proposals: {len(proposals):,}")
+        print(f"   • Voters: {len(voters):,}")
+        print(f"   • Proposal Clusters: {len(clusters):,}")
+        print(f"📁 Data saved to: 'polkadot_voting_data_complete.json'")
+        print(f"📈 Expected file size: ~50-100MB (vs previous 22MB)")
+        print("=" * 60)
         
     except Exception as e:
         print(f"❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
     finally:
         extractor.close()
 

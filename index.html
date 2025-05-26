@@ -769,7 +769,7 @@
             createVoterNodes() {
                 if (!this.showVoters) return;
 
-                const voters = this.data.voters.slice(0, 100); // Limit to top 100 voters for performance
+                const voters = this.data.voters.slice(0, 500); // Increased to top 500 voters for complete dataset
                 
                 // Use the same concentric circle arrangement as in arrangeGalaxyView
                 const baseRadius = 150; // Starting radius for first circle
@@ -822,7 +822,7 @@
                 if (!this.showVoterConnections) return;
 
                 // Create connections between voters and proposals they voted on
-                const relationships = this.data.relationships.slice(0, 2000); // Limit for performance
+                const relationships = this.data.relationships.slice(0, 10000); // Increased to 10K connections for complete dataset
                 
                 relationships.forEach(relationship => {
                     const voter = this.voterMeshes.find(m => m.userData.voter_address === relationship.voter_address);
