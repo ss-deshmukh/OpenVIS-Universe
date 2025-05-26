@@ -1,0 +1,26 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Development files
+.git/
+.gitignore
+README.md
+
+# Python scripts (not needed for web deployment)
+neo4j_data_extractor.py
+neo4j_data_extractor_optimized.py
+explore_schema.py
+setup.py
+requirements.txt
+
+# Helper files
+Helper Information/
+
+# Backup data files (keep only the main one)
+polkadot_voting_data_original.json
+polkadot_voting_data_complete.json
+
+# Alternative visualization (keep only main index.html)
+voting_galaxy.html 

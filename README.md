@@ -2,6 +2,8 @@
 
 A stunning 3D visualization platform for exploring blockchain governance data, starting with Polkadot's OpenGov system. Experience governance relationships through immersive cosmic metaphors - from planetary systems to solar arrangements.
 
+## 🌐 **[Live Demo →](https://openvis-universe.vercel.app)**
+
 ![OpenVis Universe](https://img.shields.io/badge/OpenVis-Universe-purple?style=for-the-badge)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 ![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white)
