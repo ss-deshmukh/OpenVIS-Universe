@@ -41,8 +41,8 @@ A stunning 3D visualization platform for exploring blockchain governance data, s
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/openvis-universe.git
-   cd openvis-universe
+   git clone https://github.com/ss-deshmukh/OpenVIS-Universe.git
+   cd OpenVIS-Universe
    ```
 
 2. **Set up Python environment**
@@ -179,12 +179,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/openvis-universe/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/openvis-universe/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/ss-deshmukh/OpenVIS-Universe/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/ss-deshmukh/OpenVIS-Universe/discussions)
 - 📧 **Email**: your.email@example.com
 
 ---
 
 **Made with ❤️ for the decentralized future**
 
-*Explore governance like never before - where data meets the cosmos* ✨ 
+*Explore governance like never before - where data meets the cosmos* ✨
