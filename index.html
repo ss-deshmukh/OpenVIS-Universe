@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polkadot OpenGov - Voting Pattern Galaxy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #info-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 350px;
+            z-index: 100;
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        #stats {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #e6007a, #552bbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .control-group {
+            margin-bottom: 15px;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .control-group input, .control-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 12px;
+        }
+
+        .control-group select option {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+
+        .control-group select option:disabled {
+            background: rgba(0, 0, 0, 0.9);
+            color: #666666;
+        }
+
+        .control-group input:focus, .control-group select:focus {
+            outline: none;
+            border-color: #e6007a;
+        }
+
+        .legend {
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        .stat-value {
+            color: #e6007a;
+            font-weight: bold;
+        }
+
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 200;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #e6007a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            max-width: 300px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <div>Loading Polkadot OpenGov Data...</div>
+        </div>
+
+        <div id="info-panel">
+            <div class="title">OpenVis Universe</div>
+            <div class="subtitle">
+                Explore Polkadot's governance in multiple cosmic arrangements:
+                <br><br>
+                <strong>Planet System:</strong> Proposals on central planet, voters in orbital rings
+                <br>
+                <strong>Solar System:</strong> Voters form the central sun, proposals orbit as status-based planets
+                <br><br>
+                <strong>Navigation:</strong><br>
+                • Left-click + drag: Rotate<br>
+                • Right-click + drag: Pan<br>
+                • Scroll: Zoom in/out<br>
+                • Arrow keys: Pan around
+            </div>
+            
+            <div class="legend" id="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #00ff88;"></div>
+                    <span id="legend-executed">Executed (Top)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4488ff;"></div>
+                    <span id="legend-other">Other (Upper)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffaa00;"></div>
+                    <span id="legend-timedout">Timed Out (Lower)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff4444;"></div>
+                    <span id="legend-rejected">Rejected (Bottom)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffffff;"></div>
+                    <span id="legend-voters">Active Voters</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 12px; height: 2px; background: #666666; margin-right: 8px;"></div>
+                    <span>Voting Connections</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="controls">
+            <div class="control-group">
+                <label>View Mode</label>
+                <select id="viewMode">
+                    <option value="galaxy">Planet System</option>
+                    <option value="solar">Solar System</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Blockchain Network</label>
+                <select id="blockchainNetwork">
+                    <option value="polkadot">Polkadot</option>
+                    <option value="kusama" disabled>Kusama</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Animation Speed</label>
+                <input type="range" id="animationSpeed" min="0" max="2" step="0.1" value="1">
+            </div>
+            
+            <div class="control-group">
+                <label>Particle Density</label>
+                <input type="range" id="particleDensity" min="0.1" max="2" step="0.1" value="1">
+            </div>
+            
+
+            
+            <div class="control-group">
+                <label>Show Voter Connections</label>
+                <input type="checkbox" id="showVoterConnections" checked>
+            </div>
+            
+            <div class="control-group">
+                <label>Show Voters</label>
+                <input type="checkbox" id="showVoters" checked>
+            </div>
+            
+            <div class="control-group">
+                <label>Auto Rotate</label>
+                <input type="checkbox" id="autoRotate">
+            </div>
+        </div>
+
+        <div id="stats">
+            <div class="stat-item">
+                <span>Total Proposals:</span>
+                <span class="stat-value" id="totalProposals">-</span>
+            </div>
+            <div class="stat-item">
+                <span>Active Voters:</span>
+                <span class="stat-value" id="activeVoters">-</span>
+            </div>
+            <div class="stat-item">
+                <span>Voting Relationships: </span>
+                <span class="stat-value" id="votingRelationships">-</span>
+            </div>
+
+        </div>
+
+        <div id="tooltip" class="hidden"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script>
+        class VotingPatternGalaxy {
+            constructor() {
+                this.scene = null;
+                this.camera = null;
+                this.renderer = null;
+                this.controls = null;
+                this.data = null;
+                this.proposalMeshes = [];
+                this.voterMeshes = [];
+                this.voterConnectionLines = [];
+                this.voterConnectionData = []; // Store connection data for dynamic updates
+                this.particles = null;
+                this.animationSpeed = 1;
+                this.showVoterConnections = true;
+                this.showVoters = true;
+                
+                this.init();
+                this.loadData();
+            }
+
+            init() {
+                // Scene setup
+                this.scene = new THREE.Scene();
+                this.scene.fog = new THREE.Fog(0x0a0a0a, 100, 1000);
+
+                // Camera setup
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+                this.camera.position.set(0, 50, 100);
+
+                // Renderer setup
+                this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setClearColor(0x0a0a0a, 1);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                document.getElementById('container').appendChild(this.renderer.domElement);
+
+                // Controls
+                this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+                this.controls.enableDamping = true;
+                this.controls.dampingFactor = 0.05;
+                this.controls.maxDistance = 800;  // Increased for better exploration
+                this.controls.minDistance = 5;    // Decreased for closer inspection
+                
+                // Enable all movement types
+                this.controls.enableRotate = true;
+                this.controls.enableZoom = true;
+                this.controls.enablePan = true;
+                
+                // Enhanced movement sensitivity for better control
+                this.controls.rotateSpeed = 0.8;
+                this.controls.zoomSpeed = 0.5;  // Reduced for smoother zooming
+                this.controls.panSpeed = 1.2;  // Increased for easier panning
+                
+                // Smooth movement settings
+                this.controls.autoRotate = false;
+                this.controls.autoRotateSpeed = 0.5;
+                this.controls.enableKeys = true;
+                this.controls.keyPanSpeed = 10.0;
+                
+                // Mouse button assignments
+                this.controls.mouseButtons = {
+                    LEFT: THREE.MOUSE.ROTATE,
+                    MIDDLE: THREE.MOUSE.DOLLY,
+                    RIGHT: THREE.MOUSE.PAN
+                };
+                
+                // Touch controls for mobile
+                this.controls.touches = {
+                    ONE: THREE.TOUCH.ROTATE,
+                    TWO: THREE.TOUCH.DOLLY_PAN
+                };
+                
+                // Keyboard controls
+                this.controls.keys = {
+                    LEFT: 37,  // Arrow left
+                    UP: 38,    // Arrow up
+                    RIGHT: 39, // Arrow right
+                    BOTTOM: 40 // Arrow down
+                };
+
+                // Lighting
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.3);
+                this.scene.add(ambientLight);
+
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                directionalLight.position.set(100, 100, 50);
+                directionalLight.castShadow = true;
+                this.scene.add(directionalLight);
+
+                // Add starfield background
+                this.createStarfield();
+                
+                // Add planetary ring guides
+                this.createPlanetaryRings();
+
+                // Event listeners
+                window.addEventListener('resize', () => this.onWindowResize());
+                this.setupControls();
+                this.setupTooltip();
+            }
+
+            createStarfield() {
+                const starsGeometry = new THREE.BufferGeometry();
+                const starsMaterial = new THREE.PointsMaterial({ 
+                    color: 0xffffff, 
+                    size: 0.5,
+                    transparent: true,
+                    opacity: 0.8
+                });
+
+                const starsVertices = [];
+                for (let i = 0; i < 10000; i++) {
+                    const x = (Math.random() - 0.5) * 2000;
+                    const y = (Math.random() - 0.5) * 2000;
+                    const z = (Math.random() - 0.5) * 2000;
+                    starsVertices.push(x, y, z);
+                }
+
+                starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+                const stars = new THREE.Points(starsGeometry, starsMaterial);
+                this.scene.add(stars);
+            }
+
+            createPlanetaryRings() {
+                // Create subtle ring guides to show the orbital structure
+                // Match the voter circle arrangement
+                const baseRadius = 150;
+                const radiusIncrement = 25;
+                const maxCircles = Math.ceil(100 / 80); // Assuming max 100 voters, 80 per circle
+                const ringRadii = [];
+                
+                // Generate ring radii based on voter circle arrangement
+                for (let i = 0; i < maxCircles; i++) {
+                    ringRadii.push(baseRadius + (i * radiusIncrement));
+                }
+                
+                ringRadii.forEach(radius => {
+                    const ringGeometry = new THREE.RingGeometry(radius - 1, radius + 1, 64);
+                    const ringMaterial = new THREE.MeshBasicMaterial({ 
+                        color: 0x333333,
+                        transparent: true,
+                        opacity: 0.1,
+                        side: THREE.DoubleSide
+                    });
+                    
+                    const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                    ring.rotation.x = Math.PI / 2; // Rotate to horizontal
+                    ring.userData = { type: 'planetRing' };
+                    this.scene.add(ring);
+                });
+                
+                // Add latitude and longitude grid lines on the sphere
+                this.createLatLongGrid();
+                
+                // Add a subtle sphere outline for the proposal planet
+                const sphereGeometry = new THREE.SphereGeometry(82, 32, 32);
+                const sphereMaterial = new THREE.MeshBasicMaterial({ 
+                    color: 0x444444,
+                    transparent: true,
+                    opacity: 0.05,
+                    wireframe: true
+                });
+                
+                const sphereOutline = new THREE.Mesh(sphereGeometry, sphereMaterial);
+                sphereOutline.userData = { type: 'planetOutline' };
+                this.scene.add(sphereOutline);
+                
+                // Store references for later manipulation
+                this.planetRings = this.scene.children.filter(child => child.userData.type === 'planetRing');
+                this.planetOutline = sphereOutline;
+                
+                // Initialize grid line arrays
+                this.latitudeLines = [];
+                this.longitudeLines = [];
+            }
+
+            createSolarSystemRings() {
+                // Hide existing planet rings and outline
+                if (this.planetRings) {
+                    this.planetRings.forEach(ring => ring.visible = false);
+                }
+                if (this.planetOutline) {
+                    this.planetOutline.visible = false;
+                }
+                
+                // Hide planet grid lines
+                if (this.latitudeLines) {
+                    this.latitudeLines.forEach(line => line.visible = false);
+                }
+                if (this.longitudeLines) {
+                    this.longitudeLines.forEach(line => line.visible = false);
+                }
+                
+                // Create orbital ring for the planets
+                const orbitRadius = 180;
+                const orbitGeometry = new THREE.RingGeometry(orbitRadius - 2, orbitRadius + 2, 64);
+                const orbitMaterial = new THREE.MeshBasicMaterial({ 
+                    color: 0x666666,
+                    transparent: true,
+                    opacity: 0.2,
+                    side: THREE.DoubleSide
+                });
+                
+                // Create or show orbital ring
+                if (!this.solarOrbit) {
+                    const orbitRing = new THREE.Mesh(orbitGeometry, orbitMaterial);
+                    orbitRing.rotation.x = Math.PI / 2;
+                    orbitRing.userData = { type: 'solarOrbit' };
+                    this.scene.add(orbitRing);
+                    this.solarOrbit = orbitRing;
+                } else {
+                    this.solarOrbit.visible = true;
+                }
+                
+                // Create or show central sun outline
+                if (!this.sunOutline) {
+                    const sunRadius = 62;
+                    const sunGeometry = new THREE.SphereGeometry(sunRadius, 32, 32);
+                    const sunMaterial = new THREE.MeshBasicMaterial({ 
+                        color: 0xffaa00,
+                        transparent: true,
+                        opacity: 0.1,
+                        wireframe: true
+                    });
+                    
+                    const sunOutline = new THREE.Mesh(sunGeometry, sunMaterial);
+                    sunOutline.userData = { type: 'sunOutline' };
+                    this.scene.add(sunOutline);
+                    this.sunOutline = sunOutline;
+                } else {
+                    this.sunOutline.visible = true;
+                }
+            }
+
+            restorePlanetaryRings() {
+                // Hide solar system elements
+                if (this.solarOrbit) {
+                    this.solarOrbit.visible = false;
+                }
+                if (this.sunOutline) {
+                    this.sunOutline.visible = false;
+                }
+                
+                // Show planet grid lines
+                if (this.latitudeLines) {
+                    this.latitudeLines.forEach(line => line.visible = true);
+                }
+                if (this.longitudeLines) {
+                    this.longitudeLines.forEach(line => line.visible = true);
+                }
+                
+                // Show planet system rings (recreate if needed to match voter circles)
+                if (this.planetRings && this.planetRings.length > 0) {
+                    this.planetRings.forEach(ring => ring.visible = true);
+                } else {
+                    // Recreate rings to match voter arrangement
+                    const baseRadius = 150;
+                    const radiusIncrement = 25;
+                    const maxCircles = Math.ceil(100 / 80);
+                    this.planetRings = [];
+                    
+                    for (let i = 0; i < maxCircles; i++) {
+                        const radius = baseRadius + (i * radiusIncrement);
+                        const ringGeometry = new THREE.RingGeometry(radius - 1, radius + 1, 64);
+                        const ringMaterial = new THREE.MeshBasicMaterial({ 
+                            color: 0x333333,
+                            transparent: true,
+                            opacity: 0.1,
+                            side: THREE.DoubleSide
+                        });
+                        
+                        const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                        ring.rotation.x = Math.PI / 2;
+                        ring.userData = { type: 'planetRing' };
+                        this.scene.add(ring);
+                        this.planetRings.push(ring);
+                    }
+                }
+                
+                // Show planet outline
+                if (this.planetOutline) {
+                    this.planetOutline.visible = true;
+                }
+            }
+
+            createLatLongGrid() {
+                const sphereRadius = 82;
+                const gridLines = 12; // Number of latitude and longitude lines
+                
+                // Initialize grid arrays if they don't exist
+                if (!this.latitudeLines) this.latitudeLines = [];
+                if (!this.longitudeLines) this.longitudeLines = [];
+                
+                // Create latitude lines (horizontal circles)
+                for (let i = 1; i < gridLines; i++) {
+                    const phi = (i / gridLines) * Math.PI;
+                    const y = sphereRadius * Math.cos(phi);
+                    const radius = sphereRadius * Math.sin(phi);
+                    
+                    const geometry = new THREE.RingGeometry(radius - 0.2, radius + 0.2, 64);
+                    const material = new THREE.MeshBasicMaterial({
+                        color: 0x666666,
+                        transparent: true,
+                        opacity: 0.15,
+                        side: THREE.DoubleSide
+                    });
+                    
+                    const latLine = new THREE.Mesh(geometry, material);
+                    latLine.position.y = y;
+                    latLine.rotation.x = Math.PI / 2;
+                    latLine.userData = { type: 'planetGrid' };
+                    this.scene.add(latLine);
+                    this.latitudeLines.push(latLine);
+                }
+                
+                // Create longitude lines (vertical semicircles)
+                for (let i = 0; i < gridLines; i++) {
+                    const theta = (i / gridLines) * 2 * Math.PI;
+                    
+                    const points = [];
+                    for (let j = 0; j <= 32; j++) {
+                        const phi = (j / 32) * Math.PI;
+                        const x = sphereRadius * Math.sin(phi) * Math.cos(theta);
+                        const y = sphereRadius * Math.cos(phi);
+                        const z = sphereRadius * Math.sin(phi) * Math.sin(theta);
+                        points.push(new THREE.Vector3(x, y, z));
+                    }
+                    
+                    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+                    const material = new THREE.LineBasicMaterial({
+                        color: 0x666666,
+                        transparent: true,
+                        opacity: 0.15
+                    });
+                    
+                    const lonLine = new THREE.Line(geometry, material);
+                    lonLine.userData = { type: 'planetGrid' };
+                    this.scene.add(lonLine);
+                    this.longitudeLines.push(lonLine);
+                }
+            }
+
+            async loadData() {
+                try {
+                    const response = await fetch('polkadot_voting_data.json');
+                    this.data = await response.json();
+                    
+                    this.updateStats();
+                    this.createVisualization();
+                    
+                    document.getElementById('loading').classList.add('hidden');
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    document.getElementById('loading').innerHTML = '<div>Error loading data. Please check the console.</div>';
+                }
+            }
+
+            updateStats() {
+                document.getElementById('totalProposals').textContent = this.data.metadata.total_proposals.toLocaleString();
+                document.getElementById('activeVoters').textContent = this.data.metadata.total_voters.toLocaleString();
+                document.getElementById('votingRelationships').textContent = this.data.metadata.total_relationships.toLocaleString();
+            }
+
+            createVisualization() {
+                this.createProposalGalaxy();
+                this.createVoterNodes();
+                this.createVoterConnections();
+                this.animate();
+            }
+
+            createProposalGalaxy() {
+                const proposals = this.data.proposals;
+                const sphereRadius = 80; // Radius of the proposal sphere
+
+                // Group proposals by status
+                const statusGroups = {
+                    'Executed': [],
+                    'Rejected': [],
+                    'TimedOut': [],
+                    'Other': []
+                };
+
+                proposals.forEach(proposal => {
+                    if (statusGroups[proposal.status]) {
+                        statusGroups[proposal.status].push(proposal);
+                    } else {
+                        statusGroups['Other'].push(proposal);
+                    }
+                });
+
+                // Define vertical layers for each status (top to bottom)
+                const statusLayers = {
+                    'Executed': { yRange: [0.5, 1.0], color: 0x00ff88 },      // Top (North pole)
+                    'Other': { yRange: [0.0, 0.5], color: 0x4488ff },         // Upper middle
+                    'TimedOut': { yRange: [-0.5, 0.0], color: 0xffaa00 },     // Lower middle
+                    'Rejected': { yRange: [-1.0, -0.5], color: 0xff4444 }     // Bottom (South pole)
+                };
+
+                // Create a global latitude-longitude grid for all proposals
+                const totalProposals = proposals.length;
+                const longitudeLines = Math.ceil(Math.sqrt(totalProposals * 2)); // Number of longitude lines
+                const latitudeLines = Math.ceil(totalProposals / longitudeLines); // Number of latitude lines
+                
+                // Sort all proposals by status priority (top to bottom)
+                const statusPriority = { 'Executed': 0, 'Other': 1, 'TimedOut': 2, 'Rejected': 3 };
+                const sortedProposals = proposals.sort((a, b) => {
+                    const priorityA = statusPriority[a.status] !== undefined ? statusPriority[a.status] : 1;
+                    const priorityB = statusPriority[b.status] !== undefined ? statusPriority[b.status] : 1;
+                    return priorityA - priorityB;
+                });
+                
+                sortedProposals.forEach((proposal, index) => {
+                    // Calculate latitude and longitude grid position
+                    const latIndex = Math.floor(index / longitudeLines);
+                    const lonIndex = index % longitudeLines;
+                    
+                    // Convert to spherical coordinates
+                    // Latitude: from North pole (0) to South pole (π)
+                    const phi = (latIndex / Math.max(1, latitudeLines - 1)) * Math.PI;
+                    
+                    // Longitude: around the sphere (0 to 2π)
+                    const theta = (lonIndex / longitudeLines) * 2 * Math.PI;
+                    
+                    // Convert spherical to Cartesian coordinates
+                    const x = sphereRadius * Math.sin(phi) * Math.cos(theta);
+                    const y = sphereRadius * Math.cos(phi);
+                    const z = sphereRadius * Math.sin(phi) * Math.sin(theta);
+                    
+                    // Determine color based on status
+                    const statusColors = {
+                        'Executed': 0x00ff88,
+                        'Rejected': 0xff4444,
+                        'TimedOut': 0xffaa00,
+                        'Other': 0x4488ff
+                    };
+                    const color = statusColors[proposal.status] || statusColors['Other'];
+
+                    // Size based on total votes (ayes + nays)
+                    const totalVotes = proposal.ayes + proposal.nays;
+                    const size = Math.max(0.5, Math.min(3, Math.log(totalVotes + 1) * 0.3));
+
+                    // Create proposal sphere
+                    const geometry = new THREE.SphereGeometry(size, 16, 16);
+                    const material = new THREE.MeshPhongMaterial({ 
+                        color: color,
+                        transparent: true,
+                        opacity: 0.8,
+                        emissive: color,
+                        emissiveIntensity: 0.1
+                    });
+
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.position.set(x, y, z);
+                    mesh.userData = proposal;
+                    
+                    this.scene.add(mesh);
+                    this.proposalMeshes.push(mesh);
+                });
+            }
+
+            createVoterNodes() {
+                if (!this.showVoters) return;
+
+                const voters = this.data.voters.slice(0, 100); // Limit to top 100 voters for performance
+                
+                // Use the same concentric circle arrangement as in arrangeGalaxyView
+                const baseRadius = 150; // Starting radius for first circle
+                const radiusIncrement = 25; // Distance between concentric circles
+                const maxVotersPerCircle = 80; // Increased for closer spacing (2x diameter spacing)
+
+                voters.forEach((voter, index) => {
+                    // Determine which circle this voter belongs to
+                    const circleIndex = Math.floor(index / maxVotersPerCircle);
+                    const positionInCircle = index % maxVotersPerCircle;
+                    const votersInThisCircle = Math.min(maxVotersPerCircle, voters.length - (circleIndex * maxVotersPerCircle));
+                    
+                    // Calculate radius for this circle
+                    const currentRadius = baseRadius + (circleIndex * radiusIncrement);
+                    
+                    // Calculate equidistant angle for this position
+                    const angle = (positionInCircle / votersInThisCircle) * Math.PI * 2;
+                    
+                    // Position on the same Z-axis (Y = 0)
+                    const x = Math.cos(angle) * currentRadius;
+                    const z = Math.sin(angle) * currentRadius;
+                    const y = 0; // All voters on the same horizontal plane
+
+                    // Size based on vote count
+                    const size = Math.max(0.3, Math.min(1.5, Math.log(voter.vote_count + 1) * 0.2));
+
+                    // Create voter sphere (smaller and white/gray)
+                    const geometry = new THREE.SphereGeometry(size, 8, 8);
+                    const material = new THREE.MeshPhongMaterial({ 
+                        color: 0xffffff,
+                        transparent: true,
+                        opacity: 0.6,
+                        emissive: 0x333333,
+                        emissiveIntensity: 0.1
+                    });
+
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.position.set(x, y, z);
+                    mesh.userData = voter;
+                    mesh.userData.type = 'voter';
+                    
+                    this.scene.add(mesh);
+                    this.voterMeshes.push(mesh);
+                });
+            }
+
+
+
+            createVoterConnections() {
+                if (!this.showVoterConnections) return;
+
+                // Create connections between voters and proposals they voted on
+                const relationships = this.data.relationships.slice(0, 2000); // Limit for performance
+                
+                relationships.forEach(relationship => {
+                    const voter = this.voterMeshes.find(m => m.userData.voter_address === relationship.voter_address);
+                    const proposal = this.proposalMeshes.find(m => m.userData.proposal_id === relationship.proposal_id);
+                    
+                    if (voter && proposal) {
+                        // Create geometry with initial positions
+                        const geometry = new THREE.BufferGeometry();
+                        const positions = new Float32Array([
+                            voter.position.x, voter.position.y, voter.position.z,
+                            proposal.position.x, proposal.position.y, proposal.position.z
+                        ]);
+                        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                        
+                        // Color based on vote type
+                        let lineColor = 0x00ff00; // Green for AYE
+                        if (relationship.vote_type === 'NAY') lineColor = 0xff0000; // Red for NAY
+                        else if (relationship.vote_type === 'ABSTAIN') lineColor = 0xffff00; // Yellow for ABSTAIN
+                        
+                        const material = new THREE.LineBasicMaterial({ 
+                            color: lineColor,
+                            transparent: true,
+                            opacity: Math.min(0.3, relationship.vote_weight * 10) // Opacity based on vote weight
+                        });
+                        
+                        const line = new THREE.Line(geometry, material);
+                        this.scene.add(line);
+                        this.voterConnectionLines.push(line);
+                        
+                        // Store connection data for dynamic updates
+                        this.voterConnectionData.push({
+                            line: line,
+                            voter: voter,
+                            proposal: proposal,
+                            geometry: geometry
+                        });
+                    }
+                });
+            }
+
+            setupControls() {
+                document.getElementById('viewMode').addEventListener('change', (e) => {
+                    this.changeViewMode(e.target.value);
+                });
+
+                document.getElementById('animationSpeed').addEventListener('input', (e) => {
+                    this.animationSpeed = parseFloat(e.target.value);
+                });
+
+
+
+                document.getElementById('showVoterConnections').addEventListener('change', (e) => {
+                    this.showVoterConnections = e.target.checked;
+                    this.toggleVoterConnections();
+                });
+
+                document.getElementById('showVoters').addEventListener('change', (e) => {
+                    this.showVoters = e.target.checked;
+                    this.toggleVoters();
+                });
+
+                document.getElementById('autoRotate').addEventListener('change', (e) => {
+                    this.controls.autoRotate = e.target.checked;
+                });
+
+                document.getElementById('particleDensity').addEventListener('input', (e) => {
+                    this.updateParticleDensity(parseFloat(e.target.value));
+                });
+            }
+
+            setupTooltip() {
+                const tooltip = document.getElementById('tooltip');
+                const raycaster = new THREE.Raycaster();
+                const mouse = new THREE.Vector2();
+
+                this.renderer.domElement.addEventListener('mousemove', (event) => {
+                    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                    raycaster.setFromCamera(mouse, this.camera);
+                    const allMeshes = [...this.proposalMeshes, ...this.voterMeshes];
+                    const intersects = raycaster.intersectObjects(allMeshes);
+
+                    if (intersects.length > 0) {
+                        const data = intersects[0].object.userData;
+                        
+                        if (data.type === 'voter') {
+                            // Voter tooltip
+                            tooltip.innerHTML = `
+                                <strong>Voter</strong><br>
+                                <strong>Address:</strong> ${data.voter_address.substring(0, 10)}...<br>
+                                ${data.voter_name ? `<strong>Name:</strong> ${data.voter_name}<br>` : ''}
+                                <strong>Total Votes:</strong> ${data.vote_count.toLocaleString()}<br>
+                                <strong>Avg Voting Power:</strong> ${data.avg_voting_power.toFixed(4)}
+                            `;
+                        } else {
+                            // Proposal tooltip
+                            tooltip.innerHTML = `
+                                <strong>Proposal ${data.proposal_id}</strong><br>
+                                <strong>Title:</strong> ${data.proposal_title}<br>
+                                <strong>Status:</strong> ${data.status}<br>
+                                <strong>Ayes:</strong> ${data.ayes.toLocaleString()}<br>
+                                <strong>Nays:</strong> ${data.nays.toLocaleString()}<br>
+                                ${data.requested_amount > 0 ? `<strong>Requested:</strong> ${data.requested_amount.toLocaleString()} DOT<br>` : ''}
+                            `;
+                        }
+                        
+                        tooltip.style.left = event.clientX + 10 + 'px';
+                        tooltip.style.top = event.clientY + 10 + 'px';
+                        tooltip.classList.remove('hidden');
+                    } else {
+                        tooltip.classList.add('hidden');
+                    }
+                });
+
+                this.renderer.domElement.addEventListener('mouseleave', () => {
+                    tooltip.classList.add('hidden');
+                });
+            }
+
+            changeViewMode(mode) {
+                switch (mode) {
+                    case 'galaxy':
+                        this.arrangeGalaxyView();
+                        this.updateLegend('galaxy');
+                        break;
+                    case 'solar':
+                        this.arrangeSolarSystemView();
+                        this.updateLegend('solar');
+                        break;
+                }
+            }
+
+            updateLegend(mode) {
+                if (mode === 'solar') {
+                    // Solar System mode: Voters are the sun, proposals are planets
+                    document.getElementById('legend-executed').textContent = 'Executed Planet';
+                    document.getElementById('legend-other').textContent = 'Other Planet';
+                    document.getElementById('legend-timedout').textContent = 'TimedOut Planet';
+                    document.getElementById('legend-rejected').textContent = 'Rejected Planet';
+                    document.getElementById('legend-voters').textContent = 'Voter Sun';
+                } else {
+                    // Galaxy/Planet mode: Original layout
+                    document.getElementById('legend-executed').textContent = 'Executed (Top)';
+                    document.getElementById('legend-other').textContent = 'Other (Upper)';
+                    document.getElementById('legend-timedout').textContent = 'Timed Out (Lower)';
+                    document.getElementById('legend-rejected').textContent = 'Rejected (Bottom)';
+                    document.getElementById('legend-voters').textContent = 'Active Voters';
+                }
+            }
+
+            arrangeGalaxyView() {
+                // Restore planet system visual elements
+                this.restorePlanetaryRings();
+                
+                const sphereRadius = 80;
+                const ringRadius = 150;
+                const ringThickness = 20;
+                
+                // Sort proposals by status priority for latitude-longitude grid
+                const statusPriority = { 'Executed': 0, 'Other': 1, 'TimedOut': 2, 'Rejected': 3 };
+                const sortedMeshes = this.proposalMeshes.sort((a, b) => {
+                    const priorityA = statusPriority[a.userData.status] !== undefined ? statusPriority[a.userData.status] : 1;
+                    const priorityB = statusPriority[b.userData.status] !== undefined ? statusPriority[b.userData.status] : 1;
+                    return priorityA - priorityB;
+                });
+                
+                // Calculate grid dimensions
+                const totalProposals = sortedMeshes.length;
+                const longitudeLines = Math.ceil(Math.sqrt(totalProposals * 2));
+                const latitudeLines = Math.ceil(totalProposals / longitudeLines);
+                
+                // Arrange proposals on latitude-longitude grid
+                sortedMeshes.forEach((mesh, index) => {
+                    // Calculate latitude and longitude grid position
+                    const latIndex = Math.floor(index / longitudeLines);
+                    const lonIndex = index % longitudeLines;
+                    
+                    // Convert to spherical coordinates
+                    const phi = (latIndex / Math.max(1, latitudeLines - 1)) * Math.PI;
+                    const theta = (lonIndex / longitudeLines) * 2 * Math.PI;
+                    
+                    // Convert to Cartesian coordinates
+                    const targetX = sphereRadius * Math.sin(phi) * Math.cos(theta);
+                    const targetY = sphereRadius * Math.cos(phi);
+                    const targetZ = sphereRadius * Math.sin(phi) * Math.sin(theta);
+
+                    this.animateToPosition(mesh, targetX, targetY, targetZ);
+                });
+                
+                // Arrange voters in concentric circles on the same Z-axis
+                const baseRadius = 150; // Starting radius for first circle
+                const radiusIncrement = 25; // Distance between concentric circles
+                const maxVotersPerCircle = 80; // Increased for closer spacing (2x diameter spacing)
+                
+                this.voterMeshes.forEach((mesh, index) => {
+                    // Determine which circle this voter belongs to
+                    const circleIndex = Math.floor(index / maxVotersPerCircle);
+                    const positionInCircle = index % maxVotersPerCircle;
+                    const votersInThisCircle = Math.min(maxVotersPerCircle, this.voterMeshes.length - (circleIndex * maxVotersPerCircle));
+                    
+                    // Calculate radius for this circle
+                    const currentRadius = baseRadius + (circleIndex * radiusIncrement);
+                    
+                    // Calculate equidistant angle for this position
+                    const angle = (positionInCircle / votersInThisCircle) * Math.PI * 2;
+                    
+                    // Position on the same Z-axis (Y = 0)
+                    const targetX = Math.cos(angle) * currentRadius;
+                    const targetZ = Math.sin(angle) * currentRadius;
+                    const targetY = 0; // All voters on the same horizontal plane
+
+                    this.animateToPosition(mesh, targetX, targetY, targetZ);
+                });
+            }
+
+            arrangeSolarSystemView() {
+                // Create solar system visual elements
+                this.createSolarSystemRings();
+                
+                // Central Sun: Arrange voters on a sphere using latitude-longitude grid
+                const sunRadius = 60;
+                const totalVoters = this.voterMeshes.length;
+                const longitudeLines = Math.ceil(Math.sqrt(totalVoters * 2));
+                const latitudeLines = Math.ceil(totalVoters / longitudeLines);
+                
+                this.voterMeshes.forEach((mesh, index) => {
+                    // Calculate latitude and longitude grid position
+                    const latIndex = Math.floor(index / longitudeLines);
+                    const lonIndex = index % longitudeLines;
+                    
+                    // Convert to spherical coordinates
+                    const phi = (latIndex / Math.max(1, latitudeLines - 1)) * Math.PI;
+                    const theta = (lonIndex / longitudeLines) * 2 * Math.PI;
+                    
+                    // Convert to Cartesian coordinates for the central sun
+                    const targetX = sunRadius * Math.sin(phi) * Math.cos(theta);
+                    const targetY = sunRadius * Math.cos(phi);
+                    const targetZ = sunRadius * Math.sin(phi) * Math.sin(theta);
+
+                    this.animateToPosition(mesh, targetX, targetY, targetZ);
+                });
+
+                // Orbiting Planets: Group proposals by status and arrange in orbital spheres
+                const statusGroups = {
+                    'Executed': [],
+                    'Rejected': [],
+                    'TimedOut': [],
+                    'Other': []
+                };
+
+                this.proposalMeshes.forEach(mesh => {
+                    const status = mesh.userData.status;
+                    if (statusGroups[status]) {
+                        statusGroups[status].push(mesh);
+                    } else {
+                        statusGroups['Other'].push(mesh);
+                    }
+                });
+
+                const orbitRadius = 180; // Distance from center
+                const planetRadius = 25;  // Radius of each planet sphere
+                const statusOrder = ['Executed', 'Other', 'TimedOut', 'Rejected'];
+                
+                statusOrder.forEach((status, planetIndex) => {
+                    const proposals = statusGroups[status];
+                    if (proposals.length === 0) return;
+
+                    // Calculate planet center position in orbit
+                    const planetAngle = (planetIndex / statusOrder.length) * Math.PI * 2;
+                    const planetCenterX = Math.cos(planetAngle) * orbitRadius;
+                    const planetCenterZ = Math.sin(planetAngle) * orbitRadius;
+                    const planetCenterY = 0;
+
+                    // Arrange proposals on this planet's sphere using grid system
+                    const totalProposals = proposals.length;
+                    const planetLongLines = Math.ceil(Math.sqrt(totalProposals * 2));
+                    const planetLatLines = Math.ceil(totalProposals / planetLongLines);
+
+                    proposals.forEach((mesh, index) => {
+                        // Calculate latitude and longitude grid position on this planet
+                        const latIndex = Math.floor(index / planetLongLines);
+                        const lonIndex = index % planetLongLines;
+                        
+                        // Convert to spherical coordinates
+                        const phi = (latIndex / Math.max(1, planetLatLines - 1)) * Math.PI;
+                        const theta = (lonIndex / planetLongLines) * 2 * Math.PI;
+                        
+                        // Convert to Cartesian coordinates relative to planet center
+                        const localX = planetRadius * Math.sin(phi) * Math.cos(theta);
+                        const localY = planetRadius * Math.cos(phi);
+                        const localZ = planetRadius * Math.sin(phi) * Math.sin(theta);
+                        
+                        // Add planet center offset
+                        const targetX = planetCenterX + localX;
+                        const targetY = planetCenterY + localY;
+                        const targetZ = planetCenterZ + localZ;
+
+                        this.animateToPosition(mesh, targetX, targetY, targetZ);
+                    });
+                });
+            }
+
+            animateToPosition(mesh, targetX, targetY, targetZ) {
+                const duration = 2000;
+                const startTime = Date.now();
+                const startPos = mesh.position.clone();
+                const targetPos = new THREE.Vector3(targetX, targetY, targetZ);
+
+                const animate = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = this.easeInOutCubic(progress);
+
+                    mesh.position.lerpVectors(startPos, targetPos, eased);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                };
+
+                animate();
+            }
+
+            easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            }
+
+
+
+            toggleVoterConnections() {
+                this.voterConnectionLines.forEach(line => {
+                    line.visible = this.showVoterConnections;
+                });
+            }
+
+            toggleVoters() {
+                this.voterMeshes.forEach(mesh => {
+                    mesh.visible = this.showVoters;
+                });
+            }
+
+            updateParticleDensity(density) {
+                // Update particle effects based on density
+                this.proposalMeshes.forEach(mesh => {
+                    mesh.material.opacity = 0.8 * density;
+                });
+            }
+
+            updateVoterConnections() {
+                // Update voter connection line positions to follow moving objects
+                this.voterConnectionData.forEach(connection => {
+                    if (connection.line.visible && connection.voter && connection.proposal) {
+                        const positions = connection.geometry.attributes.position.array;
+                        
+                        // Update voter position (start of line)
+                        positions[0] = connection.voter.position.x;
+                        positions[1] = connection.voter.position.y;
+                        positions[2] = connection.voter.position.z;
+                        
+                        // Update proposal position (end of line)
+                        positions[3] = connection.proposal.position.x;
+                        positions[4] = connection.proposal.position.y;
+                        positions[5] = connection.proposal.position.z;
+                        
+                        // Mark the attribute as needing update
+                        connection.geometry.attributes.position.needsUpdate = true;
+                    }
+                });
+            }
+
+            animate() {
+                requestAnimationFrame(() => this.animate());
+
+                // Rotate proposals slowly
+                this.proposalMeshes.forEach((mesh, index) => {
+                    mesh.rotation.y += 0.01 * this.animationSpeed;
+                    mesh.rotation.x += 0.005 * this.animationSpeed;
+                    
+                    // Add subtle floating animation
+                    mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01 * this.animationSpeed;
+                });
+
+                // Rotate voters slowly (opposite direction)
+                this.voterMeshes.forEach((mesh, index) => {
+                    mesh.rotation.y -= 0.008 * this.animationSpeed;
+                    mesh.rotation.x += 0.003 * this.animationSpeed;
+                    
+                    // Add subtle floating animation
+                    mesh.position.y += Math.sin(Date.now() * 0.0008 + index) * 0.008 * this.animationSpeed;
+                });
+
+                // Update connection lines to follow moving objects
+                this.updateVoterConnections();
+
+                this.controls.update();
+                this.renderer.render(this.scene, this.camera);
+            }
+
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        }
+
+        // Initialize the visualization
+        new VotingPatternGalaxy();
+    </script>
+</body>
+</html> 
