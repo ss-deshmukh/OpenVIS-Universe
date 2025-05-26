@@ -1,0 +1,1542 @@
+"r.id","r.title","r.tally_ayes","r.progress_report","r.tally_nays","r.status","r.requested"
+0.0,[Reject] Supposed to be Hello World,"77354101000000","","27760164071780128",Rejected,-1
+1.0,OpenCommunity Governance,"22339790097015351","","32497064934603119",Rejected,"0"
+2.0,Proposal,"3780598396858491","","17616513027568972",Rejected,"64540000000000"
+3.0,[Whitelisted Caller] Referendum #3: Upgrade Bridge Hub to v9420,"858508222456566661","","0",Executed,-1
+4.0,PolkaWorld Ops and Maintenance proposal：2023.6 - 2023.8,"25284448001554699","","8001194652342790",Executed,"168230000000000"
+5.0,KILT Decentralized Identity Provider (DIP) - Polkadot Medium Spender Proposal,"96485356831129194","","28598256206017633",Executed,"614770000000000"
+6.0,Saturn Gateway - A Multichain Multisig Application for the Polkadot Ecosystem,"20746860709937220","","6372653748057142",Executed,"754350000000000"
+7.0,Nomination Pool Incentives - Fixing an issue with Motion 339,"26780855293575159","","3175708033617394",Executed,"0"
+8.0,"Nova Wallet 4th Proposal: Multistaking dashboard, Staking Nomination Pools, WalletConnect v2, New Assets tab UI, Community Requested Features, Reimbursement for delivered features","62538267582481156","","4290289145927421",Executed,"1200262600000000"
+9.0,Fix HostConfiguration,"364012068992060655","","202645000000000",Executed,-1
+10.0,Polkashots.io Cloud Costs January-April 2023,"7861697141885780","","27632835842649184",Rejected,"39366900000000"
+11.0,Restructuring of Polkadot Brasil,"183331000000000","","33896650673079364",Rejected,-1
+12.0,Aibot proposal：June 2023 - August 2023,"811005000000000","","32008527298340775",TimedOut,"436631070000000"
+13.0,"Subsquare and dotreasury new features development plan including governance statistics, dotreasury dark mode, etc","33780268606831022","","3751430475345054",Executed,"369690000000000"
+14.0,Encode Club Tranches 2 and 3,"23745905707282095","","7012653519029213",Executed,"267659900000000"
+15.0,Subsquid - Public data indexing Infrastructure for Polkadot and Kusama (Q1 2023),"26489043984573217","","8463352475345054",Executed,"498800000000000"
+16.0,A Common Ledger App Compatible With All Polkadot And Kusama Parachains [ retroactive funding for development ],"41127847833038565","","72508126331530932",Rejected,"684790000000000"
+17.0,Privacy Sidechains for all Substrate- Based Chains,"6365292273782742","","21856371675414241",Rejected,"87750000000000"
+18.0,[Whitelisted Caller] Referendum #18 Polkadot v9430,"660600001152444455","","1001000000000",Executed,-1
+19.0,[Small Spender] Stakeworld's polkadot RPC and bootnode infrastructure - Q2 2023,"9547728672961563","","27475928453944872",Rejected,"34690000000000"
+20.0,Subscan | Infrastructure Costs of Subscan for Polkadot & Westend & Rococo & Statemint & Rockmine  Networks (from July to December 2022),"32106419696878435","","3902630608000000",Executed,"418677040000000"
+21.0,"Ledger Apps Maintenance Proposal (Polkadot, Kusama, Statemine, Statemint)","52067654470260822","","14690693459266593",Executed,"1754190000000000"
+22.0,Genesis DAO Ecosystem Integration,"46743090709140324","","44226818476304950",Executed,"775000000000000"
+23.0,Polkassembly's Registrar Application,"35044551058423954","","506745001000000",Executed,-1
+24.0,Proposal: ink! design security review by OpenZeppelin (treasury proposal 2/2),"15497246118197916","","4762018865112867",Executed,"255330000000000"
+25.0,Requesting a return of the submission deposit related to Motion #406.,"19992300560329945","","3229676608000000",Executed,"3827000000000"
+26.0,[OpenGov] Return of the bond for the rejection of (Gov1) Treasury Proposal #244 (MVP Workshop),"19722411905529392","","3444056556000000",Executed,"5000000000000"
+27.0,Requesting a return of the submission deposit related to Motion #405.,"18248974281974696","","3225537556000000",Executed,"5000000000000"
+28.0,"Returning submission deposit for Anagolay proposal, related to rejecting proposal #256 (more info in the desc.)","18328862950795455","","3797909589303516",Executed,"5000000000000"
+29.0,Societal - A Homebase for Decentralized Communities,"57168367642569671","","84749084488230844",Rejected,"382490000000000"
+30.0,OpenGov submission of Motion 420 - Upstream funding Matrix.org Foundation,"20275842021437098","","80531843389456851",Rejected,"1466280000000000"
+31.0,Requesting a return of the submission deposit,"19861217661197702","","3732216924692313",Executed,"5000000000000"
+32.0,Milestone 2: Polkadot Hackathon Global Series 2023: Europe Edition,"14216449241235747","","6733868024998750",Executed,"117306850000000"
+33.0,Encointer Treasury Proposal,"22649374916216643","","59215089809600474",Rejected,"996720000000000"
+34.0,RadiumBlock seeks reimbursement for Polkadot Endpoint Service (Q4 2022 and Q1 2023),"29467120041145629","","38160115749859964",Rejected,"192560000000000"
+35.0,Polkadotters – retroactive and future funding of community powered media for Polkadot & Kusama ecosystem in 2022-2024,"36276331003135425","","35203913870923669",Executed,"147460000000000"
+36.0,OneBlock The 2023 Polkadot Summer Hackathon proposal,"13123613451304131","","11912278111136080",Executed,"697860000000000"
+37.0,(Big Tipper) Small Funding for KryptosChain Media,"11843794564274506","","6247266057113309",Executed,"9324500000000"
+38.0,(Small tipper) Funding for AnimatedCrypto channel ,"953261830414097","","8016404259086589",Rejected,"1200000000000"
+39.0,Next revision of increasing nomination pool limits & commission,"19265122894038625","","6346053660649953",TimedOut,-1
+40.0,Pinknode Public Endpoint for Polkadot in Q4 2022,"5355864422059607","","25963066438481693",Rejected,"42461900000000"
+41.0,Notifi Vote RE: #1767 Notifi - Communication & Notification Tooling for Polkadot's Broader Ecosystem,"5784791538880360","","19620825150987648",Rejected,"729166667000000"
+42.0,[Please reject] Erroneous Referendum Submission,"221000000000000","","34804900550859643",Rejected,"0"
+43.0,Polkadot Relayers Incubator 2023,"17365545192428600","","11408921232540028",Executed,"352775350000000"
+44.0,Treasury proposal for New Product Development & OpenGov Deployment,"31748497778280492","","812305637913073",Executed,"365380000000000"
+45.0,Funded High Performance Public Infrastructure for the entire Polkadot Ecosystem (OnFinality),"28811648922535486","","27496824816202084",Executed,"47471290000000"
+46.0,"Polkadot Hubs - Initiative case-study, education and support for future hubs (12 months period)","2586480611109425","","35029054999985552",Rejected,"79150000000000"
+47.0,Approve Polkadot Assurance Legion Bounty,"113346655058570826","","32952442838937347",Executed,-1
+48.0,Part 1 of 2 request for 1100 DOT deposit reimbursement,"9228710506156298","","1026656052000000",Executed,"1000000000000"
+49.0,Part 2 of 2 request for 1100 DOT deposit reimbursement,"8048778936606903","","1086528660000000",Executed,"10000000000000"
+50.0,"GovernGoofed, a proposal to tackle 3 of the most challenging issues in OpenGov V1","3977157100000000","","7896933307780197",Rejected,"2500000000000"
+51.0,Open HRMP Channels Between System Parachains,"624433246983710778","","1000000000000",Executed,-1
+52.0,DAO_Terminal: Enhancing User Involvement in Polkadot Governance,"4952698360762875","","15935728219458836",Rejected,"39560000000000"
+53.0,[Auction Admin] Referendum #53: Start an Auction,"1638817829889826837","","2005000000000",Executed,-1
+54.0,"25-minute contextual primer on Polkadot 2.0","25889256659325605","","503132000000000",Executed,"400000000000"
+55.0,[TAKE TWO] Next revision of increasing nomination pool limits & commission,"615742015755117121","","114133152069446",Executed,-1
+56.0,Canceling Remaining Auctions and Introducing New Ones,"397766500784273704","","61000000000000",Executed,-1
+57.0,"Rust, Substrate, ink! technical content for rust developers.","10261270465299801","","1145822000000000",Executed,"2340000000000"
+58.0,[Whitelisted Caller] Referendum #58: Increase Parachain Validators to 250,"612421466543156146","","0",Executed,-1
+59.0,[Reject] incorrect preimage,"1220180659236606","","25573448346599921",TimedOut,-1
+60.0,A small tip for media representation,"441826993408617","","11162390921566642",TimedOut,-1
+61.0,A small chatbot for the polkadot wiki,"3818416537766811","","9261391994785390",TimedOut,"2500000000000"
+62.0,Metadata for offline signers,"48475974565834842","","3629718876054939",Executed,"1106937000000000"
+63.0,"vote no pls , I missed preimage :(","83351000000000","","29700041748762987",TimedOut,-1
+64.0,Treasury Proposal by 727.ventures: Polkadot Wink,"2208639527388797","","23031595566101545",Rejected,"280785690000000"
+65.0,"","0","","13882291670286861",TimedOut,"970000000000000"
+66.0,"","241500000000","","13965711542439436",TimedOut,"970000000000000"
+67.0,"Security Audit of trustless Ethereum 2.0 Light Client, developed as a Substrate Pallet","2846326898000000","","120363645127768594",Rejected,"970000000000000"
+68.0,UI & Front-end for Asset Conversion pallet (referenda68) - Project Status Update - Delivery Completed,"35611784203613357","","15893903391745488",Executed,"178200000000000"
+69.0,"[FAULTY PREIMAGE, PLEASE REJECT] A Polkadot Ecosystem App Store","246600000000000","","9742963309908297",TimedOut,-1
+70.0,Finsig SDK for Apple Products,"9246706679387339","","14080935523684309",Rejected,"121170000000000"
+71.0,Wasm Smart Contracts Bounty #19,"48803596552017290","","5587314000000000",Executed,-1
+72.0,A Polkadot Ecosystem App Store,"4006809321555039","","1735997699847809",Executed,"1000000000000"
+73.0,Rejecting Gov1.0 Treasury Proposals and Facilitating Bond Reimbursement where applicable,"564031890804700859","","378395000000000",Executed,-1
+74.0,"","84350000000000","","17041933533758194",TimedOut,-1
+75.0,Polkashots.io Cloud Costs January-April 2023,"7010865995730502","","22713548032670961",Rejected,"9990000000000"
+76.0,canceling,"5866001000000","","49676445228978306",Rejected,-1
+77.0,Smoldot development financing Q3/2023,"62100491970519936","","1602706872152575",Executed,"151390000000000"
+78.0,Blockops Network - Grant Proposal for the development of One-Click Parachain Deployment,"5366983342410372","","40163045886344912",Rejected,"299460000000000"
+79.0,SmallTipper,"27701764786455233","","170125152700000",Executed,-1
+80.0,deleted,"69212000000000","","32662511927568732",Rejected,-1
+81.0,Bounty to back Apillon Web3 development platform as a common good infrastructure,"386813625089124152","","598074401446355119",Rejected,-1
+82.0,OnFinality High Performance Public Infrastructure (Q2 2023),"75740056491518219","","50830035840209689",Executed,"124550830000000"
+83.0,SmallTipper,"27325114242491022","","1050001000000",Executed,-1
+84.0,[Staking Admin] Referendum #84: Update System Collator Sets and Configurations,"38128233020713116","","448536472740836",Executed,-1
+85.0,DOT holders 🤝 & The Kusamarian 🤖❤️,"449245771201547774","","119986483729887085",Executed,"592035800000000"
+86.0,"Substrate, XCM rust technical practice videos.","3328892860128057","","12571766143445290",Rejected,"9900000000000"
+87.0,"","108640000000","","85970573527239729",Rejected,-1
+88.0,OnFinality Unified NFT API,"13176341273362057","","107670764503468325",Rejected,"142690710000000"
+89.0,Proposal: Artificial Intelligence for security monitoring on a network level ,"121076032700000","","23436821766621213",TimedOut,"66860000000000"
+90.0,Gosemble Phase 2 - a Framework for building Substrate-compatible Runtimes in Go (Parachains & Solochains),"79084153300925284","","59734790920436939",Executed,"639160000000000"
+91.0,Specialized Learning Path of Polkadot Ecosystem for Devs,"5751000000000","","17526817341110250",TimedOut,"316120000000000"
+92.0,"Wrong $DOT amount, please nay","31717152700000","","16914197090268606",TimedOut,"36686760000000000"
+93.0,Infrastructure Funding for Polkadot Asset Hub - Migration of Kusama NFTs,"77259024031301046","","12024327064286621",Executed,"366860000000000"
+94.0,SmallTipper,"23746405356330146","","65372608000000",Executed,-1
+95.0,Small tip for Polkadot community activation in Finland,"22807484364558203","","2236375207200000",Executed,"500000000000"
+96.0,=Artificial Intelligence for security monitoring on a network level ,"2417789867892313","","85644535792657481",Rejected,"66860000000000"
+97.0,Milestone 2 and 3 Payment Request – YieldBay: Polkadot’s yield farming dashboard,"40396519418879169","","24209720955897357",Executed,"153757450000000"
+98.0,POLKADOT INSIDER - 28 WEEKS OPERATION & GROWTH FUNDING (AUGUST 2023 - FEBRUARY 2024),"84014070836280166","","70753875695134942",Executed,"142570000000000"
+99.0,Patron Milestones 2-7 Development,"11392479246899974","","77670626251967240",Rejected,"183915960000000"
+100.0,A small tip for a staking rewards calculator,"12349961824093595","","2877257686000000",Executed,"2250000000000"
+101.0,Milestone 3 Proposal: Polkadot x EasyA Hackathons at Harvard and in London (#60DaysOfPolkadot),"14547479335906641","","76070592607473734",Rejected,"439209400000000"
+102.0,[Retroactive] Polytope Labs: ISMP Research & Development,"42013787315189836","","127519351004998357",Rejected,"995200000000000"
+103.0,Milestone 3: Polkadot Hackathon Global Series 2023,"27183003894634488","","12059760773400084",Executed,"602468880000000"
+104.0,Polkadot journal: A Marketing Proposal for Polkadot/Kusama,"4695001000000","","96660291693693263",Rejected,"24410000000000"
+105.0,Proposal: OpenZeppelin x Polkadot Ecosystem Growth,"134282616364668932","","4902005592823739",Executed,"438771439000000"
+106.0,Community-Centric Blockchain Education: Dacade's Commitment to Polkadot's Growth via learning through sharing,"465606000000","","103768562356226486",Rejected,"104000000000000"
+107.0,LayerX - rollout parachain as Trustless Bridge between Polkadot and Ethereum.,"3493000235388797","","246373721953929015",Rejected,"813000000000000"
+108.0,SmallTipper,"11108966022407254","","961962055218180",Executed,-1
+109.0,Polkasafe - Milestone 2 - Retroactive funding proposal,"16070726209056086","","98977517165456391",Rejected,"419361500000000"
+110.0,[Whitelisted Caller] Referendum #110: Update Parachain Validation Config,"683281081018690746","","100000000000",Executed,-1
+111.0,Propose Curator for PAL Bounty,"95493714808178395","","17777890804504847",Executed,-1
+112.0,Refunding Pink Node's GOV1 Treasury Spend Deposit,"69152021103005665","","327411000000000",Executed,-1
+113.0,Refunding MIDL.DEV's GOV1 Treasury Spend Deposit,"69352023123048861","","127410000000000",Executed,-1
+114.0,Refunding Radium Block's GOV1 Treasury Spend Deposit,"69648154997105304","","277411000000000",Executed,-1
+115.0,Refunding CCTF's GOV1 Treasury Spend Deposit,"64594605431954482","","277411000000000",Executed,-1
+116.0,PolkaWorld Ops and Maintenance proposal：2023.9 - 2023.11,"5523343568617809","","76696229910302130",Rejected,"168420000000000"
+117.0,"Societal: Advanced Treasury, Governance and Member Management Systems for Decentralized Communities","24166257260041021","","173944310878143430",Rejected,"266160000000000"
+118.0,Maintenance for the substrate-api-client Sep-23 to Dec-23,"103930610102269851","","14625532046127677",Executed,"41000000000000"
+119.0,An Open Communication Layer For Polkadot,"98811673049258586","","17740582108842062",Executed,"272590000000000"
+120.0,Multix - Further development and Cypress Dapp testing plugin,"133774234380594846","","7416842711678819",Executed,"428200000000000"
+121.0,Crypto-Friendly Substrate Scaffold Pallets for Every Parachains,"16397704225277700","","95284370676527194",Rejected,"203596878000000"
+122.0,[Whitelisted Caller] Referendum #122: Register KSM on Asset Hub,"820683503550912355","","50000000000000",Executed,-1
+123.0,Recognising Paradox's Contributions to Reject Gov 1 Proposals and Release Bonds,"65100288208785736","","207088341525147",Executed,"3000000000000"
+124.0,Magnet Proposal: Polkadot’s Smart Contract Docking Station using DOT as Gas Based on the PAYG Model,"88388774826571764","","24050041848514849",Executed,"401051930000000"
+125.0,"Nova Spektr Milestone 3 Proposal: Dynamic Derivations, WalletConnect v2, Proxy accounts, Cross-chain transfers, Fiat values, Ethereum address support, Staking improvements, Wallet details, App Store and Microsoft Store","257789662191831750","","85897279426335442",Executed,"1291450000000000"
+126.0,RadiumBlock: Retroactive funding for High Performance Public Endpoint Service for Polkadot(Q4 2022 and Q1 2023),"4774247660347505","","104696987837479320",Rejected,"194014500000000"
+127.0,Void - incorrect spend submitted,"2505643001000000","","113192029349617951",Rejected,"1947798990000000000"
+128.0,Allocate DOT Loan for Use Amongst Cross-Ecosystem DeFi within the Cosmos Ecosystem,"15325779157222911","","107575001334910580",Rejected,"1947790000000000"
+129.0,Encointer Treasury Proposal (budget halving),"10536680843173578","","217998596806882886",Rejected,"598950000000000"
+130.0,Cancel Old Auctions Schedule - Replaced by New Schedule After OpenGov Inclusion,"836627037916003840","","51000000000",Executed,-1
+131.0,"Polkadot @ SXSW 2023, Austin, Texas on March 12th-15th 2023","6420616815548666","","104030652717816590",Rejected,"710680000000000"
+132.0,Unbrick Nodle,"1297968075659845601","","100000001000",Executed,-1
+133.0,Election of curation team - bounty 19: Wasm Smart Contracts Bounty,"114853659420640295","","5915780769474191",Executed,-1
+134.0,Proposal: Building a better understanding of blockchain across mainstream global media,"226025876183234420","","92828883271128350",Executed,"539380130000000"
+135.0,Moderation Team Bounty,"141909297733378247","","3354161258053582",Executed,-1
+136.0,Create & implement RFC14 - Improve locking mechanism for parachains,"12590656445507207","","495976707428057",Executed,"9500000000000"
+137.0,ink!Hub Treasury Proposal ,"116943796329071657","","79495095332278701",Executed,"580180000000000"
+138.0,OnFinality High Performance Public Infrastructure (Q3 2023),"16201776132044385","","139123534157978387",Rejected,"121537439000000"
+139.0,Moonbeam: Swap Leases with Parachain 3342,"673520176458294217","","5743000000000",Executed,-1
+140.0,(VOTE NAY!!) Polkadot Parachain Assets Onramp Bounty Program ,"150094811557816501","","118367843935080284",Executed,"756000000000000"
+141.0,Increasing Hiring Success in Polkadot by Missing Link,"98155237155010209","","21648531242166908",Executed,"441960000000000"
+142.0,Increase MaxMemoryPages to 512MB,"796291342915339278","","100000000000",Executed,-1
+143.0,Refunding AlexPromoTeam GOV1 Treasury Spend Deposit,"7097651801915592","","83210853802104157",Rejected,"1000000000000"
+144.0,Small Tips retroactive for Content in Portuguese UPDATED (Vote Nay - if you set AYE Change your vote to NAY),"5396719548509261","","84966680738032824",Rejected,"2500000000000"
+145.0,Subsquid - Public data indexing Infrastructure for Polkadot and Kusama (Q2 2023),"109089775209592170","","20291978157342087",Executed,"582536600000000"
+146.0,KAGOME – the C++ implementation of Polkadot Host milestone 2,"90739019018917290","","132340631978901211",Rejected,"2538620000000000"
+147.0,Ignore / Nay (Duplicate Ref) ,"2635442916222079","","108666123141393135",Rejected,-1
+148.0,Notifi - Communication & Notification Tooling for Polkadot's Broader Ecosystem V2 Proposal,"17388019614814429","","109025452507963337",Rejected,"350083930000000"
+149.0,Untitled,"55002001000000","","118925066193308879",TimedOut,-1
+150.0,Bounty: The Genesis Incentive Pool,"81738389246133264","","361560204738429796",Rejected,-1
+151.0,Polkadot System Parachain Collators - Tips,"109356877463526617","","10353573614992727",ExecutionFailed,"0"
+152.0,KryptosChain Media Support (Continuation) - Big Tipper Request,"115504455016117338","","23603295508997576",Executed,"8413400000000"
+153.0,"ink! OpenBrush 8-9, 11 milestone delivery","151455586687745664","","130392772102237994",Executed,"148336230000000"
+154.0,Retroactive and future maintenance/development of Parachains.info,"30721444368458966","","107079898119224003",Rejected,"224000000000000"
+155.0,Polkadot & Teddy DAO: A New Way to Leverage Charitable Giving in Web3,"212960028021378673","","14418802925131299",Executed,"450740000000000"
+156.0,Polkadot System Parachain Collators - Tips - Referenda #151 failed to execute,"141509777540871406","","7502545688472512",Executed,"0"
+157.0,Increase DOT media visibility through media buying and airdrop campaign,"290025099664517202","","555469753272975091",Rejected,"2470580000000000"
+158.0,PolkaWorld Ops and Maintenance proposal：2023.10 - 2024.3,"285334273619194708","","42147084567406253",Executed,"324200000000000"
+159.0,Moderation Team Bounty Curator Proposal,"67144869322148228","","15732554049046161",Executed,-1
+160.0,"AIWeb3 Chinese Unit proposal (爱Web3 中文社区提案) - September, 2023 - March, 2024","329223937837237742","","119252617068094901",Executed,"162310000000000"
+161.0,Apillon Platform Milestone 1 Proposal,"409922465100898147","","31207494314453700",Executed,"1714540500000000"
+162.0,Polkadot Live: Proposal for funding community driven development to initial release.,"163638325568609132","","30295319927314623",Executed,"249370000000000"
+163.0,Polkadot Parachain Assets Onramp Bounty Program,"138629804444317755","","25601512917201086",Executed,-1
+164.0,SmallTipper,"11240682610253540","","100000000000",Executed,-1
+165.0,Polkadot Nominator Insight Hub. Spreading the Best Nominator Strategies through TOP Nomination Leaderboards,"158859889596602731","","142150471545863232",Executed,"324800000000000"
+166.0,Tweak Polkadot's Ideal Staking Rate,"798786277788837662","","4691799508784957",Executed,-1
+167.0,Maintenance & Support Python Libraries (April to September 2023),"345963542128318378","","105466919859418800",Executed,"64447000000000"
+168.0,A French content hub for Polkadot Ecosystem,"166428488601863707","","109027781990728785",Executed,"52330000000000"
+169.0,Need to get tip which is not executed in old gov,"2396592934768540","","75062813595474378",Rejected,"150000000000"
+170.0,Coinsider Media Campaign for Polkadot,"301823110327982534","","105172143247631497",Executed,"50000000000000"
+171.0,Get tip for substrate PR,"78389514809038127","","781911000000000",Executed,"150000000000"
+172.0,OpenSquare infrastructure products maintenance(2023 Q2 and Q3) and a new batch of features development,"159747435068953148","","132594605709526109",Executed,"674380000000000"
+173.0,Dubbing Polkadot Decoded 2023 into Italian,"4534511000000000","","96170226397284528",Rejected,"1302270000000"
+174.0,Proposal for USDC Sufficiency on Polkadot Asset Hub,"1135922442168412552","","100000000000",Executed,-1
+175.0,SubQuery <> Nova Wallet Common API:  Maintenance Cost For Q1-Q2 2023,"194051717741193526","","116871267327003441",Executed,"111838100000000"
+176.0,SmallTipper,"96184197489315692","","70100000000000",Executed,-1
+177.0,Polkadot Unity SDK proposal to become a Verified Solution (Part 1),"418369414693033482","","15088141225582367",Executed,"426850000000000"
+178.0,Dot Leap 2: Let's grow!,"156099592495757185","","130692057429261986",Executed,"378510000000000"
+179.0,Polkadot Blockchain Academy - retroactive funding for wave 3 of the Academy held at UC Berkeley this Summer.,"472926634166033717","","17592747082190137",Executed,"2558350140000000"
+180.0,Beyond Raw Data: How Polkascan Transforms Subsquid Aggregates into a User-Friendly Polkadot Experience (Polkadot Treasury Proposal),"34929308145728263","","117077753462710581",Rejected,"169550000000000"
+181.0,"Polkawatch, Decentralization Analytics, Continued Operation and Development","316429662376528678","","113011722152527532",Executed,"121150000000000"
+182.0,Featured Research Proposal: Empowering the Polkadot Ecosystem [CryptoEQ],"422627451000000","","106787936970157437",TimedOut,"54570000000000"
+183.0,Polkassembly Social Contract | Maintenance proposal Q3 & Q4’23,"121370265733504103","","22904025680582367",Executed,"431540000000000"
+184.0,Cryptozilla - retroactive and continuation of video content production. (Big Tipper),"310901388627187753","","11398274066909959",Executed,"9800000000000"
+185.0,Proposal：Polkadot Hackathon 2023 Winter in HongKong,"305246745690294722","","143158441451217728",Executed,"905400000000000"
+186.0,Public rpc services for polkadot including the common chains in Q3 2023,"34249168906073472","","124468186708478217",Rejected,"17110000000000"
+187.0,Encode latest tranche request,"303986072709122954","","47167792233312730",Executed,"120916500000000"
+188.0,"ELLIPAL Self-custody Cold Wallet 1 Proposal: DOT/KSM Tokens, Staking,ASTR & GLMR Parachains&Tokens,DOT/KSM/ ASTR/GLMR Swap,WalletConnect v2,Polkadot Wallet Integration","3058219566813823","","155590453039779199",Rejected,"339430000000000"
+189.0,Kuma Wallet - Milestone 5,"1557463318779763","","155812473519489018",Rejected,"94520000000000"
+190.0,Recognizing Alice und Bob and #stakedot,"311958890306648104","","450052000000000",Executed,"2500000000000"
+191.0,Polkadot RPC services Dwellir Q3 2023 (retroactive) ,"332627368807304515","","107875227131513894",Executed,"47746000000000"
+192.0,Removed,"650217551000010","","155626346467870762",Rejected,"4256600000000000"
+193.0,DOTCAST - Pursuing quality improvement by spreading honest and true awareness.,"323157663318631181","","111820838172936558",Executed,"43950000000000"
+194.0,[TrackingChain] Bring Adoption for Companies: Building Infrastructure for Web2 Integration (Big Tipper Discussion),"303764007695063235","","10795354249467972",Executed,"10000000000000"
+195.0,Please vote against,"223229872152575","","126128699436386927",TimedOut,"9250000000000"
+196.0,Educational content maintenance proposal by Cryptonitas,"311866324741423785","","3431620886441372",Executed,"9250000000000"
+197.0,Polkadot Weigher,"75940551465250932","","1090182000000000",Executed,"2000000000000"
+198.0,Big Tips for Content in Portuguese - Verbo da Sabedoria Channel,"71705441015734560","","5068015396327592",Executed,"7000000000000"
+199.0,Polkadot Ecosystem App Store - Dynamic App Pages & Project Reputation System - dotappstore.com,"303657333911518404","","134089503217742854",TimedOut,-1
+200.0,Polkadot Relayers 2023 Milestone 2,"325756303288862852","","20737239689864835",Executed,"262813830000000"
+201.0,KAGOME – the C++ implementation of Polkadot Host milestone 2,"350600815479628623","","110700110574889735",Executed,"1684320000000000"
+202.0,Proposal: The operating cost for the research organization Polkadot Ecology Research Institute for 2023/10-2024/3,"409447211862640483","","41033188213073215",Executed,"280100000000000"
+203.0,💎DOT Airdrop on Terra 2.0 ✅,"307827824000000","","161098009523445245",Killed,"100000000000000"
+204.0,Kill Referendum 203 (Scam Referendum),"135262785035351375","","16120501000000000",Executed,-1
+205.0,Treasury Proposal: Parachain Loan Financing (PLF) Kapex Parachain,"2683017400043632","","450538773353622923",Rejected,"5925730000000000"
+206.0,Please ignore or disapprove!,"0","","32730223646644778",TimedOut,"244741490000000000"
+207.0,Go-Substrate-Rpc-Client - Retroactive Maintenance Grant (Sept 2021 to Dec 2023),"425363562976614277","","10637673631033082",Executed,"244740000000000"
+208.0,[Root] Referendum #208,"0","","137522580739583963",TimedOut,"426500000000000"
+209.0,[Retroactive Funding] Dotinsights - A Research Hub & Data Platform for Polkadot & Kusama Ecosystem,"325967612843188445","","147552280099367964",Executed,"426500000000000"
+210.0,SmallTipper,"87473161680646261","","0",Executed,-1
+211.0,"[Whitelisted Caller] Referendum #211: Upgrade Polkadot v1,000,000","349114115779517253","","111146641327164752",Cancelled,-1
+212.0,"","543511965872279","","39855802302667243",TimedOut,-1
+213.0,KryptosChain Media (The Next Level!) - 6 Months of funding,"320096254447575942","","582891992303287385",Rejected,"0"
+214.0,[PRE-IMAGE FIX + RESUBMISSION] Polkadot Ecosystem App Store - Dynamic App Pages & Project Reputation System - dotappstore.com,"334255735483842796","","114867008265105432",Executed,"18000000000000"
+215.0,Smoldot development financing Q4/2023,"468155982142856019","","12264234874816906",Executed,"189826915423000"
+216.0,Milestone 3 Proposal: Polkadot x EasyA Hackathons at Harvard and in London (#60DaysOfPolkadot),"306418905797937750","","39645523131706892",Executed,"547536100000000"
+217.0,Long Overdue Tip for Leemo's Contributions to the Polkadot Ecosystem,"407020419199844490","","16408403000000000",Executed,"4206900000000"
+218.0,KryptosChain en Español (Polkadot ecosystem video content in Spanish) - 12 weeks funding,"302768752581317939","","181065069498896674",Executed,"19599300000000"
+219.0,BlockchainBrad Educational & Journalist Content - 6 Months funding,"443491498855876543","","27381904208938364",Executed,"141650000000000"
+220.0,Proof-driven Whistleblowing: Decrease in the Number of Teams in the Ecosystem. Several Posts/Research by Rita2me.,"1589026395762959","","152023224094746655",Rejected,"11110000000000"
+221.0,"PolkaTube: Empowering the Spanish-Speaking Polkadot Ecosystem with RUST Programming, Substrate, and Marketing Content","307998998788890883","","163480759714945532",Executed,"48950000000000"
+222.0,Markedot: Marketplace and marketing with profits for the Polkadot and Kusama  community.,"160960523228779510","","34457678162925492",Executed,"35350000000000"
+223.0,"Polkadot Pulse 1.0 & Polkadot Networking Night @ IBW, ETHIndia Week","421525132734624690","","43404401592285618",Executed,"247010000000000"
+224.0,Proposal: Funding for the Brazilian Portuguese Language Content Producers Group,"3108875519093985","","183105553739776484",Rejected,"170000000000000"
+225.0,Retroactive funding for 73videos about Polkadot ecosystem(波卡梦龙),"301186582052000000","","125034519376417658",Executed,"15630000000000"
+226.0,AfterSide Crypto in Italian (Polkadot ecosystem video content in Italian) - 2 Videos,"304583545054454750","","162346936585476474",Executed,"15000000000000"
+227.0,Retroactive tip for Polkadot booth at Hacktivity Security Festival 2023,"305655099542606253","","3298988097734942",Executed,"3500000000000"
+228.0,Non-custodial DOT payments integration for major eCommerce platforms,"39158860032987941","","427762383407371355",Rejected,"597468400000000"
+229.0, [VOTE NAY - RESUBMISSION IN PROCESS] Activation and retention of developers in Turkey and India for the Polkadot Ecosystem,"758356460449078","","156620290219868136",Rejected,"1387110000000000"
+230.0,Polkadot Sanctuary: A Journey of Achievements and Innovations in Bali - Retroactive funding,"414493649738943858","","34337796796261889",Executed,"69700000000000"
+231.0,Polkadot Treasury USDT Acquisition,"486106493728324775","","64827575858455316",Executed,-1
+232.0,Chain Cohort Event Sponsorship - Opportunity to tap more than 1000 developers community and technology university in Vietnam.,"303948419848041453","","525751670582367",Executed,"5900000000000"
+233.0,Enhance analytics solutions for Polkadot: Chainspect's Treasury Proposal,"4057457794890173","","102756179909401666",Rejected,"59170000000000"
+234.0,"Title: Polkadot @CoindeskConsensus 2023, April 26-28, 2023 in Austin, Texas","317276889984531487","","119683607097203282",Executed,"1377680000000000"
+235.0,Invalid: Events Bounty V2 Curator Candidacy,"865111236388797","","153086497342665043",TimedOut,"10000000000000000"
+236.0,Events Bounty V2 Curator Candidacy,"96575069470356354","","12461647537619453",Executed,-1
+237.0,Retroactive Funding - Polkasafe Revised Proposal,"419884482483095698","","42488562463214426",Executed,"331247000000000"
+238.0,IBC x Largest Polkadot Developer Outreach Proposal,"74200000000000","","290201662829730108",Rejected,"821403400000000"
+239.0,Cancel Referendum 211 (runtime upgrade) due to bad call ,"503726532252071657","","0",Executed,-1
+240.0,Crafting a Users & Developers Onboarding Funnel,"328346779123538661","","13214795707626858",Executed,"97000000000000"
+241.0,"","11991821779452120","","113245116363415741",Cancelled,-1
+242.0,Retroactive & Ongoing Funding Rationale: Republik Rupiah - Turning Indonesia into the Polkadot Island's With Education and Community,"408451066158192203","","380925120635790167",Executed,"161820000000000"
+243.0,BRA_16-D! Quality improvement of content for the Spanish Comunity by BRA_16-D,"303016024563726389","","125391299362062754",Executed,"44550000000000"
+244.0,PROPOSAL FOR ADVANCING DECENTRALIZED FINANCE EDUCATION IN LATIN AMERICA WITH THE POLKADOT ECOSYSTEM,"304921049836118610","","144251663481046203",Executed,"31610000000000"
+245.0, Milestone 4: Polkadot Hackathon Global Series 2023 APAC Edition,"339678657544120322","","5098556856913136",Executed,"108911190000000"
+246.0,Cancel Referendum 241 (runtime upgrade) due to XCM issue,"126112893260167067","","0",Executed,-1
+247.0,"PR, Content marketing, Social amplifications proposal","444746700702142137","","47689066624217003",Executed,"214000000000000"
+248.0,substrate-etl Retroactive funding: Q3+Q4 2022-Q1+Q2 2023,"417065793209757828","","16402636789847902",Executed,"990250000000000"
+249.0,Cryptor. Polkadot AMAs for 2 largest Russian speaking crypto communities.,"301974956888471357","","14045658430015205",Executed,"5000000000000"
+250.0,Bounty Proposal: Business Prospects for Polkadot in Brazil,"69605414978509522","","60564719045578908",Executed,-1
+251.0,VOTE NAY IN THIS PROPOSAL 251,"160333000000000","","127969752568977514",Rejected,"177650000000000"
+252.0,"[Small Spender] Please reject, there is a wrong setting, please vote on: https://polkadot.subsquare.io/referenda/254","251524251194975","","124023307718052512",Rejected,-1
+253.0,Vote (NAY) Revised the Tip Proposal - Dotgraphic ,"1179966605492723","","42353904594336269",Rejected,"2400000000000"
+254.0,Please ignore this proposal # Withdraw 254: Retroractive funding for Web3 Education and Investment YouTube Channel Proposal,"1346642983679656","","128009436881703999",Rejected,"43510000000000"
+255.0,Altcoin Daily - High impact Polkadot media promotion,"308278870788636616","","136748400090840474",Executed,"0"
+256.0,MASON VERSLUIS - Medium to High impact Polkadot media promotion,"304058530460758078","","495825760866694094",Rejected,"0"
+257.0,Addressing Polkadot's Negative Image on Twitter,"0","","496811195114878742",Rejected,"50000000000000"
+258.0,DECENTRALISEDCHAIN - Low impact Polkadot media promotion,"300094450000000000","","17298544601754772",Executed,"0"
+259.0,Big Tips for Subtitling and Promoting Kusamarian's Gavin Wood Interview,"300060000100000000","","52355952224108842",Executed,"10000000000000"
+260.0,"6 months Educational Campaign in India - Crypto India","309119566222855997","","73544783079897673",Executed,"218490000000000"
+261.0,AllInCrypto's Strategic Content and Community Engagement Proposal,"307904260157892982","","11920449682169956",Executed,"80000000000000"
+262.0,Tip for Adam Steeber's participation in Dot Take,"337899417692014750","","12847976662018286",Executed,"9056600000000"
+263.0,TuPrimerBitcoin: Creation of quality content on Youtube to make the Spanish-speaking Polkadot ecosystem more visible.,"305789197769822493","","282595763952042527",Executed,"50000000000000"
+264.0,EatYourCryptos: Creation of Educational Content in Spanish on Youtube,"400959555000010000","","471074269017769353",Rejected,"16740000000000"
+265.0,A Pink Proposal for $PINK,"39154807786718557","","124004997718102542",Cancelled,"9999990000000000"
+266.0,"Cancel Referendum 265 - Funding 999,999 DOT for meme coin in the name of Polkadot Marketing.","83883663518200514","","91350000000000",Executed,-1
+267.0,Revised Tip Proposal After Community Feedback - Dotgraphic ,"27768982918266037","","12474950517497743",Executed,"1200000000000"
+268.0,"[Whitelisted Caller] Referendum #268: Polkadot v1,000,0001","1020138290618009503","","0",Executed,-1
+269.0,Maria Andersen Crypto | Youtube Media Package Funding,"401566275227722323","","283998953882901572",Executed,"0"
+270.0,Crypto Crow | Youtube Media Package Funding,"400292686000000000","","519515823300155353",Rejected,"0"
+271.0,Proposal to Fund educational content for MAD CRIPTO MX YouTube Channel and twitter account,"428461344563033095","","261700579202095303",Executed,"47000000000000"
+272.0,Clockwise Crypto | Youtube Media Package Funding,"400848857516800000","","523844506834945267",Rejected,"0"
+273.0,MineYourBiz  | Youtube Media Package Funding,"190540000000000","","331141451503394779",Rejected,"0"
+274.0,"","120050000000000","","47342278042498033",TimedOut,"0"
+275.0,Mind The Chart | Youtube Media Package Funding,"400889892125738757","","517420618520861643",Rejected,"0"
+276.0,"""Mistake in preimage - please Nay""","100000000","","107923216122932706",TimedOut,-1
+277.0,SIAMO TUTTI NON FUNGIBILI | Youtube & Social Media Package Funding,"400534141000000000","","521234706785622815",Rejected,"0"
+278.0,Open HRMP channels: AssetHub <> Composable Finance & AssetHub <> Zeitgeist,"3544266326709574","","77235749123858963",TimedOut,-1
+279.0,dApp Marvels 💎 - Ink! Ecosystem growth tool,"507384214064456424","","28187093872152575",Executed,"253612900000000"
+280.0,Open HRMP channels: AssetHub <> Composable Finance & AssetHub <> Zeitgeist,"121957790866246450","","19631700000000100",Executed,-1
+281.0,CryptoWendyO | Youtube Media Package Funding,"663199858000000","","519578975603490564",Rejected,"0"
+282.0,Discover Crypto | Youtube Media Package Funding,"280050011000000","","518108858129783504",Rejected,"0"
+283.0,Crypto Blood | Youtube Media Package Funding,"468080000000000","","516477421271658924",Rejected,"0"
+284.0,Wrong Proposal,"7060900284884511","","137241757459540775",Rejected,-1
+285.0,Decentralized Staking Support Group,"358451898000000","","152383152540646992",Rejected,"97350000000000"
+286.0,Connecting The Dots ,"401337937419111275","","502041027826667036",Rejected,"24000000000000"
+287.0,AfterSide Crypto | 6 MONTHS - Youtube & Social Media Package Funding,"150145693732923","","150854733675831068",Rejected,"79390000000000"
+288.0,Polkadot System Parachain Collators - Tips Q4/2023,"284681411413847054","","26731274064564742",Executed,"0"
+289.0,please vote nay,"102000000000000","","75367678619166172",TimedOut,"0"
+290.0,Maintenance for the substrate-api-client Jan-24 to Jun-24,"115975207549246375","","16161713397688481",Executed,"56450000000000"
+291.0,Please reject,"400318665026480888","","524046519077557090",Rejected,-1
+292.0,Quality Content Creation and P2P support - The Bitcoin Army's Orinoco Campaign,"151305360900128","","516517010903387408",Rejected,"34630000000000"
+293.0,The HGA Marketing Proposal,"424521283620214579","","651929555158352558",Rejected,"0"
+294.0,Wrong Preimage please vote Nay,"335739872152575","","329664801987807209",Rejected,"0"
+295.0,VOTE NAY - WE ARE REPOSTING - Polkadot Brand Awareness Partnership with Real Vision (Raoul Pal),"58872726120243907","","669431164611576472",Rejected,"0"
+296.0,ignore - UI errors,"79513000000000","","99578289956870291",TimedOut,"320000000000000"
+297.0,ignore - UI errors,"50102000000000","","99596240025309264",TimedOut,"320000000000000"
+298.0,Holder-targeted Audience Growth w/  Addressable.io & The Kusamarian,"425879710052230430","","124551073051160145",Executed,"320000000000000"
+299.0,Polkadot's Educational Campaign India: A Wise Advice Initiative,"408190092148064123","","671250945663686383",Rejected,"284890000000000"
+300.0,Effective Media Proposal Evaluation System for the Polkadot Marketing Collective/s (Stage 1: Focus on Builders),"57328372980983","","149850537016130159",Rejected,"88420000000000"
+301.0,Easybuild. Fast Path for Future Polkadot Builders committed to building.,"1044394898000000","","147322386356254838",Rejected,-1
+302.0,"Nova Wallet 5th Proposal: Cloud backups, Push Notifications, Proxies, Deeplinks, OpenGov improvements, Network management, Reimbursement","446594691909560391","","129550564718891947",Executed,"1254840000000000"
+303.0,Reward for Content already made on Rust,"4469641980092828","","11600840674394290",Rejected,"2000000000000"
+304.0,Supercharge Polkadot's Brand: Collaborative Partnership with (Mario Nawfal) IBC Ventures,"496711119355918376","","384536862500178525",Executed,"478370000000000"
+305.0,Please reject,"307001000000000","","148897556560369994",Rejected,-1
+306.0,Bounty 27 Curator Committee Proposal ,"143136213144171742","","7418923146520681",Executed,-1
+307.0,YouTube Polkadot Round Table Discussion,"20620214808090367","","19046665772655962",Executed,"30000000000"
+308.0,Toni Ghinea - Creating Polkadot Content,"0","","120431041411753487",TimedOut,"0"
+309.0,DAPP CENTRE | Youtube Media Package Funding,"654039885414647","","51505290641332510",Rejected,"0"
+310.0,Talisman Wallet - Retroactive Proposal #1,"441871353405405990","","28806875613671164",Executed,"799750000000000"
+311.0,Subscan | Infrastructure Costs of Subscan for Polkadot & Westend & Rococo & Statemint & Rockmine  Networks (from January to September 2023),"522605033033524577","","35337857579282367",Executed,"786760000000000"
+312.0,Oracle Ecosystem Initiative,"157083350016375298","","19220981391802235",Executed,"704750000000000"
+313.0,KryptosChain Short Term Funding,"62287989446822493","","95590544078561465",Rejected,"9999900000000"
+314.0,#ERROR PLEASE VOTE NAY,"160100000000000","","90810708941320774",TimedOut,"1000000000000"
+315.0,#ERROR PLEASE VOTE NAY,"150000000000000","","90791631073781439",TimedOut,"1000000000000"
+316.0,#ERROR PLEASE VOTE NAY,"150211000000000","","90666511361596354",TimedOut,"1000000000000"
+317.0,#ERROR PLEASE VOTE NAY,"350000000000100","","90562712401180477",TimedOut,"1000000000000"
+318.0,#ERROR PLEASE VOTE NAY,"0","","90722267179870428",TimedOut,"1000000000000"
+319.0,#ERROR PLEASE VOTE NAY,"10","","90962459339389285",TimedOut,"1000000000000"
+320.0,https://github.com/paritytech/polkadot-api/pull/200,"48658701165327363","","1590942235388797",Executed,-1
+321.0,#ERROR PLEASE VOTE NAY!,"10001000010001","","90462971148612797",TimedOut,"1000000000000"
+322.0,Bring Adoption for Companies: Empowering BlockSpace with PolkadotSDK as the Core Infrastructure,"908105760615647","","20492802389882293",Rejected,"9000000000000"
+323.0,“NacionCrypto” Establishment of Study Group and Development of Technical and Non-Technical Content.,"1233495885424647","","146783371315421165",Rejected,-1
+324.0,Increase Awareness of Polkadot On-Brand Narratives via Twitter Ads,"406952745945964309","","140610178177245392",Executed,"353950000000000"
+325.0,Bitskwela - Bringing Polkadot to the Thriving Philippine Web 3.0 Community,"506096741079390329","","10682357683779331",Executed,"80000000000000"
+326.0,Posted in error please vote nay,"0","","299867921632658194",TimedOut,"400000000000"
+327.0,A 12-Month Strategic Alliance proposal: Polkadot and Cheeky Crypto Partner for Decentralized Innovation,"95001000000000","","40828324444295599",TimedOut,"120000000000000"
+328.0,Polkadot Brand Awareness Partnership with Real Vision (Raoul Pal),"536203076257807179","","7910644653407662",Executed,"428650000000000"
+329.0,Building Developer Ecosystems In Turkey & India,"11006010000000","","130204593737974583",Rejected,"221950000000000"
+330.0, Crypto Sj Media proposal - Educational & Awareness  Campaign in India,"272000000100","","42562360021219735",TimedOut,"99990000000000"
+331.0,Alpha Airdrop - Polkadot Education Content Creation Proposal (6 months),"434446013265078064","","19406284257413351",Executed,"135600000000000"
+332.0,Corespace Weigher,"19384168089000661","","6769170000000000",Executed,"10000000000000"
+333.0,DOT Request - UPDATE REJECT THIS REQUEST,"24527443595240076","","125552877634103586",Rejected,"50000000000000"
+334.0,OG Tracker,"530485482605185050","","12909032647381594",Executed,"64310000000000"
+335.0,Proposed Polkadot Auction Schedule 2024,"311169718628397738","","543206865210526",Executed,-1
+336.0,Treasury Proposal: An expansive course on Substrate and Polkadot,"0","","137397801495111419",Rejected,"10868470000000000"
+337.0,"Development & Maintenance for Node Red Polkadot bridge, a Client for Low Code IoT Integration","7051230032703419","","135670244661980637",Rejected,"90000000000000"
+338.0,"Polkadot Sponsorship @Token 2049, Singapore on September 13th - 14th 2023","439181514815902095","","116318723812109992",Executed,"715030000000000"
+339.0,Polkadot Colombia Ambassadors: technology education marathon through ten universities in Colombia and one in San Salvador.,"23410303220457768","","121653416180606206",Rejected,"52100000000000"
+340.0,Open HRMP channels between AssetHub and Polimec,"117846499169538477","","410256078432547",ExecutionFailed,-1
+341.0,test,"8201675394027361","","155011145629340285",Cancelled,"1496570000000000"
+342.0,Polkadot Ecosystem Growth with Key Opinion Leaders,"407712463623496925","","127720673271002288",Executed,"267060000000000"
+343.0,"Business Expansion with Fintech, Corporate and Institutions in Spain and Andorra","401278317964835129","","140902108821360617",Executed,"112390000000000"
+344.0,Funding for 6 months of Polkadot brand promotion,"401392745071291872","","156644512327005856",Executed,"169810000000000"
+345.0,Lark Davis - Proposal for Funding Polkadot Content Creation,"6423418418205019","","23776075034548435",Rejected,"210000000000000"
+346.0,Bounty Proposal for Public RPCs for Relay and System Chains,"127715467335316100","","5196580743996018",Executed,-1
+347.0,Scholarship for Polkadot Blockchain Academy Founder's Track,"12993128215687598","","3273890237545887",Executed,"6100000000000"
+348.0,"Cancel Ref 341 - Dolpha.com seeking 150,000 DOT ","103956023937789475","","1839396872152575",Executed,-1
+349.0,Polkadot Workshop @ UPR Mayaguez,"21863484185411339","","1389035726849249",Executed,"4820000000000"
+350.0,sub0 Asia 2024 - pre-funding request,"429068005653048227","","12902360674714393",Executed,"999500000000000"
+351.0,Proposal for the Deregistration of Equilibrium Parachain,"293670693732923","","45763664659711933",TimedOut,-1
+352.0,Financial Support for Polkadot Blockchain Academy (PBA).,"1745751980649949","","10760300025477984",Rejected,"4500000000000"
+353.0,"Polkadot IRL ADS Campaign #1 - Out of Home Digital Billboards, Toronto Canada","12848460818512216","","135627094514855748",Rejected,"19500000000000"
+354.0,Influencer Marketing Campaign for Polkadot Community Engagement,"189656761885379","","334454725742861930",TimedOut,"487500000000000"
+355.0,Polkadot Staking Dashboard: Maintenance and Growth of Polkadot UX Proposal,"142429215249110582","","10320513668829323",Executed,"222520000000000"
+356.0,Amplification of important ecosystem posts on X,"633031421112513139","","472660663308068494",Executed,"110590000000000"
+357.0,Amplification of important ecosystem posts on X,"400120519518301326","","195044483359554206",Executed,"10000000000000"
+358.0, Polkadot Unity SDK proposal to become a Verified Solution (Part 2),"544184949196751836","","2230813316583380",Executed,"416670000000000"
+359.0,Treasury Proposal: An expansive course on Substrate and Polkadot,"402612786354903178","","309806860160676412",Executed,"105413270000000"
+360.0,Magnet Milestone 2 Proposal: Polkadot’s Smart Contract Docking Station using DOT as Gas Based on On-demand Coretime Model,"132203932181211292","","2492306466693924",Executed,"264487360000000"
+361.0,Retroactive Funding to Pepe Araucano for the Polkadot Meetup Buenos Aires,"9563734506632377","","4945149063194007",Executed,"5000000000000"
+362.0,Bagpipes - Powerful No-code Cross-Chain XCM Dapp and Workflow Builder for the Polkadot Ecosystem 🪄,"434930044958305672","","39098682863627266",Executed,"259107234000000"
+363.0,Funding of Polkadot System Parachain Collators,"127635641023827789","","2690778850926468",Executed,-1
+364.0,[Retroactive] Funding Development Costs for Dot Code School PoC - An Interactive Coding School to Build Meaningful Web3 Applications using the Polkadot SDK,"439708944835018294","","2741600845947794",Executed,"25000000000000"
+365.0,WagMedia - Collective Content Creation for 26 Weeks,"439559236664503226","","10119409997326778",Executed,"260580000000000"
+366.0,"substrate-etl 2.0: Polkadot + Kusama Data on Dune (12 months, 3/15/24-3/14/25)","590947685244447900","","258444080560538345",Executed,"3250000000000000"
+367.0,"Polkadot Music Events Initiative - onboarding fans, artists and builders to Polkadot through music","61356418470812","","37189347346255274",TimedOut,"1768520000000000"
+368.0,"Big Tipper Proposal : Retroactive fund - Meetup Multi Chain 2023 - Curitiba, Brazil ","405529925423484460","","5182296316276019",Executed,"2820000000000"
+369.0,"2nd installment for the referendum #196 already approved (2/3)","406753332373338462","","24356262892413517",Executed,"17980000000000"
+370.0,Kalatori — non-custodial Polkadot/AssetHub payment gateway for eCommerce,"412001962742493820","","5480034025731898",Executed,"444295000000000"
+371.0,Milestone 4 Report: Polkadot x EasyA Hackathons at Harvard and in London (#60DaysOfPolkadot),"426197231487979871","","9918710199275774",Executed,"103569000000000"
+372.0,Subsquid - Public data indexing Infrastructure for Polkadot and Kusama (Q3 2023),"149318906725291681","","5930900741094392",Executed,"452347700000000"
+373.0, Proposal for retroactive funding of Fellowship product development.,"422567405832938591","","1480964512357278",Executed,"257961800000000"
+374.0,Ignite Polkadot | Campaign #1,"802369854894307368","","717465566131460797",Executed,"206320000000000"
+375.0,Polkadot Blockchain Academy - funding and reimbursement for costs associated with Wave 4 in Hong Kong.,"558477870385353879","","12321530395348016",Executed,"2489861307620000"
+376.0,Unchained (by Laura Shin) X Polkadot - Sponsorship Proposal ,"423241062354386192","","5879908043387294",Executed,"577816900000000"
+377.0,Infrastructure funding for Polkadot Asset Hub #2 -  Components,"410619152809271356","","19475027517093113",Executed,"718420000000000"
+378.0,Reimburse AssetHub HRMP channel deposit,"24491524135266454","","4342270788443636",Executed,-1
+379.0,NFT XCM,"186985994889742732","","16431745648191678",Executed,"1067000000000000"
+380.0,Setting the relay chain's safeXcmVersion to v3,"1133955188938263591","","1997275300445778",Executed,-1
+381.0,BLOX MEDIA GROUP - Media Package,"2650946151087827","","903748726010466679",Rejected,"558583100000000"
+382.0,Continuous Coverage on Ivan on Tech for a FULL YEAR,"407227185525566945","","22682661835446738",Executed,"240000000000000"
+383.0,Executive Search for PolkaDot - Senior BD Executive Search for PolkaDot ,"400622440134997581","","687920763127007286",Rejected,"27500000000000"
+384.0,Boosting NFT Education in Latin America with the Polkadot Ecosystem,"209727551100000","","159595659094643131",Rejected,"42670000000000"
+385.0,Community Memecoin launch marketing campaign,"882323830916722811","","564248126469003013",Executed,"915570000000000"
+386.0,Untitled,"0","","30609946768448107",TimedOut,"99000000000000"
+387.0,"Polkadot Decoded 2023, final tranche (June, Copenhagen, DK)","543058439813514020","","9904150810611297",Executed,"646580000000000"
+388.0,Promoting the adoption of Polkadot through Gaming - The Great Escape,"150539939077829449","","410428465114710182",Rejected,"219690000000000"
+389.0,A Chain of Blocks - ACOBJason - 6 Months Continual Polkadot EcoSystem News & Explanations,"420553082955692310","","20040051328227598",Executed,"82500000000000"
+390.0,THIS PROPOSAL IS AN ERROR. PLEASE IGNORE: THE AMOUNT IS NOT CORRECT. PLEASE VOTE NAY. ,"252510000000000","","159257421008632479",Rejected,"44170120000000000"
+391.0,Marketing Support NoSpec,"461697475548939439","","17859952537505462",Executed,"5400000000000"
+392.0,(please read the important update first) To build the Sónar +D DAO by Polkadot: How blockchain can revolutionize the music industry.,"965377063194007","","560182062287292797",Rejected,"441701200000000"
+393.0,Finding and fixing a vulnerability in broker-pallet,"28223331946358430","","1984635944890484",Executed,"1000000000000"
+394.0,Assigning a Curator to Bounty 32 (System Parachain Collator Bounty),"164311668507607974","","22370443839056598",Executed,-1
+395.0,Twitter Kols Outreach,"122621531000000","","141022896903033685",TimedOut,"7000000000000"
+396.0,Chopsticks Web for dry run governance proposals and more,"161888585857029179","","84876229564742",Executed,"20000000000000"
+397.0,Maintenance & Support Substrate Python API (Oct-Dec 2023),"38686570971086035","","137203229564742",Executed,"27441100000000"
+398.0,Error in Submission and Address,"251421603700000","","39222377992070419",Rejected,"2250000000000"
+399.0,Small Tip to CultureDot for their efforts to market Polkadot,"2066933777962458","","32559685844092491",Rejected,"500000000000"
+400.0,Approve Current Fellowship V and VI Dan Members,"139503433786478180","","512307783225472",Executed,-1
+401.0,Proposal: Polkadot Brand Awareness Campaign with Crypto Banter - Ran Neuner / PLEASE VOTE NAY,"163323736492234623","","1067607787113053943",Rejected,"386840000000000"
+402.0,Marketing Bounty,"553693094729152908","","10568219636736719",Executed,-1
+403.0,Re-submission: Open HRMP channels between AssetHub and Polimec,"330560192790820497","","61067953921460",Executed,-1
+404.0,Web3 Association 2024 Sponsorship,"224741362587345","","148789241834817649",Rejected,"16580000000000"
+405.0,Error! Please vote NAY,"822715289358169","","159288805879281417",TimedOut,"1600000000000"
+406.0,"Representing Polkadot on Radio Intereconomía & BDZ, the Main Spanish Web3 Event","32212188241931402","","1153401235388797",Executed,"1600000000000"
+407.0,Treasury Proposal for Zeeve Wrench - an open-source Parachain Automation Framework,"4062650568534576","","14576859115545188",Rejected,"124890000000000"
+408.0,ink! + Ethereum RPC = ethink!. Proposal-01: PoC and Prototype.,"157080524937917202","","1293491000000000",Executed,"99750000000000"
+409.0,Polkadot Southeast Asia Developer Community Expansion for 1 Year Operation,"534712675072997581","","157964162389741050",Executed,"566000000000000"
+410.0,Curators Candidates - Bounty #28,"548493342473398237","","15817509497352819",Executed,-1
+411.0,"Polkadot Developers Conference // sub0 September 19-20, 2023 in Lisbon, Portugal - Final tranche","165078081648620903","","1806104000000000",Executed,"650500000000000"
+412.0,Polkadot in Finance: A Strategic Partnership Development Proposal,"492010642920787937","","174249250357627221",Executed,"31578900000000"
+413.0,"Building a Polkadot Hub for DevRels, Talent Pipeline and Potential Deal Flow for the Polkadot Ecosystem from the Philippines","185465010000000","","32803255219984660",Rejected,"550000000000000"
+414.0,Open HRMP Channels Between AssetHub And InvArch,"162008412244344278","","485421172469272",Executed,-1
+415.0,'Behind the Code II' - A Web Documentary series - OpenGov proposal ,"705477167106705325","","5029422226682906",Executed,"515740000000000"
+416.0,"Upgrade Polkadot v1,001,000","794505155868592994","","338608081208204890",Cancelled,-1
+417.0,Marketing Support NoSpec Tipper 2,"66239821398784630","","8431434086192299",Executed,"10000000000000"
+418.0,PolkaWarriors - Cultivate a robust & collaborative community of Polkadot in Vietnam,"492264442360637797","","20160214524074957",Executed,"99000000000000"
+419.0," Illustrated Book: ""The Sacred Coin Quest"" - Create a Collective Memory","4356597318281898","","138866628862109821",Rejected,"2500000000000"
+420.0,Big Tip for Content in Portuguese - Verbo DotSama,"29517393213204470","","8357808037159986",Executed,"6730000000000"
+421.0,Retroactive tip for Polkadot hackathon brunch in Dubai and Budapest,"26826374477634419","","717214000000000",Executed,"2260000000000"
+422.0,DOT Experts Tip for Hector Bulgarini for Proposal #379: NFT XCM,"592952486491156650","","129768975225232033",Executed,"9990000000000"
+423.0,Proposing Curators for Bounty #31,"164679179318399400","","23257293055831126",Executed,-1
+424.0,Encode Club x Polkadot Education Programming 2023 - A Summary Report of Tranche 4 to Request Funding for Tranche 5,"24387722652022991","","32955410987194170",Rejected,"16783700000000"
+425.0,Treasury Proposal: Marketing and media proposal for Polkadot in China,"507032755997627146","","42210800918299636",Executed,"82080000000000"
+426.0,Private Transfers of DOT,"62334308130584395","","26074015553425889",Executed,"116550000000000"
+427.0,Encode x Polkadot 2024 Programming,"170228000000000","","31038511033711518",Rejected,"170383700000000"
+428.0,Update Sufficient Asset Minimum Balances,"154294506236651752","","736635222607209567",Cancelled,-1
+429.0,"","30569264154149977","","4455630303651397",Executed,-1
+430.0,Open HRMP channels between AssetHub and Hashed Network,"40110458533452694","","2997015466367117",TimedOut,-1
+431.0,Polkadot Watchdogs Governance Monthly Incentive Referendum #1 - VOTE NAY,"9965286622540268","","175983696236265291",Rejected,"1000000000000000"
+432.0,Treasury proposal: DOT liquidity loan for Bifrost DOT liquid staking token (vDOT) to be returned + DOT Staking rewards to Polkadot Treasury,"692494540687407312","","7481265197692729",Executed,"5000000000000000"
+433.0,"","35194576617520647","","309241224320845",Executed,-1
+434.0,Press Kit Polkadot 2.0,"3576108190186394","","324223137201167428",Rejected,"133330000000000"
+435.0,Approval of curators for Bounty 33 (marketing bounty),"627715672153211706","","28931805931572603",Executed,-1
+436.0,Retroactive reimburesement for para upgrade fees contributions,"156569376316195912","","392886491327239",Executed,"5500000000000"
+437.0,Integrating Polkadot Blockchain for Decentralized Electric Vehicle Charging Network,"2779083436185267","","30268917074693492",Rejected,"384600000000000"
+438.0,Open HRMP channels between AssetHub and Unique Network,"157474588765251240","","466981328023861",Executed,-1
+439.0,"Retroactive Funding for ORML, Chopsticks, and Subway","540207735053157933","","18102778976467736",Executed,"1000000000000000"
+440.0,Clean up undecodable storage entry,"1070902265688842744","","2203037503110687",Executed,-1
+441.0,DOT Experts Tip for OnlyDeFiGuy for Proposal #432 | Bifrost vDOT liquidity loan,"58768802704883671","","756683000000000",Executed,"1500000000000"
+442.0,OpenZeppelin x Polkadot Ecosystem Growth Phase M2,"520146401261669539","","25352931090263295",Executed,"343155743770000"
+443.0,"Update Polkadot Asset Hub v1,001,001 and Sufficient Asset Minimum Balances","5214534074852575","","161828016965830995",Cancelled,-1
+444.0,"Cancelling Referenda 416, 428, and 443 in a batch","892876314415250031","","927870000000000",Executed,-1
+445.0,[PLEASE REJECT] Bridging Minds with TEACHMEDEFI: Growing Polkadot‘s Mindshare in the Crypto Space,"3902147004691655","","22825638549722428",Rejected,"255550000000000"
+446.0,POLKADOT IRL CAMPAIGN #2 - BERLIN TAXIS,"513889468331508896","","16401756834143006",Executed,"112500000000000"
+447.0,Polkadot Branding and Differentiation Partnership with Cointelegraph,"537140259225579648","","13334094200803078",Executed,"439460000000000"
+448.0,[Retroactive] SubWallet 14 Months Development,"531342348300344144","","72412773503197578",Executed,"2092500000000000"
+449.0,Mistake in pre-image - please vote NAY,"5500000000000","","35197936661092720",TimedOut,"8183610000000000"
+450.0,Project Glove: Introducing Capital Efficiency and Pseudo-Anonymity on top of OpenGov,"580511054172262580","","345893611948086977",Executed,"818360000000000"
+451.0,Redot #1: Polkadot Restaking and Enabling Polkadot DA Capabilities,"198266370453258086","","163012628178445027",Executed,"66558680000000"
+452.0,Dota: Build up an Inscription Ecosystem on Polkadot,"300732825220883556","","583281871151506644",Rejected,"645160000000000"
+453.0,De-register parachain ID 2057,"217743693554300141","","1422207314774661",Executed,-1
+454.0,CryptoRank.io Exclusive Proposal: Empowering Polkadot’s Presence in the Crypto Sphere and Attracting New Active Users,"382107065089378","","261874907196118541",Rejected,"371000000000000"
+455.0,The Polkadot Caravan Tour: Bridging the Gap in the U.S. Crypto Landscape,"50524200000000","","688151676518234028",Rejected,"1000000000000000"
+456.0,Open HRMP channels between AssetHub and Hashed Network,"63030422574548912","","342294347398596",Executed,-1
+457.0,USDT and USDC Acquisition for the Treasury,"656381745139760949","","429061828939706",Executed,-1
+458.0,Upgrade System to v1.1.2,"1219522559384856932","","100000000000",Executed,-1
+459.0,Tip for 2023 Treasury Budget Analysis,"31708746601119851","","50250000000000",Executed,"9520000000000"
+460.0,Tip for Educational Content: OpenGov Thought Leadership,"56925936653923433","","151915197692729",Executed,"9520000000000"
+461.0,"3nd installment for the referendum #196 already approved (3/3)","191411508402184711","","17299454192483507",Executed,"16550000000000"
+462.0,Retroactive Funding for Mimir - A Powerful Multisig Management Application For Polkadot Ecosystem,"255369907600588272","","67235453996705864",Executed,"216700000000000"
+463.0,Polkadot Hackathon Global Series 2024: North America Edition,"368273952137623767","","28389544808483415",Executed,"510340000000000"
+464.0,Paseo - Developer Testnet Funding,"762959185951810325","","535048317945450",Executed,-1
+465.0,SmallTipper,"29616199682971971","","511960379381906",Executed,-1
+466.0,Polkalator,"3052114276028223","","30140188719343133",TimedOut,"2000000000000"
+467.0,Polkadot-API: development financing,"497698949781310975","","386092946822493",Executed,"135090000000000"
+468.0,Project Proposal: Integration & Support for  Moonbeam,"400578884560278904","","6846820307211586",Executed,"315000000000000"
+469.0,Setup of two Swiss Foundations for DED and Mythos,"578302283812350203","","260336801411548708",Executed,"320000000000000"
+470.0,Games Bounty [38],"452831669928854990","","134983375644396160",Executed,-1
+471.0,BD Bounty [39],"447547283489342508","","259301490935507188",Executed,-1
+472.0,Big Tip for a Portuguese/English educational channel,"32562610879443799","","280045813519607",Executed,"9000000000000"
+473.0,Big Tip For Market Mobster Polkadot Content Since 2020,"70307769472502392","","2068878437225482",Executed,"10000000000000"
+474.0,Compensate for insufficient `phragmenElection.renounce` unreserve amount,"1111151804674573384","","100000000000",Executed,-1
+475.0,Tutorial Media funding for KryptosChain,"29730295554061959","","208557305292421037",Rejected,"7121700000000"
+476.0,NoSpec Content Creator Support. ,"399036790626119410","","12637546772288311",Executed,"86660000000000"
+477.0,Polkadot Decoded 2024 treasury spend tranche 1/2,"801683212742716425","","3726628150519530",Executed,"1842358200000000"
+478.0,Small Tips for Retroactive Content,"22666701158870037","","2927987519139702",Executed,"2000000000000"
+479.0,ETHDenver 2024 - Polkadot - Event Recap Video Marketing - Amplify Presence at One of the Largest Blockchain Conferences,"85459203036104482","","265522512203782623",Rejected,"10000000000000"
+480.0,Retroactive tip for work done on exchanging a member in the ranked collective,"25934624618386148","","929834439517354",Executed,"800000000000"
+481.0,Formation of new space. Eliminate blockage. Developed for peace!,"110932000000000","","37598690438421884",Rejected,"2000000000000"
+482.0,DeFi Infrastructure & Tooling Bounty,"720914230173415632","","10315659111568365",Executed,-1
+483.0,Polkassembly Social Contract 2024,"596249622176324182","","136151088852542639",Executed,"1720669300000000"
+484.0,Polkadot Moderation Team Bounty Top-up,"685758434610369907","","9578381148284530",Executed,"325282400000000"
+485.0,Polkadot Ecosystem Discord Risk Mitigation,"544196454049111753","","10557562962547285",Executed,"0"
+486.0,Retroactive Tip For Independent Content Creation,"250928108105706852","","3856586745208935",Executed,"9000000000000"
+487.0,Polkadot Ambassador Program,"326132450699458527","","20136477668576494",Executed,-1
+488.0,Refill Marketing Bounty [33],"760626430394969388","","191631971233169787",Executed,"1000000000000000"
+489.0,Setting setOnDemandQueueMaxSize to 500,"964487690677092025","","100000000000",Executed,-1
+490.0,Funding Development Costs for Expanding Dot Code School — Interactive Coding School — Bridging the Gap Between Online Learning and Real-World Web3 Development with Local Coding Environments,"622727064554352135","","64739917496619503",Executed,"200000000000000"
+491.0,Polkadot Greece (Retroactive),"25905036868194888","","9238010892759097",Executed,"9690000000000"
+492.0,Proposal: 2024 Polkadot Decoded Asia (Singapore) September 16 -17 (During the Singapore Token 2049 week),"622467645664902893","","194587240199342013",Executed,"541210000000000"
+493.0,LiteSend - remittance service secured by Polkadot,"622768484433429972","","4787013205915881",Executed,"287610000000000"
+494.0,Implementing a Polkadot-native system parachain for data storage: Phase 1/3,"433741165728205038","","68651332125280824",Executed,"651780000000000"
+495.0,The Sónar+D DAO by Polkadot,"5719767296125110","","835300809423755677",Rejected,"412428400000000"
+496.0,Veles project proposal - Carbon credits pallet,"254197531586593745","","171262034055326642",Executed,"50000000000000"
+497.0,Bounty Proposal: Business Development Polkadot in Spain & Andorra - VOTE NAY,"2314963877401491","","252379164819432714",Rejected,-1
+498.0,Dot Amplify,"61435398397195086","","414563196357246705",TimedOut,"500000000000000"
+499.0,Swissborg Proposal - A One Month Polkadot Awareness Campaign ,"435952449725150504","","253014025636891909",Executed,"300000000000000"
+500.0,Unified Wallet And Dapp Interaction,"61686911711174153","","191027023901546146",Rejected,"440320000000000"
+501.0,Tip for Longtime Polkadot Supporters CryptoWise,"26765000000000","","31791592773835721",Rejected,"10000000000000"
+502.0,"Treasury Proposal: Futarchy, a New Signal Generating Tech for Polkadot Governance","368283026100910419","","11656826549713128",Executed,"939624906510000"
+503.0,Milestone 1: EasyA x Polkadot Developer Growth via In-Person Hackathons and Crash Courses (#180DaysOfPolkadot),"503145443545115335","","66528816605318086",Executed,"520906700000000"
+504.0,Retroactive funding for developing the RFCs Referenda Bot,"27416230037323332","","3482749235388797",Executed,-1
+505.0,"Set `safeXcmVersion` to 3 for AssetHub, Collectives and BridgeHub","406685615959130938","","100000000000",Executed,-1
+506.0,The Decentralized Future of Business Development for Polkadot,"662242283122504405","","182933113362775463",Executed,"500000000000000"
+507.0,Polkadot Community Workspace NYC by Transistor,"169792368696082284","","398226767309892969",Rejected,"3109300000000000"
+508.0,Polkadot sponsorship for LIFT Learning - A Fenasbac + Central Bank of Brazil initiative,"250131365889723019","","72578092534900252",Executed,"112750000000000"
+509.0,Approval of curators for Bounty 39 (BD bounty),"532719792817166682","","196111890276949952",ExecutionFailed,-1
+510.0,Approval of curators for Bounty 38 (Games bounty),"535018119956260084","","74271768140733921",ExecutionFailed,-1
+511.0,Dot Latam Day 2023 (Retroactive),"7164344270274406","","27220328970224891",Rejected,"0"
+512.0,Big Tipper Proposal: ETHDenver Official Afterparty (Bash) Polkadot Airdrop ,"395452975695496938","","3432698584736719",Executed,"10000000000000"
+513.0,Open HRMP Channels between AssetHub and Crust Network,"53666208951266504","","365318376253017",Executed,-1
+514.0,Conor Daly - 2024 Indianapolis 500 Sponsorship,"682226238785962204","","29571308729039244",Confirmed,"2900000000000000"
+515.0,Marketing Bounty Flex [#41] - VOTE NAY,"121876238876499","","315510603774285146",Rejected,-1
+516.0,Bounty Cleanup Proposal,"227885920066197246","","0",Executed,-1
+517.0,Polkadot Desktop Wallet Tutorial by Altcoin Daily,"50302110000000","","725242739952938051",Rejected,"59863900000000"
+518.0,Parachain Runtime Builder - Treasury,"365888959253912664","","129857309661377458",Executed,"345400000000000"
+519.0,Tip for Common Good Referendum Deposit Clean-up and Validator Payout Bot,"49658747444052955","","0",Executed,"2500000000000"
+520.0,Representation of Polkadot at the NERDCONF 6th Edition event in Mexico City at the BBVA Tower.,"44244041293616154","","24260000000000",Executed,"900000000000"
+521.0,Explainer video for Polkadot 2.0 - easy and understandable ,"275721915504368","","350340331630677688",Rejected,"15000000000000"
+522.0,(PLEASE REJECT) Read below if you are a PolkadotJS user,"15360000000000","","326498770253335834",Rejected,"800"
+523.0,Rising Karting Star Seeks Polkadot Partnership(withdrawn),"300617151000000","","473354809214000519",Rejected,"82600000000000"
+524.0,Transfer the Lease of Bifrost Parachain 3356 to Bifrost Parachain 2030 to avoid downtime,"46109833255636037","","220000000000",Executed,-1
+525.0,Polkadot marketing proposal in Chinese speaking areas,"282773009185792251","","326750664997390501",Rejected,"104580000000000"
+526.0,Bounty proposal: Business Development Polkadot in Spain & Andorra,"245199706605880817","","76017770037203184",Executed,-1
+527.0,Reimbursement for lost pool rewards,"163985633930979221","","100000000000",Executed,"1218441544774"
+528.0,Error - Vote NAY,"380233960344","","335133007274252784",Rejected,"250000"
+529.0,Refill for marketing bounty number #33 [250k],"896607882998852143","","11949657523274970",Executed,"2500000000000000"
+530.0,"","510633338906851","","225763658390676067",Rejected,"5867"
+531.0,"1TRIBE: Africa On DOT - Phase II","38582680759964073","","313878119594569278",Rejected,"99861129440000"
+532.0,Bounty Proposal: [Spanish content and event production bounty],"612872884359020481","","134335863029153895",Executed,-1
+533.0,Meetups Bounty [#43],"278886481266888474","","10990412946260439",Executed,-1
+534.0,NOTE - Vote Nay [Incorrect Preimage],"1447462855027388","","261229807288410634",Rejected,-1
+535.0,Inscriptions generator and marketplace (tender offer),"564344628020922","","315755148842933185",Rejected,"1000000000000000"
+536.0,Vote Nay,"2236627050747599","","253624401600639845",Rejected,"39326"
+537.0,Vote Nay,"2866900646839105","","250721811731295747",Rejected,"315000000000000"
+538.0,SmallTipper,"195799952943896206","","259223579718795",Executed,-1
+539.0, Polkadot Developer Community in China Expansion for 1 Year Operation,"333212807197319665","","327374535671759120",Executed,"393260000000000"
+540.0,POLKADOT <> KUSAMA BRIDGE SECURITY BOUNTY,"309557453087868124","","5582106445514182",Executed,-1
+541.0,Universal Hybrid Substrate Faucet,"100632103310163173","","79381295039766076",Executed,"44710000000000"
+542.0,OpenGov Discord Voting Bot Development,"808562303612580928","","3355201000000000",Executed,"147374700000000"
+543.0,Retroactive Small Tips for Content (February),"20846450572631789","","263523095309422084",Rejected,"200"
+544.0,Talisman Unified Retroactive Proposal #2,"694450662560015914","","4442630355796187",Executed,"980260000000000"
+545.0,Initialize Kusama GRANDPA light-client running on Polkadot BridgeHub,"771107683388915429","","300000000000",Executed,-1
+546.0,Request for transferring all the DOT from the hacker's account to the Starlay's account,"14550043264711693","","33207402697620345",TimedOut,-1
+547.0,Replaced by Proposal #551 Amharic Chain Polkadot Academy to Small Spender Track,"1616067647552435","","41837955373398429",TimedOut,"36000000000000"
+548.0,"[VOTE NAY] DED Token birthing phase: ""EDs"" and technical proposal | On-Demand Governance for Assets on Asset Hub. ","29703822732848312","","321667739176645784",Rejected,"312000000000000"
+549.0,SHITTY PROPOSAL SORRY,"0","","249165756739604523",TimedOut,"35000"
+550.0,"PolkaMAPS, a DOTins project","524223100000000","","314178858718003784",Rejected,"351000000000000"
+551.0,AmharicChain Polkadot Academy,"1000000000","","309854099857315884",TimedOut,"36000000000000"
+552.0,"Token Terminal x Polkadot data partnership - Polkadot ecosystem on Token Terminal and their partner platforms (Bloomberg, MarketVector)","613993053438270820","","3202011000000000",Executed,"1718270000000000"
+553.0,Paseo Testnet - Curator submission,"225863162653888640","","178654000000000",Executed,-1
+554.0,"Polkadot Pulse Dubai Edition & Networking Night @ Token2049, Dubai","519640577897234583","","64094630024849632",Executed,"323932000000000"
+555.0,{bash} Events (the PMEI team) - a music and technology sandbox | onboarding users into Polkadot through music,"289932301074587779","","127268728999174304",Executed,"643290000000000"
+556.0,DED Bounty - VOTE NAY,"63787373155045221","","526044319231610777",Rejected,-1
+557.0,BD Bounty (retry),"411468285882872426","","36567344859848543",Executed,-1
+558.0,Games Bounty (retry),"530688440089630284","","36602209379152983",Executed,-1
+559.0,Tip for maintenance of the ORML pallets,"226030183140336617","","230280000000000",Executed,"10000000000000"
+560.0,Polkadot Hydration: Treasury LP,"564973538005141313","","93163244005817027",Executed,"10000000000000000"
+561.0,Polkadot Hydration: Liquidity Incentives,"566327590634391271","","93151693440277908",Executed,"9999999999999999"
+562.0,AMI Bounty Program,"66560040244452863","","58860913292368061",Executed,-1
+563.0,"","3513545467962191","","27988530172904589",TimedOut,-1
+564.0,"Cancelling DED Tech Proposal, and Deferring to DED Bounty Fund","40802272882983502","","5942744879075688",TimedOut,"312000000000000"
+565.0,Please vote to reject! The preimages hash is incorrect.,"220192972417393630","","318207615666248813",Rejected,-1
+566.0,"","0","","219160578647404867",TimedOut,"6621"
+567.0,Pinkdrop: Powering User Engagement and Ecosystem Growth,"559760355084633168","","3927072075987436",Executed,"72150000000000"
+568.0,Proposal: Codigo Brazuca + Polkadot Brazil - Tech Academy - from Basic to Advanced  -  8 Months Track,"205517882751675388","","65215715526536686",Executed,"95000000000000"
+569.0,Retroactive Tip For Solo Content Creation,"217726033047573832","","380532000000000",Executed,"9000000000000"
+570.0,Duplicate of #545 - please ignore,"1590232204742318","","37245173345806785",TimedOut,-1
+571.0,"","155096761928606660","","231000000000",Executed,-1
+572.0,Please vote to reject! The preimages hash is incorrect,"52723342901500","","314522917383060626",Rejected,"31474"
+573.0,PolkaWorld Ops and Maintenance proposal：2024.4 - 2025.3,"266880396425486617","","1784212000000000",Executed,"314740000000000"
+574.0,Polkadot Anti-scam Team Bounty Top-up,"271230747654131575","","55406343673412980",Executed,"844760000000000"
+575.0,Big Tip for Polkadot Brasil on X,"63017973489953050","","139166459838151676",Rejected,"6200000000000"
+576.0,Continuation of work through Messari Protocol Services,"385885366908674460","","3728335199173186",Executed,"111210000000000"
+577.0,Increase Awareness of Polkadot On-Brand Messages via Twitter Ads (5/1/24-12/31/24),"262668591836008294","","319487728357077585",Rejected,"977476100000000"
+578.0,SmallTipper,"198341278410069382","","50231000000000",Executed,-1
+579.0,SmallTipper,"198290271230069382","","50050000000000",Executed,-1
+580.0,StellaSwap Incentive Program,"435850976319194353","","134765471229459330",Executed,"10000000000000000"
+581.0,Polkadot Runtime Upgrade v1.1.3,"958468497134933592","","333000000000",Executed,-1
+582.0,RegionX | Coretime Marketplace for Polkadot,"406707686570150985","","221633979844999895",Executed,"174060000000000"
+583.0,PBA referendum - vote NAY - incorrect preimage,"582755709033567","","392176772986327509",Rejected,"2489295627960000"
+584.0,Polkadot Blockchain Academy - Wave 5 in person and remote - Singapore 20th May to 20th June 2024,"481150911323153620","","6084182545786501",Executed,"1672145635180000"
+585.0,SmallTipper,"98406381017087795","","470000000000",Executed,-1
+586.0,Request withdrawn - replaced by whitelisted caller #593,"96370078060867839","","129663874873341913",TimedOut,"100000000000000"
+587.0,Vote NO - Mistake in submission - New referenda coming shortly -  Polkadot @ Coindesk Consensus,"131000000000","","311694494923235518",Rejected,"37865"
+588.0,SmallTipper,"95284973557844972","","133890000000000",Executed,-1
+589.0,SmallTipper,"155405081631256631","","4110000000000",Executed,-1
+590.0,Nomination Pool: Remove max pool and max member limits,"964931661800451384","","280000000000",ExecutionFailed,-1
+591.0,Polkadot @ Coindesk Consensus,"604511289213662814","","42450454000000000",Executed,"389214897900000"
+592.0,VOTE NAY - ERROR IN PREIMAGE,"140706145070297094","","306592642546048254",Rejected,-1
+593.0,Fund system chains sovereign accounts on Polkadot BridgeHub for Polkadot<>Kusama bridge,"117102857275795630","","100000000000",Executed,-1
+594.0,Open HRMP Channels between AssetHub and Mythos,"302833974417548113","","91223000000000",Executed,-1
+595.0,Error - Vote no,"0","","391030135798151609",Rejected,"5000000000000"
+596.0,Requesting a refill for marketing bounty number #33,"664442427029471258","","322572571968655142",Executed,"5000000000000000"
+597.0,Polkadot Advertising Campaign on Brave Browser - Top-Up Request ,"640868896520750348","","15715417769787937",Executed,"589020000000000"
+598.0,Proposing Curators for the DeFi Infrastructure & Tooling Bounty,"405957599804802272","","12634357919069318",Executed,-1
+599.0,Polkadot P2P Network Health Weekly Reports,"241384236051586533","","163564220656048522",Executed,"56000000000000"
+600.0,Decentralized Management of Polkadot 𝕏 Account,"421246231513102512","","9846802204936058",Executed,"94680000000000"
+601.0,Polkadot Agents Program - Phase 1,"330837300694570914","","141139552042921328",Executed,"508172700000000"
+602.0,VOTE NO. Mistake in submission - New referendum coming shrtly,"720024497526022","","320998068128531139",Rejected,"42670000000000"
+603.0,Lawsuit against Giotto Bounty,"2783963914973283","","514535933016323226",TimedOut,-1
+604.0,Mistake vote NO,"211449235388797","","201119146263086763",Rejected,"1000"
+605.0,Mistake vote NO,"50425000000000","","384996334682272779",TimedOut,"1000"
+606.0,VOTE NO. Mistake in submission - New referendum coming shrtly,"0","","384898918082272779",TimedOut,"10000000000000"
+607.0,This is a tip request for Boosting NFT Education in Latin America with the Polkadot Ecosystem,"1749433292221152","","84023696076819543",Rejected,"10000000000000"
+608.0,Contribution to the Italian Polkadot Community: Funding Request,"100000000","","267242981687719694",TimedOut,"9800000000000"
+609.0,Manta Wallet Retroactive Funding,"195886000000000","","271893921664173709",Rejected,"455880000000000"
+610.0,"","159250824584413549","","100000000000",Executed,-1
+611.0,Telenova: Polkadot Wallet built into Telegram. Retroactive Funding for 6 months,"682034529655291135","","45954615684736718",Executed,"455550000000000"
+612.0,Setting onDemandBaseFee to 0.025 DOT,"307575364345009173","","0",Executed,-1
+613.0,Polkadot x The Tie Partnership to Increase Institutional Exposure and Access,"483865529140287001","","29587432202439534",Executed,"1500000000000000"
+614.0,Integration of Polkadot into ChatG (An Ai Chat Startup),"55859852822421","","202517496122727619",Rejected,"500000000000000"
+615.0,Set BEEFY genesis (thus starting BEEFY consensus on Polkadot),"954717277620331293","","0",Executed,-1
+616.0,Conor Daly Indy500 Replacement Ref ,"1399920684050693728","","3906265646103493",Executed,"2900000000000000"
+617.0,PolkaBot.AI - Decentralized AI education hub on Polkadot ,"329492081653204444","","95994046551752671",Executed,"215240000000000"
+618.0,Subsquid Migration to ArrowSquid & Indexing Upgrades,"312229510846481781","","4424425945580202",Executed,"186940000000000"
+619.0,ink! Analyzer: Retroactive funding for ink! v5 support,"222767623706009710","","100000000000",Executed,"28122700000000"
+620.0,"VOTE no, wrong track","900000000000","","389832629176467583",TimedOut,"6942000000000"
+621.0,Discord Governance Bot Self Tip Request - 0xTaylor,"151181911495198972","","4708693072553323",Executed,"6942000000000"
+622.0,SmallTipper,"154305402311728293","","311000000000",Executed,-1
+623.0,Polkadot Growth Index 📈 and AI Insights 💡,"66963872428938383","","124087304716367397",Rejected,"163447300000000"
+624.0, Vote Nay,"15853530681692711","","551295755861791103",Rejected,"72700000000000"
+625.0,Technical Support Bounty #625,"260442386777124488","","407787212407663",Executed,-1
+626.0,Retroactive Tip For Content Creator ,"61263563945755465","","200593278410560960",Rejected,"9800000000000"
+627.0,Proposal for Polkadot OpenGov Funding: WEB3DEV Bootcamp for Rust and Pallets Learning,"332882112511791307","","2046328342821433",Executed,"53000000000000"
+628.0,Tip for Adam Steeber + Kusamarian concerning #514 Conor Daly - 2024 Indianapolis 500 Sponsorship,"146057131714467700","","50000000000",Executed,"1000000000000"
+629.0,"","160108088581771529","","4050000000000",Executed,-1
+630.0,[Revision] Nomination Pool: Remove max pool and max member limits,"1135988239731893178","","50000000000",Executed,-1
+631.0,Subsquare polkadot fellowship support milestone 1,"312638027596122605","","145250000000000",Executed,"163480000000000"
+632.0,TEACHMEDEFI - Growing Polkadot’s Mindshare in the Crypto Space,"126707542290370082","","101613696854101997",Executed,"79350000000000"
+633.0,DOTCAST /This_is_the_DOT,"220924640287495966","","8010292174738785",Executed,"93555000000000"
+634.0,OG Tracker 2.0,"251070642651682690","","1064456324945798",Executed,"313530000000000"
+635.0,REJECT,"0","","261621797121643287",Rejected,"9999999999990"
+636.0,Approval of curators for Bounty 43 (Meetup bounty),"278615490252058256","","7440654174738785",Executed,-1
+637.0,Tip for 7 Polkadot Decentralized Voices,"30675304542505696","","303476634243304729",Rejected,"9999999999990"
+638.0,SmallTipper,"219567072460732424","","50000000000",Executed,-1
+639.0,Bump parachain validation timeouts,"951318359527749729","","11960000000000",Executed,-1
+640.0,Curators Candidates - Bounty #42,"427810084451572945","","468783000000000",Executed,-1
+641.0,Polkadot in Spanish X account and Marketing Decentralization,"263335903029435621","","99967431549098723",Executed,"357130000000000"
+642.0,Maintenance & Support Substrate Python API (Jan-Mar 2024),"292722256813290941","","197510000000000",Executed,"12122400000000"
+643.0,"Mythical Games and Polkadot, a proposal from Mythos Foundation Swiss","601866208984269657","","51389073363883972",Executed,"10000000000000000"
+644.0,Polkadot - Sports Sponsorship Fund ,"716488906974227625","","519150620538703864",Executed,"9680000000000000"
+645.0,Set Asset Rates for Treasury Assets,"234074869177566539","","17484739726100",Executed,-1
+646.0,CURATORS PROPOSAL FOR BOUNTY 44 - POLKADOT <> KUSAMA BRIDGE SECURITY BUGBOUNTY,"549500853610646475","","288834716256343",Executed,-1
+647.0,Polkadot.JS API UI enhancements,"27925892605857138","","248794239101779322",Rejected,"243230000000000"
+648.0,Upgrade Polkadot to Release v1.2.0,"782771951885619372","","14460000000000",Executed,-1
+649.0,Infrastructure Builders Program Bounty,"250177253170789402","","91185000000000",Executed,-1
+650.0,(Vote Nay) Polkadot Ecosystem growth campaigns,"217816696106392736","","395561636599287219",Rejected,"1000000000000000"
+651.0,The Block x Polkadot,"415717898102573408","","223270798921414230",Executed,"688686000000000"
+652.0,Test Proposal - Please Vote Nay,"200000000","","310838088187778184",Rejected,"21557"
+653.0,This is a tip request for Boosting NFT Education in Latin America with the Polkadot Ecosystem,"123782194114091149","","135636775403091181",Rejected,"10000000000000"
+654.0,Magnet Milestone 3 Proposal: An Appchain Tech Stack leverages the Coretime Model to enhance DOT use cases and facilitate Polkadot's growth,"189319121624318655","","148936824935920771",Executed,"339561700000000"
+655.0,Polkadot AmharicChain Hub: Mastering Polkadot | Empowering Learning,"40000000000","","76152867636128550",TimedOut,"58000000000000"
+656.0,POLKADOT IRL CAMPAIGN #5 - POLKADOT X LYFT NYC,"343843341452359016","","82180533258404910",Executed,"313520000000000"
+657.0,PolkaBiz  - Where founders forge investment-ready innovations.,"324976708496217001","","75706891574075571",Executed,"84200000000000"
+658.0,"Semi-Retroactive & Ongoing Funding for Cryptopolitan for Media Boost, Engagement, and Reach 2024 ","129563145952998541","","160232230247262359",Rejected,"82354200000000"
+659.0,Tip for Polkadot Presentation at Vienna Crypto Meetup,"276957025971774534","","230000000000",Executed,"1550000000000"
+660.0,Tip Request for @OnlyDeFiGuy for the Expert Report on Referendum #561,"202917199832774656","","230000000000",Confirmed,"420000000000"
+661.0,Wrong amount vote nay,"0","","344366783201969276",Rejected,"5365"
+662.0,Polkadot Beam Sponsorship at ETHPrague 2024,"380894887439338191","","20961106425523135",Executed,"53650000000000"
+663.0,⧓ Apillon Platform - Milestone 2 Proposal,"324346350278986771","","28254004000000000",Executed,"916630000000000"
+664.0,"","39000000000","","41067035566570324",TimedOut,"161530000000000"
+665.0,Polkadot Fleet of Bikes in Paris for the Olympic & Paralympic Games : A Unique & Massive Marketing opportunity.,"61477122785392614","","338746780088174005",Rejected,"161530000000000"
+666.0,SmallTipper,"157904480860649129","","50000000000",Executed,-1
+667.0,Retroactive Tip for Portuguese Content Creation,"122017967541491447","","76579033407490443",Executed,"5500000000000"
+668.0,"52 Weeks of Kus Coverage ❤️🤖","372264267530308971","","42319141000000000",Executed,"745330000000000"
+669.0,Polkadot Drone Shows Over VELD Music Fest (100K+ Attendance) - Brand Awareness + PR Campaign,"232513525404215229","","413297508859336225",Rejected,"215570000000000"
+670.0,SmallTipper,"197978915698179495","","50000000000",Executed,-1
+671.0,Retrospective Funding Proposal of the Polkadot HK Event,"126821491994850759","","74765644529968943",Executed,"9070000000000"
+672.0,Infinity Wallet - A unique native desktop Wallet & Web3 Browser - Milestone 1,"124239332224711146","","104602582502843974",Executed,"99240000000000"
+673.0,Retroactive self-tip Request for Maintenance and Ongoing Development Validator Dashboard and Services,"127845626729477999","","74405604458701244",Executed,"8890000000000"
+674.0,Retroactive Polkadot Event in Guadalajara Mexico - Talent Land 2024,"139596928096204856","","59610000000000",Executed,"8240000000000"
+675.0,Improving Polkadot’s Presence In the U.S. With The Texas Blockchain Council,"540026221317673198","","2070793110855102",Executed,"285496200000000"
+676.0,"Nova Spektr Milestone 4 Proposal: OpenGov voting and delegation, Support for complex account structures, Flexible multisigs, Operation basket, Assets Portfolio view, Fellowship voting, Web-hosted app","442948347723447718","","96229962454524656",Executed,"1227050000000000"
+677.0,Polkadot Aligned Sponsorship at Proto Layers @ Prague [cancelled],"414124678756594886","","277319744879636",Executed,"23950000000000"
+678.0,Polkadot Dapps over Apps,"1227187035491526","","321321332645773601",Rejected,"95600000000000"
+679.0,Proposal for Ensuring Continuity in Creating Content about Polkadot - VOTE NAY. THE PREIMAGE PROPOSAL IS PULLED,"326040100000000","","342154331862574136",Rejected,"2400000000000"
+680.0,Initialize Snowbridge on BridgeHub and AssetHub,"806227598688697339","","8125515314894",Executed,-1
+681.0,SmallTipper,"196046903718237711","","100000000000",Executed,-1
+682.0,"Proposal for JAM Ratification, Conformance, Performance by Polkadot Fellows","313014792543231230","","7205000000000",Executed,-1
+683.0,"Pop Network | Enabling simple and powerful smart contract development, with DOT","404793576417517297","","191081000000000",Executed,"839068132730000"
+684.0,Chainalysis analytics solutions on Polkadot Relay Network,"893063730636309266","","966777766721796195",Rejected,"10000000000000000"
+685.0,Polkadot Q2 Marketing Campaigns by Distractive ,"385260785097360557","","1913152962761988",Executed,"481170000000000"
+686.0,Proposal for Klaster Integration into the Polkadot Ecosystem,"12538865470499355","","291615706871621353",Rejected,"450000000000000"
+687.0, Integration of Avata with the Polkadot Ecosystem,"638511713343156328","","110227677834194082",Executed,"778200000000000"
+688.0,Enable async backing on polkadot,"773968710863557446","","100000000000",Executed,-1
+689.0,Curators Candidates - Bounty #40,"246239718499796915","","141438102709385693",Executed,-1
+690.0,G6 Networks: Polkadot Ecosystem Expansion with Institutions,"484508372432481609","","167724118921143486",Executed,"301480000000000"
+691.0,vote NAY,"4312303287823","","41705996768497352",Rejected,-1
+692.0,Requesting a refill for marketing bounty number #33,"499308162946822493","","377638968639796620",Executed,"5000000000000000"
+693.0,Proposal for unlocking $PINK from Phala soverign account to sibling account,"36261385550357901","","222445240992000708",Cancelled,-1
+694.0,Polkadot Bridge Hub 1.2.2 upgrade: Unstuck bridge with Kusama,"954882896811075015","","2501000000000",Executed,-1
+695.0,Polkadot-API: Apr-Jul development financing,"413508781955165700","","0",Executed,"347630000000000"
+696.0,Please vote NAY,"0","","309470032153119292",TimedOut,"16448"
+697.0,Proposal: 2024 Polkadot Decoded Asia (Singapore) September 16 -17 (During the Singapore Token 2049 week),"206370100000000","","412322935365598325",Rejected,"29719"
+698.0,Sponsorship and Side Event: Merge Madrid,"306807961486443856","","78188289980114034",Executed,"164480000000000"
+699.0,The operating cost for the research organization Polkadot Ecology Research Institute for 2024/4-2025/3,"629499300064026118","","183234163295326812",Executed,"297190000000000"
+700.0,BlockDeep Labs: Ecosystem Services Proposal for Polkadot Treasury,"459860909831245101","","165962573900186483",Executed,"817180000000000"
+701.0,error - vote NAY,"1106904470916850","","34759024384634398",TimedOut,-1
+702.0,Restrict delegations on root and treasurer tracks,"701015653100000000","","1119696564275555539",Rejected,-1
+703.0,Elevating the Polkadot Ecosystem: Encode x Polkadot Programme 2024 ,"274647226053618591","","108193327816152201",Executed,"178986052999000"
+704.0,Approve the Polkadot EVM Collective,"530780604355035379","","29155044000000000",Executed,-1
+705.0,Reducing duration of spending periods,"555417324485430089","","463820000000000",Executed,-1
+706.0,Reducing inflation - VOTE NAY,"707708204263368421","","928282409901806714",Rejected,-1
+707.0,Wrong preimage - Please vote NAY,"0","","342634157457223028",TimedOut,"690000000000000000"
+708.0,Test the brand-new spend() extrinsic,"266883659508718302","","50100000000000",ExecutionFailed,"69000000"
+709.0,Ongoing Development of Gossamer (16 months),"221455596066692678","","89526072491896640",Executed,"3680160000000000"
+710.0,"NFT in Polkadot, the first book on NFTs in the Polkadot ecosystem.","75960505040034755","","138209434895420393",Rejected,"10000000000000"
+711.0,Retroactive Funding Request for PolkadotPrague 2023 Marketing Costs,"136517301858069098","","233046778999878",Executed,"7250000000000"
+712.0,Implement Optimistic Project Funding,"556991467844615240","","538710000000000",Executed,-1
+713.0,VOTE NO - DUPLICATE,"200000000","","330669029105444349",TimedOut,"2020300000000000"
+714.0,Incentivize Interlay iBTC capacity as Polkadot common good,"1102392464344578655","","1147490022000000000",Rejected,"2020300000000000"
+715.0,Tip Request for Fardeen Haque for Awesome Dot,"64593701400160616","","364240000000000",Executed,"355000000000"
+716.0,Proposal Outdated - Do Not Vote: LAOS already won Auction 68 with SF Bid,"21897337305432218","","20476734186460666",TimedOut,-1
+717.0,SmallTipper,"156916297359006681","","0",Executed,-1
+718.0,Establishing an Insurance Bounty to increase fiscal efficiency of Polkadot treasury,"834730220583030797","","933402614143866957",Rejected,"10000000000000000"
+719.0,Top Up for Polkadot at Consensus ,"383783231110151425","","146277000000000",Executed,"142789900000000"
+720.0,Polkadot @ Coinfest Asia 2024,"247816128201355820","","29259834000000000",Executed,"424040000000000"
+721.0,TIP: Gamer Streaming Reimbursement,"212644381549579325","","1216504470916850",Executed,"5960000000000"
+722.0,Open HRMP channels between AssetHub and SORA,"119009661571904778","","22478030188100083",ExecutionFailed,-1
+723.0,ink! + Ethereum RPC = ethink!. Proposal-02: Getting Testnet-Ready.,"263457613234073776","","60346004229564742",Executed,"97320000000000"
+724.0,REJECT ,"80620000000000","","259427543936831175",Rejected,"554"
+725.0,'The Gray Paper Interview' Retrospective Funding for Post-Production,"150793831475566822","","59710000000000",Executed,"5540000000000"
+726.0,Please vote NAY - Wrong preimage,"0","","258688033947831175",Rejected,"490"
+727.0,Semi-Retroactive Proposal for the translation of the Polkadot Wiki to Hungarian,"23736840587701292","","82604299141635365",Rejected,"4900000000000"
+728.0,Polkadot Insider 52 weeks Operation (May 2024 - May 2025),"660819055100000000","","194147089761944044",Executed,"261950000000000"
+729.0,Tip Ajay Dhore for transferring the polkadot_api npm package,"154868237453101431","","50000000000",Executed,-1
+730.0,Proposal: Establish the Polkadot Community Foundation to represent DOT holders IRL,"574114849007510054","","6617631612801112",Executed,"880000000000000"
+731.0,Marketing support to help raise a new  US$100 Million Polkadot Ecosystem Fund,"436917798181669163","","437422324924259832",Rejected,"1502178100000000"
+732.0,PLEASE VOTE NAY,"0","","322360913099445562",TimedOut,"12563"
+733.0,Decoded 2024 Sponsorship for active community members,"288560701298551432","","78218380904097563",Executed,"125630000000000"
+734.0,PREMATURE UN-NOTE OF PREIMAGE - BERLIN TAXI - REFILL #1 - WILL NOT EXECUTE,"671098173642960952","","152887811503017610",Confirmed,"82650000000000"
+735.0,"Reimbursement - Polkadot Pulse Dubai Edition & Polkamix w/ Afrojack @ Token2049, Dubai","550942768314571843","","138195955971155979",Executed,"560160000000000"
+736.0,Kampela hardware cold signer productizing proposal,"156300591684832562","","302112550849191241",Rejected,"1346270000000000"
+737.0,Onboarding Established Generative Artists to Polkadot Asset Hub and driving user engagement,"226668683317773938","","332717292758749",Executed,"99970000000000"
+738.0,Polkadot Blockchain Academy Wave 5 Singapore - Demo day seed prize fund proposal,"365173803008633360","","415353464953539",Executed,"100000000000000"
+739.0,Changing the curves of the referendums that were affected by extended confirmation periods,"455783223537834589","","715689659037453625",Rejected,-1
+740.0,Polkadot Bridge Hub 1.2.2 upgrade: Unstuck bridge with Kusama,"1275002655019610370","","100000000000",Executed,-1
+741.0,Move Part of Treasury to Asset Hub,"803343693584752921","","50000000000",Executed,-1
+742.0,CoinMarketCap x Polkadot 6 months integration (Renewable),"721981484749459565","","3442427006305647",Executed,"1382180000000000"
+743.0,Express Lane,"676384267371568960","","880124947092664799",Rejected,-1
+744.0,Empower Polkadot Playground - Educate With Game For Highschool and University,"35516953569179986","","198065816103385560",Rejected,"35000000000000"
+745.0,MobilePolka: Unveiling Polkadot's Depths on the Go,"20000000000","","233021972550330675",TimedOut,"28582130940000"
+746.0,VOTE NAY,"0","","175166648892329169",TimedOut,-1
+747.0,Polkadot 2.0 Definition,"692250198039336481","","205555966462674008",Executed,-1
+748.0,Bringing Stellar Liquidity to Polkadot: Loan DOT Collateral for Pendulum’s Spacewalk Bridge Vaults,"201511091167472757","","170537181011680882",Executed,"500000000000000"
+749.0,Runtime Verification: Advanced Rust Property Test Verification for Polkadot Ecosystem,"292008963859808436","","311526000000000",Executed,"751420000000000"
+750.0,Propose Curator for IBP,"379572127872319545","","91100000000000",Executed,-1
+751.0,Polkadot @ Blockchain Rio 2024,"414027325830871133","","29918667636551542",Executed,"78730000000000"
+752.0,Should we abolish DV?,"462102000000000","","221506515465707883",Rejected,-1
+753.0,Learn Polkadot Tip for Polkadot Brand Being Elevated by Conor Daly and Inter Miami,"168298076928693141","","506781000000000",Executed,"6942000000000"
+754.0,PRE-IMAGE ERROR - VOTE NAY,"225595610012343","","350889825997535680",Rejected,"397130000000000"
+755.0,Pilot MOU Proposal for a Collaboration between the Polkadot Ecosystem and the Founder Institute:,"437757733039514330","","43544862175979277",Executed,-1
+756.0,Test the brand-new spend() extrinsic (resubmission of 708),"285228955453796615","","100000000000",Executed,"69000000"
+757.0,VOTE NAY,"100092480460108","","41684306162608169",Rejected,-1
+758.0,Replacing curators for events bounty 17,"738655209426723292","","3916942216504520",Executed,-1
+759.0,Open source alternative to centralized polkadot API gateways and node as a service,"277281380772371861","","77287622162598870",Executed,"204220000000000"
+760.0,"POLKADOT IRL CAMPAIGN #6 - THE CITY & CANARY WHARF, LONDON UK","737447679973922306","","277575111383980745",Executed,"397130000000000"
+761.0,Retroactive Payments for {bash} + adding Zebu Live Official Closing Party,"303762776163901204","","79579072922371956",Executed,"378820000000000"
+762.0,HEROIC x Polkadot sponsorship,"1075701818198068730","","433046515354507575",Executed,"1992600000000000"
+763.0,The JAM Spring Time Tour & Top Up - The Kus x Key Pictures,"587666402363641264","","21060710000000000",Executed,"354005300000000"
+764.0,Retroactive Tip - Reimbursement for Miami trip wrt Polkadot x Inter Miami proposal,"195736506039211907","","74707238004371703",Executed,"4500000000000"
+765.0,Replacing curators for event bounty 17 (backup),"810429712636075911","","5684706620228245",ExecutionFailed,-1
+766.0,OG Tracker 2.0 Top Up,"411435476982007148","","911975565378230",Executed,"132420000000000"
+767.0,Recovering lost funds for local initiative,"97922062388232203","","59660000000000",Executed,"461000000000"
+768.0,"2nd Milestone Request for Rewards and Fees for Polkadot Prodigy Hackathon 2024","624186513283137736","","78264978116633738",Executed,"109790000000000"
+769.0,Make DED the official meme coin of Polkadot,"647600489911814730","","1083686645598907043",Rejected,-1
+770.0,"dotafair: Fair Launch Chain,  A zero-threshold Fair Launch platform aims to build a DOT-based public benefit chain ecosystem, adding more use cases and adoption for DOT.","1495484807177868","","217593319817382390",Rejected,"264000000000000"
+771.0,"Pease VOTE NAY, parameter is wrong","7200000000000","","381992796407417227",TimedOut,"13982"
+772.0,AIWeb3 Chinese Unit(爱Web3 中文社区) operation June. 2024 - Dec. 2024,"416998039648673082","","235859600690234252",Executed,"139820000000000"
+773.0,"DOTphin Event Multipass by Sovereign Nature with WalletConnect integration & upgradeable, dynamic NFTs by Unique Network","418317662206843002","","245671486731058310",Executed,"500000000000000"
+774.0,"Kinera, a Decentralised Media Platform [CANCELLED]","5210081670816278","","105371372110119898",Rejected,"801880000000000"
+775.0,Events Bounty Top Up Proposal ,"794568760335443414","","93056755429233859",Executed,"10000000000000000"
+776.0,"Proposal: Funding for Design and Development of XCQ, the Cross-Consensus Query Language","232225454791108884","","0",Executed,"490754300000000"
+777.0,Proposal for the Development of SubstrateSQL Server,"5297086358786034","","406484365823587052",Rejected,"1750000000000000"
+778.0,"","157043058592468161","","100000000000",Executed,-1
+779.0,"ink! Analyzer: Retroactive funding for ink! 4.x to 5.0 migration features, and other major improvements","265428638018335852","","100000000000",Executed,"56750000000"
+780.0,Ignore - superceded by 781,"0","","279301251917299443",TimedOut,"0"
+781.0,Report : Proposal #684 Chainalysis analytics solutions on Polkadot Relay Network,"54591165235388797","","258416606184186504",Rejected,"0"
+782.0,DOT Experts Tip for OnlyDeFiGuy for Proposal #684 Chainalysis analytics solutions in USD,"122933836194925479","","216634749139008066",Rejected,"0"
+783.0,Developer tools for Polkadot-API,"99704280981211196","","77551122237480975",Executed,"317050000000000"
+784.0,"VOTE NAY, WRONG PRE-IMAGE","0","","46587581446312434",TimedOut,"10000000000000000"
+785.0,Chainalysis analytics solutions on Polkadot Network,"660528486000000000","","34877175531229793",Cancelled,"10000000000000000"
+786.0,Cancel Chainanalysis ref,"754705491727266810","","727038396542334895",Executed,-1
+787.0,Cancel root ref #693,"700974203697402242","","364721977998145773",Executed,-1
+788.0,Proposal for DED Bounties: Revitalizing Community Engagement,"561400000000","","337837110681674898",Rejected,"30000000000000"
+789.0,Top-up of Proposal 657 due to DOT price change.,"151903563391821280","","56758151975256095",Executed,"29600000000000"
+790.0,Polkadot Relayers Incubator 2024,"173028992276845740","","46143506485887404",ExecutionFailed,-1
+791.0,[Whitelisted Caller] Upgrade Polkadot v1.2.4,"958845640645023983","","682882659981",Executed,-1
+792.0,Maintenance for the substrate-api-client Jul-24 to Dec-24,"381587960381313812","","100000000000",Executed,"46700000000000"
+793.0,Untitled,"92994489425357218","","607860616552183",Executed,"10000000000"
+794.0,"Beamex PERPadot: DOT LP Depth Loan, a significant DOT liquidity depth on Beamex Perpetual Exchange","49062434706305647","","611177676673514805",Rejected,"5000000000000000"
+795.0,Beamex PERPadot: Liquidity Incentives  program to attract liquidity and onboard new users to the Polkadot ecosystem via Perpetual Trading ,"35737913971748449","","695305854558549711",Rejected,"4999990000000000"
+796.0,[Retroactive] RegionX Corehub | Parachain management,"140443024709035440","","66650000000000",Executed,"32820000000000"
+797.0,Polkadot Ecosystem vCISO Program w/Spearbit,"533248474613871737","","438377092082770370",Executed,"604310000000000"
+798.0,DOTCAST /This_is_the_DOT Top Up,"127985484486459196","","415848814301461",Executed,"40150000000000"
+799.0,Presentation on Augmented Reality Advertising for Polkadot by Overthereality,"64399287681732723","","21232986237685411",Executed,"800000000000"
+800.0,Polkadot Dapps over Apps (REVISED),"1520763578100750","","297815016888864728",Rejected,"88220000000000"
+801.0,Inclusion of Moonbeam in marketing narratives,"463867891009542714","","760101010000000",Executed,-1
+802.0,Curators Candidates - Bounty #49,"177674757830757970","","46217208520276673",Executed,-1
+803.0,Polkadot in Spanish Editorial Board and Marketing Top Up ,"109130557143238476","","1680586270478275",Executed,"94610000000000"
+804.0,Ecosystem Test Environment Bounty,"99066735461906669","","197150010000000",Executed,-1
+805.0,Polkadot Education Program for Top Ethiopian Universities.,"42870609456558157","","316047800244666816",Rejected,"36900000000000"
+806.0,Automated Reward Payout Initiative,"913564389","","349563848030953835",Rejected,"8910000000000"
+807.0,Pre-Image error vote NAY,"0","","321928169498372142",TimedOut,"145000000000000000000"
+808.0,"12 Months of Polkadot Advertising on Spotify x 2 Ad Campaigns","43966137095905418","","221308821946980557",Rejected,"145000000000000"
+809.0,Open-Source Registrar Development Continuity,"191503999451347953","","768381089106387",Executed,"27379200000000"
+810.0,test,"1","","399119793221297916",TimedOut,"90000000000"
+811.0,"Pre-Image error, vote NAY","0","","40110383556390902",TimedOut,"6000"
+812.0,A reactive library for building Substrate front-end,"167038188592967785","","206693329564742",Executed,"60000000000000"
+813.0,error vote no,"0","","23214284660794830",TimedOut,"14048"
+814.0,"Proposal: Promotion to ""VII Dan: Free Master"" for Gavin Wood - Evidence below","209837488584546046","","100000000000",Executed,-1
+815.0,*UPDATED* Polkadot Drone Show + NFT Drop Over VELD Music Fest (100K+ Attendance) - Brand Awareness + PR Campaign,"44317090568882","","431716129118723543",Rejected,"92860000000000"
+816.0,SmallTipper,"93962641261578508","","50000000000",Executed,-1
+817.0,Proposal: Adding More Auctions For LP18 On Polkadot,"861854292929243437","","0",Executed,-1
+818.0,Polkadot Business Development in Brazil - Continuation of Operations,"217383473718751458","","47615074015291802",Executed,"533350000000000"
+819.0,Referendum for the Polkadot UX Bounty,"632370708134425617","","372997556035928880",Executed,-1
+820.0,Title Sponsorship at the Crypto AI Summer Conference,"38966000000000","","433153354711902138",Rejected,"100000000000000"
+821.0, Free Beer Stand & BD/Networking Space at Polkadot Decoded,"336664986288935451","","91073934854019524",Executed,"45040000000000"
+822.0,Referendum #822 - Refill for marketing bounty number #33,"607040555660573381","","836661861729542547",Rejected,"0"
+823.0,"Vote Nay. Is a toturial about How to Request Stable asset USDT, USDC","1010913470916850","","275607271599016603",Rejected,"15000000"
+824.0,AssetX the new Polkadot Asset Hub DEX,"2557115045491526","","654497695851038597",Rejected,"733232108120000"
+825.0, Cancelling treasury proposal #774,"39508767834916605","","56412609611098",TimedOut,-1
+826.0,Revolutionizing Social Media for a Better Internet,"1477202235026052","","473399116856055692",Rejected,"230000000000000"
+827.0,Polkadot.js UI Bug When Initiating A Parathread for Parachain Auction,"137547665857651449","","9580000000000",Executed,"4084500000000"
+828.0,PLEASE VOTE NAY,"0","","30622600462407798",TimedOut,-1
+829.0,PLEASE VOTE NAY,"0","","31719613933324648",TimedOut,"385978000000"
+830.0,StorageHub’s Codebase Audit,"287999488697928836","","273028468677255037",Executed,"385978000000"
+831.0,Referendum 631 top up due to DOT price change,"194283705060843498","","58172324552737411",Executed,"44712000000"
+832.0,Funding the Technical Fellowship Sub-Treasury,"648987501958775464","","54000000000",Executed,-1
+833.0,"VIRTUNE AB X POLKADOT - ETP CAMPAIGN, SWEDEN & THE NORDICS","493355988029479075","","47777832648637469",Executed,"899450000000000"
+834.0,Inclusion of DED in marketing narratives,"691038403000000000","","1003008066652732970",Rejected,-1
+835.0,"Retroactive Sponsorship Reimbursement for Polkadot CCTF Yacht event at Token 2049, Dubai","151459202071920467","","130460861447280473",Executed,"41780000000000"
+836.0,Please vote Nay,"0","","253384214874842389",Rejected,"6702"
+837.0,BD & Marketing Proposal. Polkadot as the preferred network of chains for digitizing financial assets and similar real world assets ,"332608422156316366","","247241201661559767",Executed,"126040000000000"
+838.0,Polkadot Education - Polkadot Onboarding for Business,"219705093909641703","","95017370751764418",Executed,"248000000000000"
+839.0,Treasury proposal for renewal of API licenses for Blockexplorers,"278646627481756232","","58430369743709616",Executed,"67020000000000"
+840.0,Vote NAY,"3417498510870960","","508262132384958709",Rejected,"262650000000000"
+841.0,Upgrade Polkadot v1.2.5,"1329316836791525071","","100000000000",Executed,-1
+842.0,Big Tips for Content in Portuguese - JOÃO HAZIM - 440 DOT,"129808981905048204","","58280061661974334",Executed,"4400000000000"
+843.0,RE-SUBMISSION OF REF #734 - BERLIN TAXI REFILL,"194192595808195494","","942021596156803",Executed,"82650000000000"
+844.0,Decoded 2024:  PopUp Hub for the community,"283066240805301491","","56500986042949995",Executed,"21503914000000"
+845.0,VOTE NAY - ERROR PREIMAGE,"264412873962073","","230916940713412201",Rejected,"2228000000"
+846.0,Volatility adjustment for REF651 and REF742,"378483673130016297","","312018943729481971",Executed,"138556000000000"
+847.0,Kudos: Unlocking the Full Potential of Polkadot’s Developer Community,"304917406975522591","","379568366592061",Executed,"178223300000000"
+848.0,"Retroactive - Participation of Polkadot in Unlock summit 2024 Mexico, Puebla Talk + Workshop","131940582560898188","","353767366592061",Executed,"3487000000000"
+849.0,JUST Retroactive Compensation for Contributions to the Polkadot Ecosystem,"730722421105502115","","187833334236112",Executed,"461940000000000"
+850.0,.,"0","","298859986787283362",TimedOut,-1
+851.0,Fixed Maximum Supply for Fiscal Certainty,"54172655021333291","","477539198355062255",Rejected,-1
+852.0,lol - NAY,"0","","33270356094884972",TimedOut,-1
+853.0,"please vote no, wrong preimage","0","","250676968443742636",Rejected,"79350000000000"
+854.0,Inclusion of Hydration in marketing narratives,"299912467771480055","","391756428592061",Executed,-1
+855.0,Polkadot London Event - Dawn of RWAs ,"416970712405340920","","7984303637472384",Executed,"15190000000000"
+856.0,"Verified Organization Badges on Twitter/X for Parachains, Top Wallets & Comms Channels","520874371318894631","","167468366592061",Executed,"74960000000000"
+857.0,Reduce minBalance of USDT/C to 0.01,"553719297838390774","","50120000000000",Executed,-1
+858.0,Polkadot Head Ambassador Application: six / David Pethes,"528415643593866124","","699813951328780",Executed,-1
+859.0,Polkadot Head Ambassador Application: Leemo,"536951090074726754","","5259737454940305",Executed,-1
+860.0,Polkadot Head Ambassador Application: Ezio Rojas,"299217161463541639","","219050308433321554",Executed,-1
+861.0,Head Ambassador Application: Max Rebol,"332166739445852524","","216853184447568618",Executed,-1
+862.0,Inclusion of Novasama Technologies' Products in Marketing Narratives,"496434955507643008","","235285062000000",Executed,-1
+863.0,Proposal to Tip Art Curators and a Polkadot Candidate Ambassador in the UAE.,"331506504403409892","","214468640543890304",Executed,-1
+864.0,Polkadot Head Ambassador Application: Irina Karagyaur,"534222657757515719","","5379243172470513",Executed,-1
+865.0,SmallTipper,"76988650581795779","","100000000000",Executed,-1
+866.0,(EDIT) VOTE NAY ,"30650000000000","","433681091564001944",Rejected,"13245030000000000"
+867.0,Preimage removed - referendum revoked,"15000000000000","","205080568467224660",Cancelled,-1
+868.0,"Incognitee: Productive Privacy Sidechains for DOT, KSM and all Substrate- Based Chains","5422882271781533","","501081981276576576",Rejected,"1355270000000000"
+869.0,Polkadot Head Ambassador Application: Alice und Bob,"344448228026798483","","28862902186717577",Executed,-1
+870.0,"","213423020715913656","","100000000000",Executed,-1
+871.0,Polkadot Head Ambassador Application: Michiko Watanabe,"307329608237490248","","234847793079555055",Executed,-1
+872.0,[Whitelisted Caller] Upgrade Polkadot: v1.2.6,"1125431398822826025","","100000000000",Executed,-1
+873.0,Polkadot Head Ambassador Application: William,"298598522597105600","","215129276337116260",Executed,-1
+874.0,Polkadot Head Ambassador Application: Abdulbee,"524935966459681556","","4558149086820306",Executed,-1
+875.0,Top-up of Proposal #87 due to DOT price change,"129378216041884262","","549313465291150416",Rejected,"186775800000000"
+876.0,#876 Polkadot Head Ambassador Application: Lorena (Blockya),"309747406138999878","","215527305337116260",Executed,-1
+877.0,Proposal: Expanding the Polkadot ecosystem with Polkadot for Beginners (book) v2,"453640075154096","","529243202894069539",Rejected,"40000000000"
+878.0,"Wrong pre-image, please vote NO","960295035491526","","59486771601525485",TimedOut,-1
+879.0,Polkadot Head Ambassador Application with focus on AI Growth: Zoé,"349186568590110261","","238944768069496375",Executed,-1
+880.0,Polkadot Head Ambassador Application: Mario Altenburger,"317293245518546794","","235008988834993907",Executed,-1
+881.0,Vote Nay,"168021000000000","","235678714438825268",TimedOut,-1
+882.0,Timed Out - Vote Nay,"102500000000000","","234917786334708142",TimedOut,-1
+883.0,"Requesting ""Top Up"" of Ref #601 due to DOT price change","190839874221969038","","347319916227254707",Rejected,"250000000000000"
+884.0,Polkadot Head Ambassador Application: Patrizia De Bella,"4918328060161418","","249978024091638865",Rejected,-1
+885.0,Should we allow EVM compatible contracts on Asset Hub?,"549277124691107823","","16586362000000000",Executed,-1
+886.0,"Kampela Productizing Proposal, Redux","552858735903842979","","223021172281058605",Executed,"979202800000000"
+887.0,"Resubmission of Promotion to ""VII Dan: Free Master"" for Gavin Wood - Evidence below","522013634054293772","","0",Executed,-1
+888.0,Enable approval voting protocol improvements,"1127244754325113895","","414837469530",Executed,-1
+889.0,Polkadot Head Ambassador Application: Angelina ,"318755000000000","","253090567078163434",Rejected,-1
+890.0,[Whitelisted Caller] Make WETH asset sufficient and set asset metadata,"1770066171190921147","","100000000000",Executed,-1
+891.0,Please vote Nay - Technical issues with Pure Proxy,"7121159404656086","","236065418269056509",TimedOut,-1
+892.0,Proposal: OpenZeppelin x Polkadot Ecosystem Growth Phase M3,"507789588503816794","","1927496648906080",Executed,"391390000000000"
+893.0,Asia Blockchain Summit 2024 Sponsorship,"310719448847058990","","100801227391897424",Executed,"167412753000000"
+894.0,Inclusion of Dot Code School in Marketing Narratives,"170542345606372370","","119429779097992755",TimedOut,-1
+895.0,"Requesting ""Top Up"" of Approved Ref #644 due to DOT price change","801741229009580239","","430640685486303315",Executed,"5980000000000000"
+896.0,[Whitelisted Caller] Update Max HRMP Channels,"1129465389211784854","","100000000000",Executed,-1
+897.0,"2024 Polkadot Hackathons (September 2024 in Singapore and November 2024 in Bangkok)","467312768249352253","","397549151257121934",Executed,"1348990000000000"
+898.0,pre-image pulled ,"125213100000000","","580347656914874897",Rejected,"340000000000000"
+899.0,Revised Proposal: Polkadot Sponsorship of traditional Family Office Investment Conference Series,"629651204494992846","","632293960974323298",Rejected,"1649892700000000"
+900.0,Head Ambassador Proposal for Polkadot - Georgi #900,"291986311006418376","","37561713466196455",Executed,-1
+901.0,PLEASE VOTE NAY 😅,"1136445035491526","","290343234589236849",Rejected,"420000000000"
+902.0,Polkadot Head Ambassador Application: Mexican Collective,"295640576383911572","","218737259828196455",Executed,-1
+903.0,Plaza smart contract tooling,"745895765263814819","","865092469118502058",Rejected,"1394709000000000"
+904.0, Top Up request: Universal Hybrid Substrate Faucet,"129853899547473947","","57482323352270157",Executed,"7247800000000"
+905.0,"""Reward Mode"" - Unlocking Gaming Rewards with Polkadot.  TapNation is introducing 734,366 new users to the Polkadot ecosystem, adding 73,437 new wallets every month throughout the partnership period.","418086183716863664","","124409780477807467",Executed,"708350000000000"
+906.0,Please reject this referendum.,"10000000000","","58147753710092926",TimedOut,-1
+907.0,Hope Clary For Head Ambassador Team,"168082000000000","","237892539262383115",TimedOut,-1
+908.0,"Establish a rule for ""top up""","42672887366592061","","128722619332652771",TimedOut,-1
+909.0,Polkadot Head Ambassador Application:  Rish,"349980952207294596","","2528653221141733",Executed,-1
+910.0,"Polkadot Head Ambassador Application | Cris, Patricia, Tin","338189710712070017","","241623396343020099",Executed,-1
+911.0,Treasury Proposal: Polkadot Bounty Manager UI Development,"442298183319549627","","836138828504351",Executed,"278430000000000"
+912.0,Full Disclosure for Head Ambassador Sponsorship - Whistle-Blower Series Part 1,"250000000000","","472628480907676064",Cancelled,"156000000"
+913.0,Referendum 912 posted on the wrong track,"305626616644347265","","173817366592061",Executed,-1
+914.0,Ecosystem Agent Tip for Adam Steeber's bounty & multisig tutorial,"142620223950991573","","86134465167427060",Executed,"10000000000000"
+915.0,Top Up | RegionX Coretime Marketplace for Polkadot,"262501889395989900","","208546166592061",Executed,"48554000000"
+916.0,Referendum for PolkaDotJobs.xyz: A Polkadot Native Job Board Provided as a Public Good,"45093416391313360","","483843072608627404",Rejected,"170810000000000"
+917.0,Dot Play Bounty,"1309907676965972","","45289032008004332",Cancelled,-1
+918.0,PROPOSAL -  FHE-WASM Research and Development for the Polkadot Ecosystem,"425851524793277005","","133897481632208534",Executed,"338840000000000"
+919.0,Removing curators from Spanish bounty,"237678408371287324","","530258284909288842",Rejected,-1
+920.0,Refill for marketing bounty number #33 - 500k DOT,"778964253116171574","","914872468457997475",Rejected,"5000000000000000"
+921.0,Retracted,"88158623104857242","","232155516350597996",Rejected,-1
+922.0,"Polkadot User Segments & Conversions 👨‍👩‍👧‍👦 for Ink!, Pallets & XCM ","304559877709193716","","223482158416640523",Executed,"375733900000000"
+923.0,Removing curators from Games Bounty [38],"85688465402083587","","289992139235388797",Cancelled,-1
+924.0,Polkadot Head Ambassador for Gaming Application - Angie Dalton,"326495910714546896","","33532288022691632",Executed,-1
+925.0,KAGOME – the C++ implementation of Polkadot Host milestone 3,"658625796439460594","","131768412189946529",Executed,"1413950000000000"
+926.0,Polkadot Head Ambassador Application - Jimmy Tudeski,"65201417445069693","","213901435235062822",Rejected,-1
+927.0,"Please vote Nay, Preimage removed.","183865951822196676","","746460518050517940",Rejected,"999950000000000"
+928.0,Cancel 923,"313641332547285043","","986367601980858",Executed,-1
+929.0,Cancel 917,"326474007844570933","","1678702049574174",Executed,-1
+930.0,Vote Nay,"0","","623494596308062506",Rejected,"287550000000000"
+931.0,Top up | HEROIC x Polkadot sponsorship due to DOT price drop,"318309491291975415","","99481485955834226",Executed,"105573000000"
+932.0,Proposing The Polkadot Tooling Collective,"447053314526461956","","50051000000000",Executed,-1
+933.0,Polkasafe - The 360° multisig solution for Polkadot | Last Retroactive Funding Proposal,"559953681843521522","","49122595537604786",Executed,"180850000000"
+934.0,Polkadot Head Ambassador Application - Mario Schraepen,"508196189428583353","","21275306407554561",Executed,-1
+935.0,Polkadot Anti-Scam Team refill due to price volatility,"93114006202633184","","401268065838980238",Rejected,"305038000000"
+936.0,Close bounty 33,"93359717235234409","","671285474121313897",Rejected,-1
+937.0,Exclude Astar from marketing narratives,"481506873428592061","","370554390816127469",Executed,-1
+938.0,Continuation and Salary Request for Editorial Board in Spanish Members,"181016685043122465","","120549745317613134",Executed,"46000000000"
+939.0,Please Vote Nay,"40000000000000","","57949532677406670",TimedOut,-1
+940.0,Please vote nay. Sorry about that,"151800000000000","","57667032992428300",TimedOut,-1
+941.0,Polkadot Head Ambassador Application: DJ Hà Trang & SubWallet,"311004498168064226","","252548793828182576",ExecutionFailed,-1
+942.0,Phink – ink! fuzzer for security and robustness  ,"289854741021046146","","180822059262922933",Executed,"198100000000"
+943.0,Top-up of Proposal 751 due to DOT price change,"311490961652847613","","191574976848379477",Executed,"478202140000"
+944.0,Snowbridge Launch and Treasury Proposal,"947427688577651116","","504914812940614825",Executed,"0"
+945.0,"","0","","249804703004547354",TimedOut,-1
+946.0,Removing Moonbeam from marketing narratives,"318232410227667764","","595054412987358651",Rejected,-1
+947.0,Small Tip Proposal: We live in a society,"97409328859193711","","45826961795558078",Executed,"500000000000"
+948.0,Reactive DOT: funding request for continuation of development,"429252434160021900","","196387000000000",Executed,"153780000000000"
+949.0,Vote Nay,"11255116518042729","","201521152028145688",Rejected,-1
+950.0,Authena x Polkadot: The Future of Scalable Traceability,"297138572041884262","","758361038378705000",Rejected,"2600000000000000"
+951.0,Kylix Finance - The Lending Parachain | Funding Proposal,"171444094695810704","","611755295105437864",Rejected,"544800000000"
+952.0,Please vote nay,"0","","56404358829941043",TimedOut,-1
+953.0,Polkadot Head Ambassador Application: Bekka,"301987769606269187","","248312969508770774",Executed,-1
+954.0,Infinity Wallet - Milestone 2,"402660000000000","","669727663470569241",Rejected,"99870000000000"
+955.0,"","144666783914189380","","20205585138999878",Executed,-1
+956.0,Funding for 3 month Polkadot Brand Campaign,"1060100000000","","292163240888316727",TimedOut,"23500000000000"
+957.0,Educational Content in Spanish by long time active members at the Ecosystem,"233341941680170","","223863754963188664",Rejected,"56840000000"
+958.0,I would like to help Polkadot Marketing on X and Binance platform,"6207167720727367","","330588149829240583",Rejected,"1500000000000"
+959.0,Direction of marketing strategy,"289879394525726843","","164672154723502037",Executed,-1
+960.0, Polkadot Global Football Foundation ,"168013000000000","","313349851753500790",Rejected,"4000000000000"
+961.0,Proposal to Tip Art Curators and a Polkadot Candidate Ambassador in the UAE.,"418215564623363288","","87271744858364022",Executed,"7700000000000"
+962.0,please vote Nay,"0","","294049987100771807",Rejected,"76858300000000"
+963.0,Polkadot Head Ambassador Proposal - Lucy Coulden,"322845124855427994","","56386610537465521",Executed,-1
+964.0,please vote Nay. Thanks a lot!,"0","","306220669765018766",Rejected,"46045800000"
+965.0,Proposal: Request for DOT Top-Up to Cover Price Difference,"426181924083591535","","55717035470916850",Executed,"46045800000"
+966.0,Plaza name,"523402107885949488","","132285111351962993",Executed,-1
+967.0,Plaza and Defi Bounty,"332143054000000000","","161045082653354335",Executed,-1
+968.0,Dot Play Bounty,"689493310977832824","","335251000000000",Executed,"4000000000000000"
+969.0,Polkadot Head Ambassador : DonDiegoSanchez,"370313254613251558","","1306962000000000",Executed,-1
+970.0,Retroactive Tip for the development of LiteScan - A lightweight indexer for Polkadot Chains,"143715986433429494","","207100000000000",Executed,"8680000000000"
+971.0,SmallTipper,"118200836293831789","","53280000000000",Executed,-1
+972.0,[Whitelisted Caller] Register Polkadot People Chain,"1273143125748034204","","100100000000000",Executed,-1
+973.0,[Whitelisted Caller] Update HRMP Channel Limits,"953192984650918588","","20430855138999878",Executed,-1
+974.0,Nielsen reports,"382427233372249163","","651662219675266876",Rejected,-1
+975.0,Retroactive Funding Proposal: Completed Remarker Development and Future Polkadot NFT Standards Implementation Post-Plaza Upgrade,"834156006392736","","247848799156101062",Rejected,"100000000000000"
+976.0,Pledging to allocate 1% of Treasury Spending to Social Good Projects,"47342000200000","","186976579374157153",TimedOut,-1
+977.0,please vote nay ,"150060000000000","","336630215662911688",TimedOut,"100000000000"
+978.0,VOTE NAY,"1000000000","","256950920327488205",TimedOut,-1
+979.0,"Please vote nay, thank you!","113860000000000","","305243772174946325",Rejected,"142320000000000"
+980.0,"","0","","43617122703385988",TimedOut,-1
+981.0,Proposal to the Polkadot Community - Dustin Plantholt for Head Ambassador,"295777393448752147","","73786185928537829",Executed,-1
+982.0,TEST Bounty Please Vote For NAY !,"0","","276471180755185802",TimedOut,-1
+983.0,People Chain Migration and Release,"215639854098445635","","50100000000000",Executed,-1
+984.0,Polkadot Head Ambassador Application with focus on China Market - Siyu Liu,"478533786825935524","","45423383458211172",Executed,-1
+985.0,dAppForge - AI powered plug-in for Polkadot developers that reduces development time. ,"428525567008305292","","269906007367876922",Executed,"105000000000"
+986.0,VOTE NAY - ERROR ,"13699937689","","320286400264240350",Rejected,"3865450000000000"
+987.0,SmallTipper,"207832945517359157","","158150000000000",Executed,-1
+988.0,Dotswap.org: Asset Hub DEX UI v1+v2 2024 Development+Hosting by MVP Workshop+Colorful Notion,"178184859142001964","","314694726146173290",Rejected,"0"
+989.0,Live Music on Polkadot: Billfold + Radiate Onboarding,"316894443349277351","","632429111381152510",Rejected,"3865460000000000"
+990.0,Restricting games bounty (38) from investing in games related to mythical,"127118592406543429","","400557073140350244",Rejected,-1
+991.0,Polkadot Head Ambassador - Alice und Bob,"248451106294405911","","2022721321141733",Executed,-1
+992.0,Proposal: Freelancing Platform Development ,"197797082379344","","260777318763543394",TimedOut,"315320000000000"
+993.0,Polkadot Head Ambassador Application: Luca Poggi,"494081450954324803","","37425065364288959",Executed,-1
+994.0,Fellowship: Retain Wei at Rank III,"226160709369890593","","371295639163817432",Rejected,-1
+995.0,Subsquid - Public data indexing Infrastructure for Polkadot and Kusama (Q4 2023),"336092287859348451","","253582000000000",Executed,"492576500000000"
+996.0,Edit: Thanks,"10332540000000000","","516720704118026232",Rejected,"768000000000000"
+997.0,Incognitee: Privacy Sidechain on Paseo (Retroactive),"469377313054947051","","640079725822371",Executed,"44302720000"
+998.0,Incognitee: Privacy Sidechains (Soft Loan Q3'24),"119730998860544385","","650886460055943136",Rejected,"208841000000"
+999.0,"Dissolve the ""Polkadot Alliance"" collective due to inactivity","404596928663705304","","50100000000000",TimedOut,-1
+1000.0,A Wish for Continuity: Celebrating Polkadot's Core Values,"414021704085989866","","50001000000000",TimedOut,-1
+1001.0,Subsquare polkadot collectives support milestone 2,"470750380122626400","","100100000000000",Executed,"176400000000"
+1002.0,[Whitelisted Caller] Upgrade BridgeHub: v1.2.8,"1183655884147005354","","253280000000000",Executed,-1
+1003.0,"","16073211097973510","","21408199085822371",TimedOut,-1
+1004.0,"","0","","255139002088700466",TimedOut,-1
+1005.0,test proposal,"0","","292564588120542111",TimedOut,"1000000"
+1006.0,Proposal for Top-Up for Funding of Polkadot System Parachain Collators,"507114504293567798","","180783740089106387",Executed,"265035100000000"
+1007.0,[Whitelisted Caller] Enable Elastic Scaling MVP node feature,"527016456179957738","","50100000000000",Executed,-1
+1008.0,Please vote NAY - Resubmitted as #1014,"52500000000000","","209921803544350654",Rejected,-1
+1009.0,Propuesta de polkadot cafe/coworking,"50010000000000","","282347971044130676",TimedOut,-1
+1010.0,-,"10792412539981724","","159638282600632599",TimedOut,-1
+1011.0,(Temp Check) Milestone_2 Funding Request for Motif: vote NAY,"43222833970916850","","519095371291174176",Rejected,"993930000000000"
+1012.0,"","50040000000000","","219423538034787260",TimedOut,"17600000000"
+1013.0,Requesting 1M DED tip,"553011161000000","","388457297604633539",Rejected,"1000000"
+1014.0,Further decentralize collators set on Polkadot System Parachains - Resubmission of #1008,"378497968163460149","","182838439414981427",Executed,-1
+1015.0,Vote Nay for this Proposal ,"190000000000","","59636025171766302",TimedOut,-1
+1016.0,Vote Nay,"0","","343557586596861832",Rejected,-1
+1017.0,Head Ambassador Proposal: Dustin Lee,"12685000000000","","209677893279006743",TimedOut,-1
+1018.0,Vote nay on this,"0","","30376481970005577",TimedOut,-1
+1019.0,Refunding Polkadot Ecology Research Institute GOV1 Treasury Spend Deposit,"158989601733072163","","100131455939035983",Executed,"5000000000000"
+1020.0,Polkadot Head Ambassador – Hope Clary for Product,"59300000000000","","210833454279006743",TimedOut,-1
+1021.0,SmallTipper,"162101021429087344","","161830000000000",Executed,-1
+1022.0,Recognition for the sponsorship and diffusion work of the ecosystem in the last month.,"42953370412597020","","233426588340990236",Rejected,"1"
+1023.0,AI-Powered Interactive Assistance for Efficient Research Paper Reading,"111000000000","","568436681070275144",Rejected,"39500000000000"
+1024.0,"JAM0 @ Bangkok - November 11-16, 2024 (after sub0)","375190973494023349","","566633667045208713",Rejected,"190000000000000"
+1025.0,[Small Tipper] Referendum #1025 - Creating a new vision for Polkadot Ambassador Program,"93539078607713219","","0",Executed,"200000000"
+1026.0,[Treasurer] Fix and Add Asset Rates,"1208710594384255043","","29004280174575360",Executed,-1
+1027.0,Vote NAY - Wrong track,"0","","341424875566084676",Rejected,-1
+1028.0,Inclusion of Bifrost Products & Solutions in Marketing Narratives,"530187025582773599","","289913867608308400",ExecutionFailed,-1
+1029.0,"Investment Conference Series for Polkadot, with Revenue-share Model for Treasury","479442385229837096","","919030994241154117",Rejected,"1628134200000000"
+1030.0,AllInCrypto's Strategic Content and Community Engagement Proposal for Continued Partnership,"352373765777964927","","356772519538196820",Rejected,"125000000000000"
+1031.0,SmallTipper,"161469343060155428","","50050000000000",Executed,-1
+1032.0,Proposing Curators for the UX Bounty,"473648832221949107","","30965294445893037",Executed,-1
+1033.0,Close Bounty 46 – AMI Bounty Program,"334242262527479321","","49774549105565959",Executed,-1
+1034.0,"Less noise, more Polkadot","42350126690998834","","173788406506626551",Rejected,"0"
+1035.0,AssetPortal (Milestone 1),"469552687916406614","","82682597000000000",Executed,"309810000000000"
+1036.0,"Polkadot for 100,000+ Students","0","","168027707109433645",TimedOut,"41700000000000"
+1037.0,Behind the Code II: Additional Funding for more episodes of Web3 Thinkers/Builders and Top-up on treasury #604 payout,"425688155290783335","","119245868903760665",Executed,"99280000000000"
+1038.0,To acquire Partyfy trademark,"151150000000000","","306889975775622328",TimedOut,"950000000000000"
+1039.0,Polkadot Growth Initiative (PGI),"145136794102180888","","445088551795222494",Rejected,"4000000000000000"
+1040.0,Enhancing Coretime DevTools for Seamless Parachain Builder Experience,"113546177235388797","","259200667797100925",Rejected,"151200000000"
+1041.0,Remove Michiko Watanabe from the Polkadot Ambassador Program,"404341833994396859","","50200000000000",Executed,-1
+1042.0,forceSetBalance treasury to 0,"9027458605456332","","322762191851117470",TimedOut,-1
+1043.0,Dazhbog: A Decentralized Perpetual Futures Exchange,"168119158070916850","","306679677846485499",Rejected,"545000000000000"
+1044.0,Creating a standardized interview for Head Ambassadors,"151410686345709071","","145717796689367413",Executed,"200000000"
+1045.0,ink! 5.0 Codebase Security Audit,"246369326938862184","","62239871190998834",Executed,"431420000000000"
+1046.0,Request for Tip the experiment with beer bar at the Polkadot Decoded 2024,"1081503978087989","","179694958083778803",Rejected,"5500000000000"
+1047.0,[Small Tipper] Referendum #1047 ,"3140794264767482","","151577322300426234",Rejected,-1
+1048.0,"","0","","275479782849762299",TimedOut,-1
+1049.0,The Polkadot Halving,"21959877082379344","","316114266129412397",Rejected,-1
+1050.0,"Ecosystem agent tip for Saimon contributions - Developer, Community and Business","127152371926387631","","192674141819758010",Rejected,"10000000000000"
+1051.0,Increase recommended core count for validators reference hardware from 4 to 8,"615257581605516581","","150100000000000",Executed,-1
+1052.0,Polkadot OpenGov TOP-UP KILLER: utility.batch treasury.spends with USDC + USDT,"94867711204981136","","68623593752114646",Executed,"100000000000"
+1053.0,Tip for HA Lucy Coulden to cover expenses at Coinfest Asia,"46051897466633029","","149168740790118765",Rejected,"3900000000"
+1054.0,"50 Polkadot Ecosystem PR campaigns in the most influential media","442992383490262661","","120388244932464032",Executed,"750000000000000"
+1055.0,SmallTipper,"168128861588393783","","50000000000000",Executed,-1
+1056.0,Subscan | Infrastructure Costs of Subscan for Polkadot & Westend & Rococo & Statemint & Rockmine  Networks (from October 2023 to June 2024),"387159495457960362","","268687072611473086",Executed,"636960000000000"
+1057.0,"Make the next Polkadot Hub official in Budapest, Hungary","86029375390919742","","55399199407912539",Executed,"10000000000"
+1058.0,VOTE NAY!,"100680235388797","","305250987490287418",Rejected,"183326000000"
+1059.0,Inclusion of Centrifuge in Marketing Narratives,"434263716788535130","","180210000000000",Executed,-1
+1060.0,Polkadot Live: Milestone 2 Development Proposal,"270796564231101566","","250431640327892798",Executed,"324110000000000"
+1061.0,[Small Tipper] Referendum #1061,"118150225471142453","","45721531886647286",Executed,"200000000000"
+1062.0,Milestone 2 Funding Request for Motif: Polkadot Proactive Staking Assistance,"41000000000","","305629148674221136",Rejected,"121800000000"
+1063.0,Vote NAY,"0","","291834612799829846",Rejected,"10000000000"
+1064.0,Vote NAY,"120011000000000","","175396571458067213",Rejected,"30000000000"
+1065.0,Improved Proposal from Chainalysis to Polkadot,"1057864322559845844","","1061735942881296057",Rejected,"0"
+1066.0,Vote Nay,"2034194400707925","","244611521105682576",Rejected,"22610000000000"
+1067.0,"Please vote nay, thank you!","20000000000000","","231723618110705132",Rejected,"4730"
+1068.0,Top-Up Request for Previously Funded Proposal #663,"227206847848717404","","43759476553296194",Executed,"183326000000"
+1069.0,Tip for exposing Michiko Watanabe,"117491972377616170","","97588434030508172",Executed,"1000000000"
+1070.0,Remove myself from the Fellowship collective,"22180055696152697","","100968583229342",Executed,-1
+1071.0,Deposit DOT into parachain child accounts to accelerate opening XCM channels,"479409940541494348","","50000000000000",Executed,"22610000000000"
+1072.0,Solidity smart contract tooling - research for AssetHub/Plaza,"101744312883093040","","100338478974213023",ExecutionFailed,"1900000000"
+1073.0,"","0","","104462299987611184",TimedOut,"10000000000000000"
+1074.0,Changes to PAL Security Bounty,"439732610369950226","","100100000000000",Executed,"2200000000"
+1075.0,Untitled,"219151000000000","","326611239649046508",TimedOut,"250000000000000"
+1076.0,"PlutoWallet 1st proposal: Account abstraction, Full featured NFT support, Transaction Analyzer","450237091431719294","","372669252059463567",Executed,"82720500000000"
+1077.0,Proposal to use $DED to Conduct Targeted Marketing during KBW 2024,"492853987046822493","","361766694227732429",Executed,"590000000000000000"
+1078.0,[Polkadot Community Foundation] Polkadot at Slush 2024,"299272153151970249","","438424591676836595",Rejected,"112078000000"
+1079.0,Retroactive tip request for retro posters,"123298412105959968","","2455741967000000",Executed,"450000000000"
+1080.0,Open Source Developer Grants Bounty Program,"630475950591422192","","50000000000000",Executed,-1
+1081.0,"Rust, ink! technical content for  developers","43982162473408376","","184815010149582515",Rejected,"2200000000000"
+1082.0,Polkadot App - PCF IP Rights & Funding for publishing the app,"540831490706439585","","200799000000000",Executed,"50000000000"
+1083.0,[Medium Spender] Open-source KYT on Dot #1083,"355846615304816912","","642629632174195923",Rejected,"508000000000"
+1084.0,Retroactive tip by 6 months at Polkadot Peru and international activities,"42502799190998834","","143777747581979140",Rejected,"10000000000000"
+1085.0,The Modern Market Show Headline Sponsorship - 6 Months,"89420400000000","","594750194598122779",Rejected,"120000000000"
+1086.0,Polkadot Advertising Campaign on Brave Browser - Top-Up Request - PLEASE SEE COMMENT 9/5/24,"188001000000000","","614791727124191313",Rejected,"873510000000000"
+1087.0,Vote NAY,"70101000100000","","565957472718157887",Rejected,"25744000000"
+1088.0,Tip Sourav for PSVM Merge Request #23,"143631993704893943","","0",Executed,"800000000000"
+1089.0,Resubmission of ref#975 Retroactive Funding Proposal: Completed Remarker Development and Future Development,"58334657178487425","","285062741438151749",Rejected,"30000000000"
+1090.0,B2B Marketing & Sales Enablement For The Polkadot Ecosystem,"355314450763810595","","78408139304120340",Executed,"181000000000"
+1091.0,The Dots Magazine - 2nd proposal ,"386945855598685897","","354168184001717704",Executed,"38980000000"
+1092.0,POLKADOT CHARITY FOUNDATION - Establishment & Inaugural Initiative Launch,"30000000000000","","637712708903384164",Rejected,"376040000000000"
+1093.0,Bye 😉,"144680000000000","","272044016981714203",Rejected,"10000000000000"
+1094.0,From Pitch to Market: Enhancing Founder Success with PolkaBiz,"30401691091053998","","515360658709623462",Rejected,"94800000000"
+1095.0,"(Already passed as 1072, but didn't execute) Solidity smart contract tooling - research for AssetHub/Plaza","147063743656146940","","57901481147247274",Executed,"1900000000"
+1096.0,"IN IT FOR THE TECH{NO} - Polkadot Opening Party @Token2049, SIngapore","479049138000000000","","956985898777557162",Rejected,"115000000000"
+1097.0,DOTUI: Polkadot UI/UX Design System Draft,"39000000000","","186144558298724705",Rejected,"10000000000000"
+1098.0,Bounty Cleanup,"600094108254455726","","50000000000",Executed,-1
+1099.0,Top-up request for Reactive DOT and related works,"562777148255163725","","279006327006408376",Executed,"37314000000"
+1100.0,[Small Tipper] Referendum #1100 - Creation of Head Ambassador pages in PolkadotJS apps,"141906213878460649","","50100000000000",Executed,"2500000000000"
+1101.0,Polkadot participation in Hack Seasons during Token2049,"50327000000000","","412931237251459535",TimedOut,"45400000000000"
+1102.0,Kheopswap retroactive funding,"445202262885907863","","41798004000000000",Executed,"140920000000000"
+1103.0,Polkadot-API: Aug 2024 - Jan 2025 development financing,"491812380611824721","","50015000000000",Executed,"596482790000"
+1104.0,Convert Part of DOT Assets to Stablecoins,"571828356180724551","","1224693470916850",Executed,-1
+1105.0,Polkadot At The Australian Crypto Convention,"1014375035491526","","657792739742965114",TimedOut,"116160000000"
+1106.0,CoinGecko - Polkadot Campaign,"761098467957344173","","762039294153422611",Rejected,"240000000000"
+1107.0,[Whitelisted Caller] Register the Polkadot Coretime Chain,"1474167103836063934","","100000000000",Executed,-1
+1108.0,Wrong Call Data Please Vote NAY,"301036000000000","","482754296671649264",Rejected,-1
+1109.0,Polkadot AI Navigator: Enhancing User Experience with an Intelligent Ecosystem Assistant Proposal,"121281000000000","","853882994953310767",Rejected,"41000000000000"
+1110.0,Connecting the DOTS: Training the Next Generation of Blockchain Security Experts,"3039348839112458","","585422515980753253",Rejected,"111730000000000"
+1111.0,"2025 Polkadot Motorsports Program w/ Global Ambassador - Conor Daly","44122787191098834","","568194601816289611",Rejected,"16529000000000000"
+1112.0,Support for Investigative Work and Communication Initiatives in Polkadot,"25535262154524506","","229514424346708336",Rejected,"8880000000000"
+1113.0,"""sub0 RESET"" @Devcon Bangkok - back to the roots","924424542262905448","","1312000000000",Executed,"437560000000"
+1114.0,Cyborg Network: Unlocking the Web 2.5 potential of Polkadot with Blockchain powered Edge Computing,"214040025813486482","","146908294671966856",Executed,"182275000000"
+1115.0,FiDi | Polkadot’s Code-Free Intelligence,"129763550541321566","","201930258684011491",Rejected,"936990000000000"
+1116.0,Polkadot Virtual Machine (PVM) Formal Specification Development,"13139690247088675","","251917502574421484",Rejected,"371875000000"
+1117.0,Please vote nay,"0","","304635449725194351",TimedOut,"168608"
+1118.0,[Retroactive] SubWallet 08 Months Development,"411884461101492295","","317555293039808",Executed,"1686080000000000"
+1119.0,Coretime Notifications,"1884879236388797","","388766468622233048",Rejected,"39700000000"
+1120.0,"","47255422679997572","","141916724583130707",Rejected,-1
+1121.0,Alternative Proposal on Blockchain AML/CTF Compliance from GlobalLedger.,"45423546010699878","","289836493041800038",Rejected,"200000000000000"
+1122.0,*UPDATED* Proposal for the Polkadot Community to Earn RWA Yield on Idle Stablecoins via Centrifuge,"1032415880421214595","","649880896982746457",Executed,"3000000000000"
+1123.0,ink! Alliance for a more successful Plaza,"219591322326134952","","64155799416410493",Executed,"520000000000"
+1124.0,[Small Tip] NFT Portal update and ownership adquisition,"86856988025269530","","42104238001978967",Executed,"2500000000000"
+1125.0,"Polkadot Blockchain Academy; PBA-X production and launch, Wave 6 production and execution. September 2024 to the end of March 2025.","405872568456869714","","10420946920388797",Executed,"1961043830000"
+1126.0,"","58363477997154879","","100000000000",Executed,-1
+1127.0,Snowbridge: Update Bridge Pricing Parameters to Lower Transfer Fees,"561241253819079917","","100400235388797",Executed,-1
+1128.0,Retroactive Tip to AwesomeDot Team for high quality technical podcasts,"44068359828327456","","142905218517492571",Rejected,"4500000000000"
+1129.0,[Whitelisted Caller] Increase validator set size to 400,"1006686662298151586","","50110000000000",Executed,-1
+1130.0,WagMedia - Collective Content Creation for 52 Weeks,"368928588510183581","","272915510332068606",Executed,"451400000000"
+1131.0,Polkadot India IIT Roorkee Workshops and Hackathon (1/5),"20000000000000","","142718908579054742",Rejected,"10000000000000"
+1132.0,"Polkawatch, Decentralization Analytics, Retroactive Infrastructure and Maintenance Q1-Q3 2024","307394295962716450","","150933000000000",Executed,"76470000000000"
+1133.0,"","45413452921155113","","227929243304198837",Rejected,"200000000000"
+1134.0,SmallTipper,"98346081862275430","","950100000000000",Executed,"200000000000"
+1135.0,EasyA x Polkadot - Developer Growth via In-Person Hackathons and Crash Courses (#180DaysOfPolkadot): Milestones 1 & 2 Report,"307079418211652476","","3388816000000000",Executed,"875532400000000"
+1136.0,Bitskwela - Expanding Polkadot to the Thriving Philippine Web 3.0 Community,"220874122157007740","","169348230979421673",Executed,"100000000000000"
+1137.0,Polkadot's Economics Parameters: Proposal 1 (10% constant total inflation),"110002000000000","","594898611500756006",Rejected,-1
+1138.0,Polkadot's Economics Parameters: Proposal 2 (8% constant total inflation),"129742129257169307","","434493404975346007",Rejected,-1
+1139.0,"Polkadot's Economics Parameters: Proposal 3 (8% total inflation in the first year, then gradually decreasing)","639241923433949376","","188867155449088454",Executed,-1
+1140.0,Staking Rewards Partnership - Stake App & Terminal Integration,"48332542979971569","","388756313463052462",Rejected,"114000000000"
+1141.0,Growing the Music Vertical on Polkadot: Onboarding Billfold,"452368133880485641","","2208192134818490",Executed,"1133000000000"
+1142.0,Duplicate - vote NAY,"70000000000","","47104821814767601",TimedOut,-1
+1143.0,[Whitelisted Caller] Upgrade Polkadot to v1.3.x (transition to Agile Coretime),"1364670676237744145","","50010000000000",Executed,-1
+1144.0,Fellowship: Retain bkchr at rank 6,"414680034390532650","","50000000000",Executed,-1
+1145.0,Test,"0","","286121312004737034",TimedOut,-1
+1146.0,Polkadot ecosystem ‘open for all’ organic PR & media campaign,"286901901761622730","","310920300934503273",Rejected,"165000000000"
+1147.0,G6 Milestone 2: Enterprise SDK for Managed Blockchains and Polkadot Citizens Integration,"179839959573758445","","186775830352671458",Rejected,"390240000000"
+1148.0,"Open source Substrate Indexer in Rust with a decentralized Blockchain Explorer, by Mosaic Chain","48198833455464380","","255394884562842340",Rejected,"79520000000"
+1149.0,"submerge.io: Open-Source Indexer, Analysis, KYT, and AML Compliance Platform for the Polkadot Ecosystem","729874513343049919","","625178553000000000",Executed,"180000000000"
+1150.0,Implementing a Polkadot-native system parachain for data storage: Phase 2/3,"314173736288483606","","172393223244357061",Executed,"999880000000000"
+1151.0,[Root] Please reject/ignore,"41000000000","","39401594089449196",TimedOut,-1
+1152.0,Please reject/ignore.,"1000000000","","38173209063536816",TimedOut,-1
+1153.0,Polkadot's Economics Parameters: Proposal 4 (5% constant total inflation),"45310906814959067","","164276034008683899",TimedOut,-1
+1154.0,UNNOTE THE PREIMAGE- PLEASE DON'T VOTE,"1487951001000000","","343303092431790018",TimedOut,"9632300000000"
+1155.0,Retroactive Tip for polkadot & kusama OpenGov Voting Observer Twitter(X) Bot,"42440072910170882","","212333504071690007",Rejected,"10000000000000"
+1156.0,Compensation tip for coverage of activities,"43750580910170882","","209286533829528828",Rejected,"1393800000000"
+1157.0,"[Wish For Change] Referendum #1157 - Make polkadot.com code, open source","357518648894772409","","643253000000000",Executed,-1
+1158.0,"Argus Explorer : Open-source, PVM-focused blockchain explorer designed to address critical needs within the Polkadot ecosystem.","106226100000000","","61409206483097567",Rejected,"60000000000"
+1159.0,Support for Investigative Work and Communication Initiatives in Polkadot - Revisited,"44393213970916850","","255248618192965349",Rejected,"10000000000000"
+1160.0,Close Bounty 19 – Wasm Smart Contracts Bounty,"69607934399718675","","2377687272596058",ExecutionFailed,-1
+1161.0,[Whitelisted Caller] Configure the Coretime Chain and start sales,"1773903320218130398","","100000000000",Executed,-1
+1162.0,Please Vote on #1177 (Deprecated -> .DOT Authority Registration for the Polkadot App),"23084542657450810","","177211163862860637",Rejected,-1
+1163.0,[Retroactive $DED token] Social Media marketing for dotisded,"292147776715323493","","331957413364472122",Rejected,"11920242730000000000"
+1164.0,ChessOnchain on Polkadot ,"142000100000","","227632216463242134",TimedOut,"60200000000000"
+1165.0,Development of @noble/curves/sr25519 package by Paul Miller and audit sponsorship (1/2),"314276694613656907","","50001000001000",Executed,"19800000000"
+1166.0,Marketing Bounty 2.0,"583593399330408102","","111846912935260514",Executed,-1
+1167.0,[Small Tipper] Tip for Creating a UI for the Substrate Kitties Tutorial,"258937780546734316","","50880000000000",Executed,"2000000000000"
+1168.0,SmallTipper,"129668391288527050","","82355997917830468",Executed,"200000000000"
+1169.0,Showcasing Polkadot’s Capabilities: The Spammening,"169752721118589653","","4977856718496947",Executed,"650000000000000"
+1170.0,Only Retroactive Funding Proposal: Completed Remarker Development,"168466874730415569","","1970065063200410",Executed,"9469100000000"
+1171.0,Educational content maintenance proposal by Cryptonitas. ,"8948671613711422","","65836463909735575",Rejected,"166120000000000"
+1172.0,[Whitelisted Caller] Fix incorrect price for first coretime sale,"2080386601767783151","","50000000000",Executed,-1
+1173.0,Polkadot Community Foundation <> Ledger - Giveaway to Increase 𝕏 Followers,"19896347146366773","","4640905391005981",Executed,"20506000000"
+1174.0,Tip for 4+ Years of Phunky Polkadot Activism,"113287921475972287","","44266261886647286",Executed,"10000000000000"
+1175.0,VDS Academy Channel - 6 months funding,"8385596189385061","","61483980391635233",Rejected,"30000000000"
+1176.0,Sub0 Thailand 2024 Sponsorship for active devs and community members,"26695930827703224","","76125688720738837",Rejected,"166932300000000"
+1177.0,.DOT Authority Registration for the Polkadot App,"74340844505330292","","584151000000000",Executed,-1
+1178.0,SoyPolkadot: Driving Mass Adoption in LATAM through Real Experiences and Rewards,"1762004900000000","","559373102732822682",TimedOut,"497730000000000"
+1179.0,FanSociety - an on-chain fan club protocol for musicians and fans,"4002000001000","","316503310165063290",TimedOut,"19200000000"
+1180.0,Action Research for OpenGov,"218276618405597","","82682219735324389",Rejected,"67000000000000"
+1181.0,SmallTipper,"168175269187049817","","50000000000",Executed,"800000000000"
+1182.0,Anti-phishing browser extension,"105002100001000","","137389973149673991",TimedOut,"220000000000000"
+1183.0,World’s Gymnastics on Polkadot,"1167537090593623","","81862739384529030",Rejected,"2891830000000000"
+1184.0,"Preimage unnoted, to be resubmitted [Please vote NAY]","2250340010000000","","78139906024597759",Rejected,"69510610000"
+1185.0,Bounty Proposal: [Continuation of the Spanish content and event production bounty],"3542599112416584","","76814491005599112",Rejected,"852277300000000"
+1186.0,Reduce the Set of Head Ambassadors and Start an Effective Ambassador Program,"74987732894893577","","331210402985518678",Rejected,-1
+1187.0,Polkadot Korea: 3-Months Marketing and Community Expansion Services by CoinEasy 🍊,"179727000000000","","66567225867839127",TimedOut,"24392000000000"
+1188.0,Canceling referendum 1186,"8530392731077561","","62508981025827701",Rejected,-1
+1189.0,Proposal to Demote Don Diego Sanchez as Head Ambassador,"297762797712404068","","65605892051335857",Executed,-1
+1190.0,Inroduce KYC/DID for HA and Bounty Curators,"6969555207951007","","62629313619149828",TimedOut,-1
+1191.0,Kill Referendum #1189 - Keep Mr Sanchez in the Relay Chain,"3025154695200085","","71929420646453724",TimedOut,-1
+1192.0,PolkaIdentity's Registrar Application,"75460885009478875","","8706601955347701",Executed,-1
+1193.0,SQD (fka Subsquid) - Public data indexing Infrastructure for Polkadot and Kusama (Q1 2024),"79337685435863113","","33078929998613768",Executed,"475979100000000"
+1194.0,Compensation tip for Business Development activity and grow C-Level ecosystem,"131218996346678439","","94634521875650245",Executed,"2500000000000"
+1195.0,Remove all 20 Head Ambassadors and remove the Ambassador Collective,"189476334056826038","","482532311200000000",Cancelled,-1
+1196.0,Proposal for Funding the Development of the polkadot-typed-api Library,"2905066511495767","","62362447254867470",TimedOut,"50000000000000"
+1197.0,Proposal to remove ONLY the 20 current Head Ambassadors,"302715438933301331","","63276462394871411",Executed,-1
+1198.0,Ecosystem Agent Tip,"263130722318408","","67927187394249478",Rejected,"500"
+1199.0,"","0","","65614276314349983",TimedOut,-1
+1200.0,[Whitelisted Caller] Increase validator set size to 500,"167839674312851883","","534722425977300",Executed,-1
+1201.0,Motoverse - Preimage removed -- vote NAY,"1502297180916850","","81543287921599518",Rejected,"185000000000"
+1202.0,[Whitelisted Caller] Upgrade Polkadot to v1.3.3,"1488504595904440694","","100000000000",Executed,-1
+1203.0,Peranto: Empowering Legal Compliance and Digital Identity with KILT and Polkadot in LATAM,"1126978908728824","","81998653409862692",Rejected,"100000000000"
+1204.0,Research: RFP Action Research for OpenGov,"186724510000000","","81161319234030896",Rejected,"66055000000000"
+1205.0,Funding the Ambassador Program,"305005575616323","","80357829477476786",TimedOut,"840000000000"
+1206.0,Rotating DOT Logo on Telegram - Emoji Pack on Telegram,"186283367043102686","","1128467791005981",Executed,"1500000000000"
+1207.0,FanSociety - an on-chain fan club protocol for musicians and fans,"372527893428297","","84342619818621049",Rejected,"19200000000"
+1208.0,Vote Nay - Preimage has been removed,"25599124590447552","","76707272407006678",Rejected,"10000000000000"
+1209.0,Marketing Strategy For Polkadot,"228302912912031","","69155970703450724",TimedOut,"1000000"
+1210.0,Delivery of 4 Government Use Cases to Onboard Millions onto Polkadot,"304072301859561282","","76862248253671069",Executed,"763000000000"
+1211.0,Updated Tip for Lily for Work on Bounties,"38283047231852131","","71866329870718436",Rejected,"5000000000000"
+1212.0,EasyA x Polkadot University Microgrants Bounty,"43642272696511590","","62646933466973267",Rejected,-1
+1213.0,"Boosting Polkadot's Branding, Tickers, Educational & News Content on major crypto media","289455284010000000","","384344999697137729",Rejected,"330000000000"
+1214.0,Canceling referendum 1195,"70101737811974","","80427668892860400",Rejected,-1
+1215.0,Retroactive Reward for HA work - Abdulbee.,"16778191209288412","","20094946730845414",Rejected,"15000000000"
+1216.0,Inflation decreasing - Gavin Wood vision,"326041168903414","","78318148000834136",TimedOut,-1
+1217.0,[ Wish for change ] Unifying Polkadot Ecosystem Address Format,"467240962791842385","","683060201000000",Executed,-1
+1218.0,Treasury Proposal for Funding the JAMTON Project - Bridging 950 Million Users to the Polkadot Ecosystem,"445954074527441051","","596213957927317615",Rejected,"251660000000"
+1219.0,OpenZeppelin x Polkadot Ecosystem Growth Phase M4,"21981429404347099","","61422952028973101",Rejected,"629082990000000"
+1220.0,Retroactive Tip For Solo Content Creation-2,"84964846600499176","","19810922823368602",Executed,"15000000000"
+1221.0,Retroactive Big Tipper Proposal  - Research and analysis of the Polkadot Ecosystem AI-tools Usage for Treasury Proposal Processing,"306505293672915","","72788330638887327",Rejected,"4440000000000"
+1222.0,Polka Power 2 People (PP2P) Program,"7402219162096348","","71640678557536355",Rejected,"10000000000"
+1223.0,Florida Blockchain Business Association (FBBA) Sponsorship to Improve Polkadot’s Presence In the U.S.,"304180504788978528","","187703808218668866",Executed,"50000000000"
+1224.0,Alan B. Levan | NSU Broward Center of Innovation Membership,"15439469042169178","","3309003885838989",Executed,"2400000000"
+1225.0,[Retroactive] Subsquare 12 months maintenance and common features development,"84318140374869116","","32909902361125180",Executed,"469845000000"
+1226.0,Polkadot Korea: 3-Months Marketing and Community Expansion Services by CoinEasy 🍊,"73662458233359874","","309892335231461120",Rejected,"24392000000000"
+1227.0,"","0","","76564541594893425",TimedOut,"220000000000000"
+1228.0,Vote Nay,"10000000000","","80640366668262022",TimedOut,"410000000000"
+1229.0,Polkadot Ecosystem Branding Exposure at Bitcoin.com ,"11979361120531476","","369907509873069965",Rejected,"240000000000"
+1230.0,Retroactive Funding for Dotmemo - Onchain Event Memories for Polkadot,"76309370862396664","","4070700161526760",Executed,"42000000000"
+1231.0,"","70382988558136064","","4988315702388797",Executed,"200000000000"
+1232.0,Talisman Wallet and Portal Retroactive Funding,"326584817296908897","","1245542213796934",Executed,"690600000000"
+1233.0,SmallTipper,"73556875210460720","","622094880593623",Executed,"200000000000"
+1234.0,"","0","","80141256108758556",TimedOut,-1
+1235.0,Canceling referendum 1195,"481787694115982420","","76953962255387798",Executed,-1
+1236.0,SmallTipper,"75270009095970426","","588171324977300",Executed,"800000000000"
+1237.0,Participation in the Web3 Gaming event in Mexico City - Itemz Games (Casa Battler),"5962513761599631","","15553620200376374",Rejected,"2987000000"
+1238.0,vote No: Wrong track ,"112606723359874","","79602995867026668",Rejected,"25000000000000"
+1239.0,[Medium Spender] Referendum #1239 Opt-In Tip for DV Cohort 2 - Saxemberg ,"86365012179372321","","189652306776140249",Rejected,"25000000000000"
+1240.0,Dablock: Open-Source Migration & Operations [October - January],"57329080668185057","","15902545521199127",Executed,"8400000000"
+1241.0,"","0","","77802015999414695",TimedOut,-1
+1242.0,"","0","","77411903300110818",TimedOut,"79350000000000"
+1243.0,"","100000000","","77553320800110818",TimedOut,"697860000000000"
+1244.0,SmallTipper,"74742548749305795","","621645555616323",Executed,"200000000000"
+1245.0,--,"94949528189472849","","369020652740942613",Rejected,"438600000000"
+1246.0,$DED Holiday Marketing Campaign - Korea and Japan,"294393942904149666","","567465674345037365",Rejected,"12000000000000000000"
+1247.0,Remove all 19 Head Ambassadors ,"65820227008962111","","14505345704519729",Executed,-1
+1248.0,To Be Timed Out,"10000000000","","77418699581341815",TimedOut,-1
+1249.0,Inclusion of Acurast in Marketing Narratives,"223736344011763068","","180161275297768899",Executed,-1
+1250.0,Polkadot Open Source Developer Grants Bounty Program Curator Candidacy ,"443210426056067176","","222177070801794",Executed,-1
+1251.0,SmallTipper,"73652561347652795","","1070001000000",Executed,"200000000000"
+1252.0,"Artemis Analytics Integration: Integrate Polkadot and Polkadot Ecosystem Data Into Artemis, The Most Used Crypto Analytics Platform by US Institutional Investors","314241603973494705","","81326224592068111",Executed,"200000000000"
+1253.0,SmallTipper,"77848148538822526","","90501000000",Executed,"200000000000"
+1254.0,Bounty Compliance Standards 1.0,"430707724313004339","","12070520001000000",Executed,-1
+1255.0,NAY ,"0","","79462718478983012",TimedOut,"105000000000"
+1256.0,Deploy Uni V3 contracts to AH,"15578800241113270","","64389108726467569",TimedOut,"105000000000"
+1257.0,Polkadot Growth Initiative ,"191666055616323","","441916628949230709",Rejected,"629000000000000"
+1258.0,"Publishing and promoting the documentary, “Blockchain Gaming,” by the Polkadot community.","414996873861751256","","144080194565046166",Executed,"32500000000"
+1259.0,incorrect - vote NAY,"10441500000000","","449455559599895752",Rejected,"750000000000000"
+1260.0,Continued Management of Polkadot’s 𝕏 Account,"378524501591953940","","64318518678245618",Executed,"75000000000"
+1261.0,Polkadot Growth Initiative,"117658055616323","","382586961550911207",Rejected,"62900000000"
+1262.0,"Infrastructure Funding for Polkadot Asset Hub #3 - Atomic swaps, Offers, Maintenance","382852803302063753","","3740270861970891",Executed,"280000000000"
+1263.0,SmallTipper,"75114649395441097","","1200001000000",Executed,"200000000000"
+1264.0,PolkaGate: One-Year Retroactive Funding Proposal (Oct. 2023 - Oct. 2024),"67133243638290523","","316633607215092430",Rejected,"643110000000000"
+1265.0,Unlocking Growth with a 6-Month PolkAchiever Campaign and AirLyft Enterprise Suite Access,"74972966336533173","","368022919480721040",Rejected,"120000000000"
+1266.0,Apillon Milestone 3 Proposal: Core Integrations and Service Enhancements for Polkadot Ecosystem Growth,"161500094788505204","","122669146546848635",Executed,"809600000000"
+1267.0,The Polkadot Ambassador Fellowship,"84237517784545904","","15976402580190527",Executed,-1
+1268.0,SmallTipper,"75417381883992595","","60001000000",Executed,"200000000000"
+1269.0,[Vote Nay] Polkadot Staking Dashboard & Developer Console 2024-25 Funding,"20509344473735848","","441677748161363326",Rejected,"523110000000000"
+1270.0,Tip for an account used for Referendum Deposit Clean-up and Validator Payout Bot,"62569220656282231","","11660881001000000",Executed,"10000000000000"
+1271.0,"[Whitelisted Caller] Upgrade Polkadot Relay and Asset Hub to v1.3.4, setting Polkadot inflation to 120M DOT per year","631609425309137897","","741000000000",Executed,-1
+1272.0,Crystal Intelligence Blockchain Intelligence Proposal ,"237107011000000","","444785665665732927",Rejected,"1375000000000"
+1273.0,BuildOnDot 1 Year Infrastructure Cost - Domain + Hosting,"74140275299434233","","340000000000",Executed,"500000000"
+1274.0,Polkadot Ecosystem Support with DefiLlama Research,"11845840197023632","","367619198243663132",TimedOut,"530500000000000"
+1275.0,VOTE NAY - pre image error,"105221709047040","","379442022021269174",TimedOut,"12000000000"
+1276.0,TIP for the activities made by the Polkadot Mexican Collective,"602166949587899784","","136701441721254592",Executed,"12000000000"
+1277.0,Please Vote NAY,"11936417953990877","","390290240279030315",Rejected,"300000000000"
+1278.0,Proposal: Meetups Bounty #43 top-up & changes,"314836197354068217","","3058453022616323",Executed,"630000000000000"
+1279.0,Polkadot marketing proposal in Chinese speaking areas,"38772000000000","","439681989665822850",TimedOut,"200000000000000"
+1280.0,nayyyy,"101000000000","","386726925183439678",TimedOut,"299990000000000000000"
+1281.0,use DED to fund WUD,"13741736468000000","","312368133609455980",TimedOut,"296969696900000000000"
+1282.0,"Enhancing Polkadot's Presence in Asia through Strategic Events, Experiences, and Localized Community Engagement","1067010000000","","898369620502433734",Rejected,"2660940000000"
+1283.0,Curator Resubmission for POLKADOT <> KUSAMA BRIDGE SECURITY BOUNTY,"439598431368187271","","1605399761406025",Executed,-1
+1284.0,Tip Request for Work Related to Bounties on Polkadot,"185486661217666902","","13378154467000000",Executed,"1250000000"
+1285.0,VOTE NAY. Wrong currency - resubmitting as stables,"343321010000000","","439025935240212992",Rejected,"204280000000000"
+1286.0,PolkaHotClub: a commission-free OnlyFans alternative platform based on the use of DOT as the currency for internet content subscription services,"481010000000","","436999037981928420",TimedOut,"960000000000000"
+1287.0,Polkadot Ambassador Fellowship: Initial Funding Request and Validation of the Advisory Board,"255827003611639557","","13119992085657354",Executed,"640000000000"
+1288.0,Argentinos Juniors Fantasy Opportunity,"975410000000","","440945021818880164",Rejected,"440000000000"
+1289.0,Fuelarts x BitBasel | Creative Tech Accelerator for Polkadot,"223451466415333","","439182000002803880",Rejected,"300000000000"
+1290.0,OpenZeppelin x Polkadot Ecosystem Growth Phase M4,"376099800072623483","","92210950000000",Executed,"260000000000"
+1291.0,SmallTipper,"313324159813040235","","50000000000",Executed,"200000000000"
+1292.0,SmallTipper,"313324159813040235","","50000000000",Executed,"200000000000"
+1293.0,"","190556811458354778","","50000000000",Confirmed,"200000000000"
+1294.0,SmallTipper,"313332097936051262","","50000000000",Confirmed,"200000000000"
+1295.0,"","190774758600731495","","61311684075709260",Executed,"200000000000"
+1296.0,SmallTipper,"313332054815886509","","50000000000",Executed,"200000000000"
+1297.0,Closing Bounty 39. BD (Business Development) Bounty.,"452292050552888994","","95081250000000",Executed,-1
+1298.0,Vote NAY - wrong preimage,"105868105705513","","450125327621144173",Rejected,"40000000000000"
+1299.0,Bohemia Fam and reimbursement for my time,"256839069211070873","","116219256845536801",Executed,"10000000000000"
+1300.0,SolidityScan Polkadot Proposal,"63198954215870546","","374571849702068250",Rejected,"11000000000"
+1301.0,Treasury Proposal: Funding for Enhancing Substrate Fast Sync for Large Chain States,"375981652632909039","","114768973359874",Executed,"20000000000"
+1302.0,VOTE NAY. Resubmitting as stables,"1569614870359675","","444796358640326218",Rejected,"317040000000000"
+1303.0,Kus Public Broadcasting Extension & Marketing Bounty Engagement,"329563457611601141","","68779267737667533",Confirmed,"253512320000"
+1304.0,"3AV, an Open-source Standard Format for Audio and Video","7970784970324931","","443757564476726132",Rejected,"286670000000000"
+1305.0,[Retroactive]Treasury Proposal- Mimir 2.0 - Multisig Optimization And Proxy,"328683717144209089","","397575392394997",Executed,"134500000000"
+1306.0,[DO NOT PLACE DECISION DEPOSIT] Check the new referendum submitted,"2475923010000000","","76508803900363735",TimedOut,-1
+1307.0,Set a 5% Minimum Validator Commission Fee for Polkadot,"257782417184125594","","240268017562379976",TimedOut,-1
+1308.0,Pure Proxy Replication for accounts with inaccessible funds on Asset Hub,"600687770902903830","","117328114049847",Executed,-1
+1309.0,Web Summit: Targeting Web2 companies to explore Polkadot's solutions to solve their problems. ,"246405477566934447","","117788040016824202",Executed,"4534000000"
+1310.0,Please ignore,"652010000000","","444896001106382496",Rejected,"263193100000000"
+1311.0,Ignore this referenda,"721621636212","","445092882106382496",Rejected,"1283300000000"
+1312.0,Encode x Polkadot 2024: Tranche 1 update and discussion ahead of request for Tranche 2,"306146158642915133","","133391603588442939",Executed,"128330000000"
+1313.0,Polkadot Storage: Phase 3/3,"494109885529907188","","494396232869021763",Rejected,"1900001000000"
+1314.0,Milestone 1: EasyA x Polkadot: In-person hackathons and in-app Polkadot 2.0 crash course (#360DaysOfPolkadot),"259635155100454992","","120442553419681904",Executed,"392500000000"
+1315.0,Creation of an AssetDIDcomm System with AssetDID Credential Verification,"187702900490999180","","134077303486969921",Executed,"150610000000"
+1316.0,SmallTipper,"301805563700012043","","0",Executed,"200000000000"
+1317.0,Treasury Proposal: Merkle Mountain Belts (MMBs),"257965465050842249","","917792123111366050",Rejected,"0"
+1318.0,PROPOSAL EDUCATING IN LATIN AMERICA WITH THE POLKADOT ECOSYSTEM PART 2,"332355785728581","","256510434749470227",Rejected,"25640000000000"
+1319.0,Treasury Proposal for Funding the JAMTON Project - Milestone 1,"122638953983300890","","327363846759785116",Rejected,"78800000000"
+1320.0,SmallTipper,"376600278370662415","","39000000000000",Executed,"200000000000"
+1321.0,Introduce quadratic funding to the polkadot treasury spending,"2161944958034440","","372360151035602508",TimedOut,-1
+1322.0,Referendum #1322: Rebond DOT from Parallel Fi accounts - Description below,"1171979210969224380","","41122500000000",Executed,-1
+1323.0,SmallTipper,"374020437887667890","","31120000000000",Executed,"200000000000"
+1324.0,SmallTipper,"372943311336241519","","31120000000000",Confirmed,"200000000000"
+1325.0,"Bounty Manager MS2, Further Development and Maintenance","61042773102610329","","363052376404109809",Rejected,"265000000000"
+1326.0,Subject: Parallel Finance Guilty- Request for Investigation,"77078514832744930","","1289010778306332",TimedOut,-1
+1327.0,SmallTipper,"361818227943664789","","31120000000000",Confirmed,"800000000000"
+1328.0,Retroactive Tip For Solo Content Creation,"12237412000000000","","361387593843410839",TimedOut,"5000000000000"
+1329.0,SmallTipper,"373938025880327872","","180000000000",Executed,"200000000000"
+1330.0,TIP for DDS and Lucy,"191363096254353039","","139382862325802196",Executed,"99100000000000"
+1331.0,Ink!ubator 2.0 – Change of curators for bounty #19,"440892707850330538","","3454300287557231",Executed,-1
+1332.0,Vote Nay - Maintenance for the substrate-api-client Jan-25 to Jun-25,"15765935741881100","","422306207637218713",Rejected,"38600000000000"
+1333.0,SmallTipper,"299270745597079295","","31030000000000",Executed,"200000000000"
+1334.0,ReactiveDOT: funding request for the first stable version,"374886371034456844","","477353000000000",Executed,"67600000000"
+1335.0,"","250847788465376237","","61304150000000000",Executed,"200000000000"
+1336.0,Re-propose curator for the Moderation team bounty,"437163970758103828","","225956142394997",Executed,-1
+1337.0,Prestel & Partners: Family Office & Investor Conference Series for Polkadot,"211575892653972197","","293270547079859858",Rejected,"185000000000"
+1338.0,"","238701850791749509","","0",Executed,"200000000000"
+1339.0,Critical Runtime Upgrade to Prevent Further Exploitation,"491150439922453823","","3513520236561685",Executed,-1
+1340.0,Treasury Proposal: Retroactive Funding for PVM Debugger,"646407029207871211","","224805142394997",Executed,"16000000000"
+1341.0,Continuation of Activities of the BD Team Spain & Andorra,"330547914349393","","435624840403943981",Rejected,"292200000000000"
+1342.0,Scaling Polkadot: Driving Blockchain Innovation for Real-World Assets - Business Development Proposal,"434937019644764","","377221164259735061",Rejected,"127050000000"
+1343.0,dAppForge Milestone 3 ,"319359535165386018","","117003763048202727",Executed,"115000000000"
+1344.0,SmallTipper,"313496598578795006","","51000000000",Executed,"200000000000"
+1345.0,"Etherscan-as-a-Service x Polkadot Hub - PolkaVM Block Explorer (1 Mainnet, 1 Testnet)  ","86580208252017584","","304022387468261048",Rejected,"1000000000000"
+1346.0,Accelerate growth and adoption across the entire Polkadot ecosystem,"256902094669090883","","5689533277144385",Confirmed,"1005000000000"
+1347.0,Treasury Proposal: Polkadot Africa Community Growth (West and East Africa regions) ,"257763622052192011","","75570362611205327",Executed,"92880000000"
+1348.0,Código Brazuca  Academy,"13209375129903635","","361555710841688744",Rejected,"27546000000"
+1349.0,Wrong Track - Please vote NAY,"731546704028441","","75324466913184358",TimedOut,-1
+1350.0,Wish For Change | Polkadot Branding Guideline,"377440444324535368","","60108856924199137",Executed,-1
+1351.0,[Small Spender] Reimburse accounts affected by an XCM bug,"196678804760873272","","239932198827287158",Rejected,"10000000000"
+1352.0,Retroactive Funding for Ecosystem Activities,"191076119558225175","","118608848912171825",Executed,"45000000000"
+1353.0,Ratify Payout APPROVED by Ref. 1303 - The Kus,"641941030986965171","","201122250000000",Executed,"253512320000"
+1354.0,SmallTipper,"299093883104532373","","120000000000",Executed,"800000000000"
+1355.0,Maintenance for the substrate-api-client Jan-25 to Jun-25,"437938535892090298","","477181000000000",Executed,"33200000000"
+1356.0,SmallTipper,"360848247835084716","","50250000000",Executed,"200000000000"
+1357.0,Conor Daly - 2025 Polkadot Motorsports Program,"61592153266813693","","232659576444259061",Rejected,"0"
+1358.0,NaviDOT - Christmas Campain,"135967140840550657","","61854633105198644",Executed,"300000000000"
+1359.0,Polkadot Legal Bounty,"204546677138171029","","2623672426694357",Executed,-1
+1360.0,SmallTipper,"300508223549070029","","0",Executed,"200000000000"
+1361.0,SleepyNeko for Ambassador ,"12204454028441","","77115989078753300",TimedOut,-1
+1362.0,OG Tracker 2026,"248393779621743696","","63408021094932205",Executed,"604400000000"
+1363.0,"Wrong number, please VOTE NAY","210000000000","","434232291946366297",TimedOut,"1986000000000000"
+1364.0,AIWeb3 Chinese Unit(爱Web3 中文社区) renew operation Dec. 2024 - Dec. 2025,"61623701141425168","","314717412346366297",TimedOut,"198600000000"
+1365.0,Proposing new curators for the Public RPC Bounty (31),"428175629260657943","","281028501785970",Executed,-1
+1366.0,"Subscan Q3/Q4 2024 Funding Proposal: Basic service fee & Development cost for the Polkadot, Westend, and Rococo Ecosystems）","267568310671906088","","296485555616323",Executed,"163507880000"
+1367.0,Polkadot Moderation Team Bounty Top-up - 2025,"385175364002922925","","317297698011320",Executed,"273305000000000"
+1368.0,Closing Bounty 27. Polkadot Parachain Assets Onramp Bounty Program,"445455905149761482","","281008501785970",Executed,-1
+1369.0,SmallTipper,"421764694290183809","","24783142394997",Executed,"200000000000"
+1370.0,Polkadot Staking Dashboard 2025 (Q1-Q2) Funding Proposal,"328221210496746870","","910200751785970",Executed,"82000000000"
+1371.0,Next-Gen Smart Account Features – powered by Polkadot,"196116845914302153","","121740267148719983",Executed,"606380000000"
+1372.0,Lotto Multichain dApp - Discussion,"295863134299360","","367073356110117806",TimedOut,-1
+1373.0,Vote NAY - Wrong Preimage,"100473134299360","","437433185676000970",TimedOut,"275000000000000"
+1374.0,Polkadot Fast-Grants Bounty,"269486995781524773","","178322162711913990",Executed,-1
+1375.0,Polkadot Education Path by Open Web Academy,"8076349251701653","","316071685333911643",Rejected,"27500000000"
+1376.0,KWIT - mobile payment wallet,"11927725709493587","","427828809908511915",Rejected,"334000000000"
+1377.0,OG Rust Bounties,"455984978888868661","","2864534751785970",Executed,-1
+1378.0,SmallTipper,"434223797140773186","","279868501785970",Executed,"800000000000"
+1379.0,"","360197560816764212","","1050000000000",Executed,"800000000000"
+1380.0,Modern Market Sponsorship Finder's Fee,"177954782292457346","","61783927855198644",Executed,"694200000000"
+1381.0,Ratify Payout APPROVED by Ref. 1346 - Token Terminal,"695570689744667367","","456263501785970",Executed,"1005000000000"
+1382.0,Re-propose curators for the Meetups Bounty #43,"438518908724881945","","1132000000000",Executed,-1
+1383.0,Ideal Network: The Randomness Layer for Polkadot's World Computer,"378400639139731949","","938532820285970",Executed,"300250000000"
+1384.0,.,"20040000000000","","427322351568865846",Rejected,"400000000000"
+1385.0,SmallTipper,"302989679069500006","","250000000",Executed,"200000000000"
+1386.0,.,"530221000000000","","439192873568865846",Rejected,"410000000000"
+1387.0,.,"140000000000","","439182603568865846",Rejected,"410000000000"
+1388.0,Technical & Marketing Partnership - Polkadot & Team Vitality to revolutionize esports fan engagement thanks to Web3!,"60962954811005120","","378087925727930062",Rejected,"0"
+1389.0,Conor Daly - 2025 Polkadot Motorsports Program 2.0,"348773300046741829","","422472378439150965",Rejected,"0"
+1390.0,Talisman - Mobile Wallet Proposal,"244173244045761682","","68708670803503780",Executed,"598100000000"
+1391.0,"Nova Wallet 6th Proposal: Retroactive Reimbursement: Swaps, Seamless DApp Browser, Portfolio, SwipeGov, New Polkadot Ledger, Runtime Updates, and more","568701029736671719","","279890501785970",Executed,"1037010000000"
+1392.0,{bash} events 2025 - (March to July) - creating permanent user funnels.,"298030933845618932","","44483300549444934",Executed,"452000000000"
+1393.0,"","54000000000","","73121570739897435",TimedOut,-1
+1394.0,Wish for Change | Polkadot Treasury Bitcoin Strategic Reserve,"196525191343431086","","1120466335150225",TimedOut,-1
+1395.0,Polkadot System Parachains Collator Bounty #32  Top-Up Proposal - Jan/2025,"441883734184660738","","3542000000000",Executed,"215049400000000"
+1396.0,SmallTipper,"374805196933746115","","279872501785970",Executed,"200000000000"
+1397.0,Tip for 2 days workshop - Polkadot Experience Beta,"132958676724306866","","61921735218170017",Executed,"2068400000000"
+1398.0,Fine-tuned and Dedicated Onboarding Strategy into Polkadot,"280933008910304206","","353043877472912334",Rejected,"4950300000000000"
+1399.0,Retroactive Funding Proposal For The Blockspace @Coindesk Consensus ,"440548679406268994","","370694307402293",Executed,"100525000000"
+1400.0,Snowbridge: Register Ether Asset and Lower Bridge Fees,"1290868644070243781","","1070000000000",Executed,-1
+1401.0,Tip for Six,"7090875891910245","","385999798163404412",Rejected,"20000000000"
+1402.0,SmallTipper,"375474866195516778","","60000000000",Executed,"200000000000"
+1403.0,SmallTipper,"301600375591558331","","10250000000",Executed,"200000000000"
+1404.0,QMDB Core Integration for Substrate Storage Enhancement,"12174966655616323","","361472928930943110",TimedOut,"50000000000000"
+1405.0, Live-Streamer Retroactive Proposal,"278762621736947367","","188025659006653352",Executed,"25000000000"
+1406.0,Polkadot Immersive Event Booth,"116800100000000","","376634954756288646",TimedOut,"284410000000"
+1407.0,Set Curators for Legal Bounty,"378532816167376371","","61367783637277496",Executed,-1
+1408.0,SmallTipper,"371017364136016278","","283233201785970",Executed,"200000000000"
+1409.0,"2Days Devs Meetups with Polkadot (East Africa Community)","481779709937961","","373581729982237925",TimedOut,"2960000000000"
+1410.0,RegionX - Coretime Marketplace Production Deployment Phase 1,"140967969848015047","","63052910761400000",Executed,"90070000000"
+1411.0,Spanish Bounty V3,"62749805400565526","","321251185127083476",Rejected,"673752300000000"
+1412.0,Polkadot + Brave Wallet: Driving Adoption Through Native Integration,"301085283405818004","","84887023985496546",Executed,"3000000000000"
+1413.0,[Retroactive Funding] JAM GrayPaper Reader,"376053010392237925","","198124159120103",Executed,"21000000000"
+1414.0,*sigh* please vote NAY,"1468201537461","","73543049379339336",TimedOut,-1
+1415.0,please ignore,"10961370021672","","72451811175762185",TimedOut,-1
+1416.0,Polkadot Community Foundation: Allow the Marketing Bounty to Execute Formal Contracts through the Polkadot Community Foundation,"377163241826432427","","394603250000000",Executed,-1
+1417.0,Closing Bounty 49. Technical Support Bounty.,"444078972230454148","","2159117645692078",Executed,-1
+1418.0,[Whitelisted Caller] Increasing nDelayTranches from 89 to 213,"696215899258192866","","3530000000000",Executed,-1
+1419.0,"","20000000000","","374294595362857425",Rejected,"5885291000000000000000000"
+1420.0,SQD (fka Subsquid) - Public data indexing Infrastructure for Polkadot and Kusama (Q2 2024),"72707647886798933","","364101593234453176",Rejected,"588529100000000"
+1421.0,Volmex Protocol Integration with Polkadot DEX Ecosystem ,"201905331979988383","","219417205601398286",Rejected,"375000000000"
+1422.0,Polkadot Anti-Scam Team 2025 Top-up,"5342906265142899","","313397298137588834",Rejected,"936602706523930"
+1423.0,ParaXerve NFT Marketplace Development,"60288513107479545","","315811884077945791",Rejected,"40000000000"
+1424.0,"Emergency Response Plan for Securing 200,000 DOT","2433738203074840043","","638558547880933",Executed,-1
+1425.0,Peer3 SDK - real time peer-to-peer smart contracts ,"197187722576148066","","182037555662782027",Executed,"0"
+1426.0,Polkadot Decoded 2024 post-event report,"300037293582610","","439761789585240609",Rejected,"292358000000"
+1427.0,[Whitelisted Caller] Upgrade Polkadot to v1.4,"794406938858022602","","10000000000",Executed,-1
+1428.0,Polkadot Growth Initiative  (Revised),"218830331182610","","436057827735386215",Rejected,"35120000000000"
+1429.0,SmallTipper,"300472964950746776","","10000000000",Executed,"800000000000"
+1430.0,SmallTipper,"300472974950746776","","0",Confirmed,"200000000000"
+1431.0,SmallTipper,"299572708450746776","","4000000000000",Confirmed,"200000000000"
+1432.0,Propose Curators OG Rust Bounty,"437637969568345655","","135036000000000",Executed,-1
+1433.0,Vehicle Data on Asset Hub (We're All Gonna Own It),"123634011731748136","","181056421528489499",Rejected,"282000000000"
+1434.0,Please vote Nay,"1440899272187730","","441499619671924301",Rejected,"968491000000"
+1435.0,"DON'T VOTE or ADD DECISION DEPOSIT, ALLOW IT TIMEOUT.","11183338537792","","311902544925175581",TimedOut,"0"
+1436.0,[Whitelisted Caller] Update schedulerParams.lookahead configuration parameter to 3,"528055114554862597","","2145250000000",Executed,-1
+1437.0,Don't vote here. Vote on #1436 instead,"631000000000","","72981531718238490",TimedOut,-1
+1438.0,PolkaPulse: DeFi Dashboard for Polkadot Parachains,"12058321561529101","","424991635287759166",Rejected,"78000000000"
+1439.0,Polkadot DeFi Singularity,"463270531814076095","","23080000000000",Executed,"0"
+1440.0,Giant Squid Phase 2,"374420787051073554","","36760111400000",Executed,"169520000000"
+1441.0,Polkadot Community Foundation: Conditions on transferring funds to Centrifuge-related instruments,"258282079185846335","","181154105081895511",TimedOut,-1
+1442.0,Please ignore,"406000000000","","88944383759930140",TimedOut,-1
+1443.0,"","0","","60968462456385077",TimedOut,-1
+1444.0,"","0","","72657952456385077",TimedOut,-1
+1445.0,Plan B: Rebond 200k DOT for Parallel Fi,"1440511164161846676","","138149383250500",Executed,-1
+1446.0,SmallTipper,"361716186328259530","","5070000000000",Executed,"200000000000"
+1447.0,SQD (fka Subsquid) - Public data indexing Infrastructure for Polkadot and Kusama (Q2 2024),"435470002576115295","","232264861400000",Executed,"264838090000"
+1448.0,Investment in High-Performance AI Infrastructure for Community Access,"41866000000000","","436743711578688725",TimedOut,"1500000000000000"
+1449.0,[Small Spender] Namaste Polkadot: Education and community for Polkadot India (#1449),"117403860267743","","384647863253619409",Rejected,"69468000000"
+1450.0,Tip for Managing Polkadot Portugal Channels,"122909536301892182","","312660185168686671",Rejected,"2500000000000"
+1451.0,SmallTipper,"434452023162282907","","5000000000",Executed,"200000000000"
+1452.0,Fellowship: Retain bkchr at rank 6,"272279846831858161","","3000000000000",Executed,-1
+1453.0,Editorial Board in Spanish Cohort #2 Dec 2024 - May 2025,"121836505810202120","","202345651456073940",Rejected,"46000000000"
+1454.0,SmallTipper,"262516965653604384","","2050000000000",Executed,"1500000000000"
+1455.0,Statescan maintenance proposal from 2023.10 to 2025.03,"439428870739027865","","34580250000000",Executed,"67051000000"
+1456.0,SmallTipper,"434196167397671704","","88607886798933",Executed,"200000000000"
+1457.0,SmallTipper,"197893733497553529","","88494555616323",Executed,"200000000000"
+1458.0,Parallel Finance Round Two; Is Polkadot Tech-fellows over-involved?,"74713315320886","","194888713099711403",TimedOut,-1
+1459.0,Polkadot Runtime Upgrade to v1.4.1,"432268547127980041","","0",Executed,-1
+1460.0,SmallTipper,"302253037685111502","","10000000000",Executed,"200000000000"
+1461.0,SmallTipper,"425386745463319271","","60000000000",Executed,"800000000000"
+1462.0,Polkadot-API 2025 Development Funding through Polkadot Community Foundation,"448941424184417855","","60250093122319",Executed,"656660310000"
+1463.0,Polkassembly Social Contract 2025,"251443757397912521","","177624374756069310",Executed,"530671000000"
+1464.0,Research about Computational Efficiency of AI Models on the Polkadot Blockchain + Workshops,"183082094037860","","433540834750971026",TimedOut,"16950000000"
+1465.0,OpenZeppelin Support for Polkadot Hub and Polkadot Cloud in 2025,"263404961532441070","","934331343122319",Executed,"1750000000000"
+1466.0,Polkadot Cloud Website Development (Phase 1: Q2 2025),"191340493759370929","","199971724424702545",Rejected,"50000000000"
+1467.0,Retroactive Tip For Solo Content Creation-3,"351857020188579474","","50000000000",Executed,"9900000000000"
+1468.0,Upgrade Snowbridge Gateway Contract,"1256085934612632298","","50000000000",Executed,-1
+1469.0,Please vote NAY,"153742880346491","","421786500883777766",TimedOut,"67000000000"
+1470.0,SmallTipper,"441102818086056417","","50250000000",Executed,"200000000000"
+1471.0,SmallTipper,"435225631243169284","","90250000000",Executed,"200000000000"
+1472.0,"VOTE NAY! Polkadot Blockchain Academy, PBA Campus 7, The JAM Course launch, University partnerships expansion, ongoing PBA-X evolution, Alumni program. 9 months funding from April to December.","1771473045386067","","504728567289616724",Rejected,"3729298000000"
+1473.0,Tip: Strindbergman (ETHDEVNER),"241654414270360359","","60566653293143480",Executed,"1000000000000"
+1474.0,Polkadot Fast-Grants Bounty Curator Candidacy,"268187767112919064","","49248954522319",Executed,-1
+1475.0,Subscan-PVM Integration: Building a Unified Explorer for the Polkadot Ecosystem,"441597774617284349","","35016243122319",Executed,"249250000000"
+1476.0,JUST 2.0 Retroactive Compensation for Contributions to the Polkadot Ecosystem,"517333461319102954","","61354586809801057",Executed,"0"
+1477.0,Funding for ReactiveDOT & related developments,"385974121659463003","","81539343122319",Executed,"89440000000"
+1478.0,First full fledged NFT collection on Polkadot with PVM,"12057832880346491","","422679920340877828",TimedOut,"10000000000000"
+1479.0,Polkadot/ Kusama Asset Hub Liquidity for Bridge Fee Swaps,"372274728331201737","","0",Executed,"10000000000000"
+1480.0,Set PoV size limit to 10 Mb,"841297119135637461","","25853142394997",Executed,-1
+1481.0,VOTE NAY - Wrong category- [Retroactive Funding] JAM SDK Implementation of reusable service,"1977113880346491","","374406443824650685",Rejected,"7000000000000"
+1482.0,Motorsport Sponsoring Superbike / Polkadot Racesuit,"298203644644214258","","137792077121017826",Executed,"6000000000000"
+1483.0,[Retroactive Funding] JAM SDK Implementation of reusable service,"14204646026199138","","361534650427945179",Rejected,"7000000000000"
+1484.0,[Whitelisted Caller] Increase validator set size to 600,"577542041280419614","","10000000000",Executed,-1
+1485.0,Funding for Public RPC Providers via Bounty 31,"265685758270281124","","84032235517316",Executed,"395110000000000"
+1486.0,[Runtime 1.4.2] Upgrade Polkadot Asset Hub and Collectives,"838089401827070511","","30000000000",Executed,-1
+1487.0,Paseo - Developer Testnet Bounty Top-up Request,"565509490491743201","","60200343122319",Executed,"1559290000000000"
+1488.0,Laura Shin's Unchained,"43174745707726","","378071852537650874",TimedOut,"416000000000"
+1489.0,PolkaGate MetaMask Snap: Retroactive Funding Proposal (Oct 2024 - Jan 2025),"78183412377820662","","365533901639076580",Rejected,"53600000000"
+1490.0,[Medium Spender] Referendum #1490,"352204637836513319","","193172934981601470",Executed,"901930000000000"
+1491.0,Provision of Snowbridge-Wrapped USDT & USDC Liquidity to Facilitate Fee Swaps,"578740960251720442","","200000000000000",Executed,"0"
+1492.0,[PROPOSAL] OpenGuild - Accelerate Polkadot Builder Activation in SEA & Broader Asia,"318274310665251291","","118586808888851428",Executed,"290400000000"
+1493.0,Provision of Snowbridge ETH Liquidity to Facilitate Fee Swaps,"506830709756993242","","10000000000",Executed,"5200000000000"
+1494.0,[Do not vote],"563736728555083","","76194086016281957",TimedOut,-1
+1495.0,"","65965789248","","78171600309105665",TimedOut,-1
+1496.0,"","490011285974704","","19890482531372259",TimedOut,-1
+1497.0,"***revised proposal***Polkadot Blockchain Academy, PBA Campus 7, The JAM Course launch, University pilot, ongoing PBA-X evolution, Alumni program.","399118052980786811","","165968150000000",Executed,"0"
+1498.0,[Whitelisted Caller] Register Polkadot Native Assets on Ethereum,"958421691189098150","","1020000000000",Executed,-1
+1499.0,Retroactive Funding Proposal: Bounty Manager V2.0,"75854309366007292","","253974455360740084",Rejected,"64368000000"
+1500.0,Sponsorship Hybrid driver  PORSCHE SUPER CUP - PORSCHE BENELUX ,"25292708708879","","632998341119227854",Rejected,"295000000000"
+1501.0,Renewal of treasury USDT and USDC Acquisition ,"318061674566542886","","18861042133853985",Executed,-1
+1502.0,Reimbursement for corrupted staking ledgers,"374299565237542127","","11000000000",Executed,"35043300000000"
+1503.0,Decentralized High Performance Object Storage (MinIO),"242036961970140807","","119551185976335114",Executed,"43761000000"
+1504.0,PolkaBiz Business Mentorship & Ecosystem Support,"260169338503570842","","261116990432808088",Rejected,"0"
+1505.0,SportStake Development & EU Marketing Funding Proposal,"977616708708879","","629040413516171550",Rejected,"272500000000"
+1506.0,"Fuelarts x BitBasel | The Artists & Collectors Polkadot Hub to onboard 2000+ new & engaged users, 300+ projects and 10K+ transactions","3314855469363838","","568680374687994346",Rejected,"316000000000"
+1507.0,[Small Tipper] Referendum #1507,"2976056402799","","442407670174340028",Rejected,"2400000000"
+1508.0,[Big Tipper] Referendum #1508,"264885319850042116","","200250000000",Executed,"2400000000"
+1509.0, Substrate Asset Game Engine (SAGE),"79078236177044569","","243019586360987137",Rejected,"80000000000"
+1510.0,"Set Snowbridge-wrapped USDC & USDT as sufficient assets, set their ED to $0.01, and set their metadata on Asset Hub","784839344879217934","","1250000000",Executed,-1
+1511.0,SmallTipper,"370700511389070026","","0",Executed,"200000000000"
+1512.0,"","255659672462891419","","0",Executed,"200000000000"
+1513.0,Ratify Payout APPROVED by Ref. 1390 - Talisman Mobile Wallet,"260002000000000","","0",ConfirmStarted,"598100000000"
+1514.0,Polkadot x MotoGP Partnership & Integration Proposal (VOTE NAY),"0","","0",Deciding,"57452335200000000"
+1515.0,SmallTipper,"432865229575050423","","0",Executed,"200000000000"
+1516.0,IBP Bounty Top-Up,"0","","0",Deciding,"10277320000000000"
+1517.0,Guestlist+1: Polkadot becomes the Center of Gravity for Blockchain x Music,"0","","933000000000",Deciding,"388761000000"
+1518.0,Incognitee: Privacy Sidechain on Polkadot Asset Hub (Retroactive),"360020000000000","","0",Deciding,"201140000000"
+1519.0,[Big Tipper] Referendum #1519,"387547994278893571","","10612000000000",Executed,"5000000000"
+1520.0,"{Vote Nay, opting PAL bounty} Audit sponsorship of micro-sr25519 package by Paul Miller (2/2)","0","","0",Deciding,"34500000000"
+1521.0,**Tip to Anaelle LTD for the creation of Bounties HR and Bounties Staff databases**,"79300056123094306","","0",Executed,"2125000000"
+1522.0,PolkaWorld Ops and Maintenance proposal：2025.4 - 2026.3,"584206272454012405","","142377763450882571",Confirmed,"266652000000"
+1523.0,Developing Polkadot Humanoid Robot SDK at Cyberpunk Lab,"0","","0",Deciding,"618000000000"
+1524.0,[Small Tipper] Referendum #1524,"245450023253411586","","1000000000",Executed,"200000000000"
+1525.0,Please vote NAY,"90408486425955","","0",Deciding,-1
+1526.0,SQD (fka Subsquid) - Public Data Indexing Infrastructure for Polkadot and Kusama (Q3 2024),"0","","29861400000",Deciding,"310592980000"
+1527.0,Please vote Nay.,"0","","0",Deciding,"577190000000000"
+1528.0,[Runtime 1.4.3] Upgrade Polkadot Bridge Hub,"856781169284267137","","250000000",Executed,-1
+1529.0,"Set Snowbridge-wrapped USDC & USDT as sufficient assets, set their ED to $0.01, and set their metadata on Asset Hub","288000000000000","","0",Deciding,-1
+1530.0,The Spammening Reward for Amforc,"348533000000000","","0",Deciding,"45000000000"
+1531.0,The operating cost for the research organization Polkadot Ecology Research Institute for 2025/4-2026/3,"0","","10000000000000",Deciding,"209520000000"
+1532.0,Suprime - Fully Decentralized Accelerator,"0","","0",Submitted,"2100000000000000"
+1533.0,Faze x Vitality - Esport Meta Proposal.,"0","","351010000000000",Deciding,"15068650000000000"
+1534.0,SmallTipper,"323158479276476061","","0",Executed,"800000000000"
+1535.0,"6 Months Extension for the PoKe Berlin Team - Transform Projects to Operational State","0","","5700000000000",Deciding,"290899000000"
+1536.0,Assigning Coretime to Xcavate and Mythical,"2706190555463611","","3000634553731249",Deciding,-1
+1537.0,Tip for Tallahassee Advocacy ,"261348301873286558","","6042387313194007",Executed,"5000000000000"
+1538.0,Bifrost 1M DOT liquidity loan for vDOT liquidity for one year; repay in full with approximately 6% interest.,"671405409274487","","0",Deciding,"10000000000000000"
+1539.0,JAM China Academy (Educational Roadshow),"0","","0",Deciding,"288600000000"
+1540.0,"Continuation Operations for 1 year - Spanish BD Team, now IBERLABS ","0","","35865792565352",Deciding,"144520000000"

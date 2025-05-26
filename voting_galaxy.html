@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polkadot OpenGov Voting Pattern Galaxy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #info-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            z-index: 100;
+        }
+        
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 100;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+        }
+        
+        select {
+            width: 100%;
+            padding: 5px;
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 3px;
+        }
+        
+        #search {
+            width: 100%;
+            padding: 8px;
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .legend {
+            margin-top: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        #tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 200;
+            display: none;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="info-panel">
+            <h3>Polkadot OpenGov Voting Galaxy</h3>
+            <p>Explore voting patterns across proposals and voters.</p>
+            <div id="stats">
+                <div>Proposals: <span id="proposal-count">0</span></div>
+                <div>Voters: <span id="voter-count">0</span></div>
+                <div>Relationships: <span id="relationship-count">0</span></div>
+            </div>
+            
+            <div class="legend">
+                <h4>Legend</h4>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4CAF50;"></div>
+                    <span>Executed Proposals</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #F44336;"></div>
+                    <span>Rejected Proposals</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #FF9800;"></div>
+                    <span>Pending/TimedOut</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #2196F3;"></div>
+                    <span>Voters</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="controls">
+            <input type="text" id="search" placeholder="Search proposals or voters...">
+            
+            <div class="control-group">
+                <label for="filter-status">Filter by Status:</label>
+                <select id="filter-status">
+                    <option value="all">All Proposals</option>
+                    <option value="Executed">Executed</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="TimedOut">Timed Out</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="min-funding">Min Funding Amount:</label>
+                <input type="range" id="min-funding" min="0" max="1000000" value="0">
+                <span id="funding-value">0 DOT</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="cluster-strength">Cluster Visibility:</label>
+                <input type="range" id="cluster-strength" min="0" max="1" step="0.1" value="0.5">
+            </div>
+            
+            <div class="control-group">
+                <label for="animation-speed">Animation Speed:</label>
+                <input type="range" id="animation-speed" min="0" max="2" step="0.1" value="1">
+            </div>
+        </div>
+        
+        <div id="tooltip"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script>
+        class VotingGalaxy {
+            constructor() {
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.controls = null;
+                
+                this.proposals = new Map();
+                this.voters = new Map();
+                this.connections = [];
+                this.clusters = [];
+                
+                this.proposalMeshes = [];
+                this.voterMeshes = [];
+                this.connectionLines = [];
+                
+                this.raycaster = new THREE.Raycaster();
+                this.mouse = new THREE.Vector2();
+                
+                this.init();
+                this.loadData();
+                this.setupEventListeners();
+            }
+            
+            init() {
+                // Setup renderer
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setClearColor(0x000011);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                document.getElementById('container').appendChild(this.renderer.domElement);
+                
+                // Setup camera
+                this.camera.position.set(0, 0, 1000);
+                
+                // Setup controls
+                this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+                this.controls.enableDamping = true;
+                this.controls.dampingFactor = 0.05;
+                
+                // Add ambient light
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+                this.scene.add(ambientLight);
+                
+                // Add directional light
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                directionalLight.position.set(100, 100, 50);
+                directionalLight.castShadow = true;
+                this.scene.add(directionalLight);
+                
+                // Add starfield background
+                this.createStarfield();
+            }
+            
+            createStarfield() {
+                const starsGeometry = new THREE.BufferGeometry();
+                const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 1 });
+                
+                const starsVertices = [];
+                for (let i = 0; i < 10000; i++) {
+                    const x = (Math.random() - 0.5) * 4000;
+                    const y = (Math.random() - 0.5) * 4000;
+                    const z = (Math.random() - 0.5) * 4000;
+                    starsVertices.push(x, y, z);
+                }
+                
+                starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+                const stars = new THREE.Points(starsGeometry, starsMaterial);
+                this.scene.add(stars);
+            }
+            
+            async loadData() {
+                try {
+                    const response = await fetch('polkadot_voting_data.json');
+                    const data = await response.json();
+                    
+                    this.processData(data);
+                    this.createVisualization();
+                    this.updateStats(data.metadata);
+                    
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    // For demo purposes, create sample data
+                    this.createSampleData();
+                }
+            }
+            
+            processData(data) {
+                // Process proposals
+                const proposalMap = new Map();
+                data.relationships.forEach(rel => {
+                    if (!proposalMap.has(rel.proposal_id)) {
+                        proposalMap.set(rel.proposal_id, {
+                            id: rel.proposal_id,
+                            title: rel.proposal_title,
+                            ayes: rel.ayes,
+                            nays: rel.nays,
+                            status: rel.status,
+                            requestedAmount: rel.requested_amount,
+                            voters: []
+                        });
+                    }
+                    proposalMap.get(rel.proposal_id).voters.push({
+                        address: rel.voter_address,
+                        voteType: rel.vote_type,
+                        weight: rel.vote_weight
+                    });
+                });
+                
+                // Process voters
+                const voterMap = new Map();
+                data.relationships.forEach(rel => {
+                    if (!voterMap.has(rel.voter_address)) {
+                        voterMap.set(rel.voter_address, {
+                            address: rel.voter_address,
+                            name: rel.voter_name,
+                            proposals: []
+                        });
+                    }
+                    voterMap.get(rel.voter_address).proposals.push({
+                        id: rel.proposal_id,
+                        voteType: rel.vote_type,
+                        weight: rel.vote_weight
+                    });
+                });
+                
+                this.proposals = proposalMap;
+                this.voters = voterMap;
+                this.clusters = data.clusters || [];
+                this.influences = data.influences || [];
+            }
+            
+            createVisualization() {
+                this.createProposalNodes();
+                this.createVoterNodes();
+                this.createConnections();
+                this.positionNodes();
+            }
+            
+            createProposalNodes() {
+                this.proposals.forEach((proposal, id) => {
+                    const size = Math.max(5, Math.log(proposal.requestedAmount + 1) * 2);
+                    const geometry = new THREE.SphereGeometry(size, 16, 16);
+                    
+                    let color;
+                    switch (proposal.status) {
+                        case 'Executed': color = 0x4CAF50; break;
+                        case 'Rejected': color = 0xF44336; break;
+                        case 'TimedOut': color = 0xFF9800; break;
+                        default: color = 0x9E9E9E;
+                    }
+                    
+                    const material = new THREE.MeshLambertMaterial({ 
+                        color: color,
+                        transparent: true,
+                        opacity: 0.8
+                    });
+                    
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.userData = { type: 'proposal', data: proposal };
+                    
+                    // Add glow effect
+                    const glowGeometry = new THREE.SphereGeometry(size * 1.2, 16, 16);
+                    const glowMaterial = new THREE.MeshBasicMaterial({
+                        color: color,
+                        transparent: true,
+                        opacity: 0.2
+                    });
+                    const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+                    mesh.add(glow);
+                    
+                    this.scene.add(mesh);
+                    this.proposalMeshes.push(mesh);
+                });
+            }
+            
+            createVoterNodes() {
+                this.voters.forEach((voter, address) => {
+                    const influence = this.influences.find(i => i.voter_address === address);
+                    const size = influence ? Math.max(2, influence.influence_score * 10) : 2;
+                    
+                    const geometry = new THREE.OctahedronGeometry(size);
+                    const material = new THREE.MeshLambertMaterial({ 
+                        color: 0x2196F3,
+                        transparent: true,
+                        opacity: 0.7
+                    });
+                    
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.userData = { type: 'voter', data: voter, influence: influence };
+                    
+                    this.scene.add(mesh);
+                    this.voterMeshes.push(mesh);
+                });
+            }
+            
+            createConnections() {
+                this.proposals.forEach((proposal, proposalId) => {
+                    proposal.voters.forEach(vote => {
+                        const voterMesh = this.voterMeshes.find(v => 
+                            v.userData.data.address === vote.address
+                        );
+                        const proposalMesh = this.proposalMeshes.find(p => 
+                            p.userData.data.id === proposalId
+                        );
+                        
+                        if (voterMesh && proposalMesh) {
+                            const geometry = new THREE.BufferGeometry().setFromPoints([
+                                voterMesh.position,
+                                proposalMesh.position
+                            ]);
+                            
+                            const color = vote.voteType === 'AYE' ? 0x4CAF50 : 0xF44336;
+                            const material = new THREE.LineBasicMaterial({ 
+                                color: color,
+                                transparent: true,
+                                opacity: 0.3
+                            });
+                            
+                            const line = new THREE.Line(geometry, material);
+                            line.userData = { type: 'connection', vote: vote };
+                            
+                            this.scene.add(line);
+                            this.connectionLines.push(line);
+                        }
+                    });
+                });
+            }
+            
+            positionNodes() {
+                // Position proposals in clusters based on similarity
+                const proposalArray = Array.from(this.proposals.values());
+                const radius = 300;
+                
+                proposalArray.forEach((proposal, index) => {
+                    const angle = (index / proposalArray.length) * Math.PI * 2;
+                    const x = Math.cos(angle) * radius;
+                    const z = Math.sin(angle) * radius;
+                    const y = (Math.random() - 0.5) * 100;
+                    
+                    const mesh = this.proposalMeshes.find(m => m.userData.data.id === proposal.id);
+                    if (mesh) {
+                        mesh.position.set(x, y, z);
+                    }
+                });
+                
+                // Position voters around their voted proposals
+                this.voterMeshes.forEach(voterMesh => {
+                    const voter = voterMesh.userData.data;
+                    let avgX = 0, avgY = 0, avgZ = 0;
+                    let count = 0;
+                    
+                    voter.proposals.forEach(vote => {
+                        const proposalMesh = this.proposalMeshes.find(p => 
+                            p.userData.data.id === vote.id
+                        );
+                        if (proposalMesh) {
+                            avgX += proposalMesh.position.x;
+                            avgY += proposalMesh.position.y;
+                            avgZ += proposalMesh.position.z;
+                            count++;
+                        }
+                    });
+                    
+                    if (count > 0) {
+                        const offsetRadius = 50 + Math.random() * 50;
+                        const offsetAngle = Math.random() * Math.PI * 2;
+                        
+                        voterMesh.position.set(
+                            avgX / count + Math.cos(offsetAngle) * offsetRadius,
+                            avgY / count + (Math.random() - 0.5) * 50,
+                            avgZ / count + Math.sin(offsetAngle) * offsetRadius
+                        );
+                    }
+                });
+                
+                // Update connection lines
+                this.updateConnections();
+            }
+            
+            updateConnections() {
+                this.connectionLines.forEach(line => {
+                    const positions = line.geometry.attributes.position.array;
+                    line.geometry.attributes.position.needsUpdate = true;
+                });
+            }
+            
+            setupEventListeners() {
+                // Mouse events for interaction
+                this.renderer.domElement.addEventListener('mousemove', (event) => {
+                    this.onMouseMove(event);
+                });
+                
+                this.renderer.domElement.addEventListener('click', (event) => {
+                    this.onMouseClick(event);
+                });
+                
+                // Control events
+                document.getElementById('search').addEventListener('input', (e) => {
+                    this.filterBySearch(e.target.value);
+                });
+                
+                document.getElementById('filter-status').addEventListener('change', (e) => {
+                    this.filterByStatus(e.target.value);
+                });
+                
+                document.getElementById('min-funding').addEventListener('input', (e) => {
+                    this.filterByFunding(parseFloat(e.target.value));
+                    document.getElementById('funding-value').textContent = `${e.target.value} DOT`;
+                });
+                
+                // Window resize
+                window.addEventListener('resize', () => {
+                    this.onWindowResize();
+                });
+            }
+            
+            onMouseMove(event) {
+                this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+                
+                this.raycaster.setFromCamera(this.mouse, this.camera);
+                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes]);
+                
+                const tooltip = document.getElementById('tooltip');
+                
+                if (intersects.length > 0) {
+                    const object = intersects[0].object;
+                    const data = object.userData.data;
+                    
+                    let content = '';
+                    if (object.userData.type === 'proposal') {
+                        content = `
+                            <strong>${data.title}</strong><br>
+                            Status: ${data.status}<br>
+                            Ayes: ${data.ayes.toLocaleString()}<br>
+                            Nays: ${data.nays.toLocaleString()}<br>
+                            Requested: ${data.requestedAmount.toLocaleString()} DOT
+                        `;
+                    } else if (object.userData.type === 'voter') {
+                        const influence = object.userData.influence;
+                        content = `
+                            <strong>Voter</strong><br>
+                            Address: ${data.address.substring(0, 10)}...<br>
+                            Proposals Voted: ${data.proposals.length}<br>
+                            ${influence ? `Influence Score: ${influence.influence_score.toFixed(2)}` : ''}
+                        `;
+                    }
+                    
+                    tooltip.innerHTML = content;
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = event.clientX + 10 + 'px';
+                    tooltip.style.top = event.clientY + 10 + 'px';
+                } else {
+                    tooltip.style.display = 'none';
+                }
+            }
+            
+            onMouseClick(event) {
+                this.raycaster.setFromCamera(this.mouse, this.camera);
+                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes]);
+                
+                if (intersects.length > 0) {
+                    const object = intersects[0].object;
+                    this.focusOnObject(object);
+                }
+            }
+            
+            focusOnObject(object) {
+                // Animate camera to focus on the selected object
+                const targetPosition = object.position.clone();
+                targetPosition.z += 200;
+                
+                // Simple animation (you could use a library like GSAP for smoother animations)
+                const startPosition = this.camera.position.clone();
+                const duration = 1000; // ms
+                const startTime = Date.now();
+                
+                const animate = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    this.camera.position.lerpVectors(startPosition, targetPosition, progress);
+                    this.controls.target.copy(object.position);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                };
+                
+                animate();
+            }
+            
+            filterBySearch(query) {
+                const lowerQuery = query.toLowerCase();
+                
+                this.proposalMeshes.forEach(mesh => {
+                    const proposal = mesh.userData.data;
+                    const matches = proposal.title.toLowerCase().includes(lowerQuery) ||
+                                  proposal.id.toString().includes(lowerQuery);
+                    mesh.visible = matches || query === '';
+                });
+                
+                this.voterMeshes.forEach(mesh => {
+                    const voter = mesh.userData.data;
+                    const matches = voter.address.toLowerCase().includes(lowerQuery) ||
+                                  (voter.name && voter.name.toLowerCase().includes(lowerQuery));
+                    mesh.visible = matches || query === '';
+                });
+            }
+            
+            filterByStatus(status) {
+                this.proposalMeshes.forEach(mesh => {
+                    const proposal = mesh.userData.data;
+                    mesh.visible = status === 'all' || proposal.status === status;
+                });
+            }
+            
+            filterByFunding(minAmount) {
+                this.proposalMeshes.forEach(mesh => {
+                    const proposal = mesh.userData.data;
+                    mesh.visible = proposal.requestedAmount >= minAmount;
+                });
+            }
+            
+            updateStats(metadata) {
+                document.getElementById('proposal-count').textContent = this.proposals.size;
+                document.getElementById('voter-count').textContent = this.voters.size;
+                document.getElementById('relationship-count').textContent = metadata.total_relationships;
+            }
+            
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                
+                // Rotate proposals slowly
+                const time = Date.now() * 0.0005;
+                this.proposalMeshes.forEach((mesh, index) => {
+                    mesh.rotation.y = time + index * 0.1;
+                });
+                
+                // Animate voter positions slightly
+                this.voterMeshes.forEach((mesh, index) => {
+                    mesh.position.y += Math.sin(time + index) * 0.1;
+                });
+                
+                this.controls.update();
+                this.renderer.render(this.scene, this.camera);
+            }
+            
+            createSampleData() {
+                // Create sample data for demo if real data isn't available
+                console.log('Creating sample data for demo...');
+                // Implementation for sample data...
+            }
+        }
+        
+        // Initialize the visualization
+        const galaxy = new VotingGalaxy();
+        galaxy.animate();
+    </script>
+</body>
+</html> 
