@@ -165,6 +165,14 @@
                 <label for="animation-speed">Animation Speed:</label>
                 <input type="range" id="animation-speed" min="0" max="2" step="0.1" value="1">
             </div>
+            
+            <div class="control-group">
+                <label for="view-mode">View Mode:</label>
+                <select id="view-mode">
+                    <option value="galaxy">Galaxy View</option>
+                    <option value="solar">Solar System View</option>
+                </select>
+            </div>
         </div>
         
         <div id="tooltip"></div>
@@ -189,9 +197,12 @@
                 this.proposalMeshes = [];
                 this.voterMeshes = [];
                 this.connectionLines = [];
+                this.planetMeshes = [];
                 
                 this.raycaster = new THREE.Raycaster();
                 this.mouse = new THREE.Vector2();
+                this.viewMode = 'galaxy';
+                this.uniformOrbSize = 3; // Standard size for all orbs
                 
                 this.init();
                 this.loadData();
@@ -313,10 +324,149 @@
                 this.positionNodes();
             }
             
+            createSolarSystemView() {
+                // Clear existing planets
+                this.planetMeshes.forEach(planet => this.scene.remove(planet));
+                this.planetMeshes = [];
+                
+                // Group proposals by status
+                const statusGroups = {
+                    'Executed': [],
+                    'Rejected': [],
+                    'TimedOut': [],
+                    'Other': []
+                };
+                
+                this.proposalMeshes.forEach(mesh => {
+                    const status = mesh.userData.data.status;
+                    if (statusGroups[status]) {
+                        statusGroups[status].push(mesh);
+                    } else {
+                        statusGroups['Other'].push(mesh);
+                    }
+                });
+                
+                // Create planets for each status group
+                const planetPositions = [
+                    { x: -400, z: 0 },    // Executed
+                    { x: 400, z: 0 },     // Rejected  
+                    { x: 0, z: -400 },    // TimedOut
+                    { x: 0, z: 400 }      // Other
+                ];
+                
+                const statusColors = {
+                    'Executed': 0x4CAF50,
+                    'Rejected': 0xF44336,
+                    'TimedOut': 0xFF9800,
+                    'Other': 0x9E9E9E
+                };
+                
+                Object.keys(statusGroups).forEach((status, index) => {
+                    const orbs = statusGroups[status];
+                    if (orbs.length === 0) return;
+                    
+                    // Calculate planet size based on square root of orb count
+                    const minPlanetSize = 20;
+                    const maxPlanetSize = 80;
+                    const planetSize = Math.max(minPlanetSize, Math.min(maxPlanetSize, Math.sqrt(orbs.length) * 8));
+                    
+                    // Create planet
+                    const planetGeometry = new THREE.SphereGeometry(planetSize, 32, 32);
+                    const planetMaterial = new THREE.MeshLambertMaterial({
+                        color: statusColors[status],
+                        transparent: true,
+                        opacity: 0.3,
+                        wireframe: true
+                    });
+                    
+                    const planet = new THREE.Mesh(planetGeometry, planetMaterial);
+                    const pos = planetPositions[index];
+                    planet.position.set(pos.x, 0, pos.z);
+                    planet.userData = { type: 'planet', status: status, orbCount: orbs.length };
+                    
+                    this.scene.add(planet);
+                    this.planetMeshes.push(planet);
+                    
+                    // Position orbs around the planet
+                    this.positionOrbsAroundPlanet(orbs, planet, planetSize);
+                });
+                
+                // Position voters around all planets
+                this.positionVotersInSolarSystem();
+            }
+            
+            positionOrbsAroundPlanet(orbs, planet, planetRadius) {
+                const orbitalRadius = planetRadius + 30;
+                const layers = Math.ceil(orbs.length / 20); // Max 20 orbs per layer
+                
+                orbs.forEach((orb, index) => {
+                    const layer = Math.floor(index / 20);
+                    const indexInLayer = index % 20;
+                    const orbsInLayer = Math.min(20, orbs.length - layer * 20);
+                    
+                    const layerRadius = orbitalRadius + layer * 15;
+                    const angle = (indexInLayer / orbsInLayer) * Math.PI * 2;
+                    const height = (Math.random() - 0.5) * 20;
+                    
+                    const x = planet.position.x + Math.cos(angle) * layerRadius;
+                    const y = planet.position.y + height;
+                    const z = planet.position.z + Math.sin(angle) * layerRadius;
+                    
+                    orb.position.set(x, y, z);
+                });
+            }
+            
+            positionVotersInSolarSystem() {
+                this.voterMeshes.forEach(voterMesh => {
+                    const voter = voterMesh.userData.data;
+                    
+                    // Find which planets this voter has voted on
+                    const votedPlanets = new Set();
+                    voter.proposals.forEach(vote => {
+                        const proposalMesh = this.proposalMeshes.find(p => p.userData.data.id === vote.id);
+                        if (proposalMesh) {
+                            const status = proposalMesh.userData.data.status;
+                            votedPlanets.add(status === 'Executed' || status === 'Rejected' || status === 'TimedOut' ? status : 'Other');
+                        }
+                    });
+                    
+                    if (votedPlanets.size > 0) {
+                        // Position voter between the planets they've voted on
+                        let avgX = 0, avgZ = 0;
+                        let count = 0;
+                        
+                        this.planetMeshes.forEach(planet => {
+                            if (votedPlanets.has(planet.userData.status)) {
+                                avgX += planet.position.x;
+                                avgZ += planet.position.z;
+                                count++;
+                            }
+                        });
+                        
+                        if (count > 0) {
+                            const offsetRadius = 50 + Math.random() * 30;
+                            const offsetAngle = Math.random() * Math.PI * 2;
+                            
+                            voterMesh.position.set(
+                                avgX / count + Math.cos(offsetAngle) * offsetRadius,
+                                (Math.random() - 0.5) * 40,
+                                avgZ / count + Math.sin(offsetAngle) * offsetRadius
+                            );
+                        }
+                    } else {
+                        // Position randomly if no votes found
+                        voterMesh.position.set(
+                            (Math.random() - 0.5) * 800,
+                            (Math.random() - 0.5) * 100,
+                            (Math.random() - 0.5) * 800
+                        );
+                    }
+                });
+            }
+            
             createProposalNodes() {
                 this.proposals.forEach((proposal, id) => {
-                    const size = Math.max(5, Math.log(proposal.requestedAmount + 1) * 2);
-                    const geometry = new THREE.SphereGeometry(size, 16, 16);
+                    const geometry = new THREE.SphereGeometry(this.uniformOrbSize, 16, 16);
                     
                     let color;
                     switch (proposal.status) {
@@ -336,7 +486,7 @@
                     mesh.userData = { type: 'proposal', data: proposal };
                     
                     // Add glow effect
-                    const glowGeometry = new THREE.SphereGeometry(size * 1.2, 16, 16);
+                    const glowGeometry = new THREE.SphereGeometry(this.uniformOrbSize * 1.2, 16, 16);
                     const glowMaterial = new THREE.MeshBasicMaterial({
                         color: color,
                         transparent: true,
@@ -352,10 +502,7 @@
             
             createVoterNodes() {
                 this.voters.forEach((voter, address) => {
-                    const influence = this.influences.find(i => i.voter_address === address);
-                    const size = influence ? Math.max(2, influence.influence_score * 10) : 2;
-                    
-                    const geometry = new THREE.OctahedronGeometry(size);
+                    const geometry = new THREE.OctahedronGeometry(this.uniformOrbSize);
                     const material = new THREE.MeshLambertMaterial({ 
                         color: 0x2196F3,
                         transparent: true,
@@ -363,6 +510,7 @@
                     });
                     
                     const mesh = new THREE.Mesh(geometry, material);
+                    const influence = this.influences.find(i => i.voter_address === address);
                     mesh.userData = { type: 'voter', data: voter, influence: influence };
                     
                     this.scene.add(mesh);
@@ -485,6 +633,10 @@
                     document.getElementById('funding-value').textContent = `${e.target.value} DOT`;
                 });
                 
+                document.getElementById('view-mode').addEventListener('change', (e) => {
+                    this.switchViewMode(e.target.value);
+                });
+                
                 // Window resize
                 window.addEventListener('resize', () => {
                     this.onWindowResize();
@@ -496,7 +648,7 @@
                 this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
                 
                 this.raycaster.setFromCamera(this.mouse, this.camera);
-                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes]);
+                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes, ...this.planetMeshes]);
                 
                 const tooltip = document.getElementById('tooltip');
                 
@@ -521,6 +673,12 @@
                             Proposals Voted: ${data.proposals.length}<br>
                             ${influence ? `Influence Score: ${influence.influence_score.toFixed(2)}` : ''}
                         `;
+                    } else if (object.userData.type === 'planet') {
+                        content = `
+                            <strong>${object.userData.status} Planet</strong><br>
+                            Proposals: ${object.userData.orbCount}<br>
+                            Status: ${object.userData.status}
+                        `;
                     }
                     
                     tooltip.innerHTML = content;
@@ -534,7 +692,7 @@
             
             onMouseClick(event) {
                 this.raycaster.setFromCamera(this.mouse, this.camera);
-                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes]);
+                const intersects = this.raycaster.intersectObjects([...this.proposalMeshes, ...this.voterMeshes, ...this.planetMeshes]);
                 
                 if (intersects.length > 0) {
                     const object = intersects[0].object;
@@ -597,6 +755,21 @@
                     const proposal = mesh.userData.data;
                     mesh.visible = proposal.requestedAmount >= minAmount;
                 });
+            }
+            
+            switchViewMode(mode) {
+                this.viewMode = mode;
+                
+                if (mode === 'solar') {
+                    this.createSolarSystemView();
+                } else {
+                    // Clear planets and return to galaxy view
+                    this.planetMeshes.forEach(planet => this.scene.remove(planet));
+                    this.planetMeshes = [];
+                    this.positionNodes();
+                }
+                
+                this.updateConnections();
             }
             
             updateStats(metadata) {

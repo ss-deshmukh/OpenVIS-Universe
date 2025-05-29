@@ -280,6 +280,13 @@
                 <label>Auto Rotate</label>
                 <input type="checkbox" id="autoRotate">
             </div>
+            
+
+            
+            <div class="control-group">
+                <label>Focus Mode</label>
+                <button id="clearFocus" style="width: 100%; padding: 5px; background: #333; color: white; border: 1px solid #555; border-radius: 3px;">Clear Focus</button>
+            </div>
         </div>
 
         <div id="stats">
@@ -299,6 +306,54 @@
         </div>
 
         <div id="tooltip" class="hidden"></div>
+        
+        <!-- Timeline Slider at Bottom -->
+        <div id="timeline-container" style="
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        ">
+            <div style="text-align: center; margin-bottom: 10px; color: white; font-size: 14px; font-weight: bold;">
+                Timeline: <span id="timelineLabel">3 Months Ago to Now</span>
+            </div>
+            
+            <div style="position: relative; margin: 10px 0;">
+                <input type="range" id="timelineSlider" min="0" max="6" step="1" value="2" style="
+                    width: 100%;
+                    height: 6px;
+                    background: linear-gradient(to right, #333, #e6007a);
+                    border-radius: 3px;
+                    outline: none;
+                    -webkit-appearance: none;
+                ">
+                
+                <!-- Timeline Markings -->
+                <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 8px;
+                    font-size: 10px;
+                    color: #ccc;
+                ">
+                    <span>Now</span>
+                    <span>1M</span>
+                    <span>3M</span>
+                    <span>6M</span>
+                    <span>1Y</span>
+                    <span>2Y</span>
+                    <span>All Time</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -316,10 +371,23 @@
                 this.voterMeshes = [];
                 this.voterConnectionLines = [];
                 this.voterConnectionData = []; // Store connection data for dynamic updates
+                this.planetMeshes = []; // Store planet meshes for solar system mode
                 this.particles = null;
                 this.animationSpeed = 1;
                 this.showVoterConnections = true;
                 this.showVoters = true;
+                this.timelineMonths = 3; // Default to 3 months back
+                this.focusedObject = null; // Currently focused voter or proposal
+                this.allConnectionsData = []; // Store all connections for filtering
+                this.timelineOptions = [
+                    { value: 0, label: 'Now', months: 0 },
+                    { value: 1, label: '1 Month Ago to Now', months: 1 },
+                    { value: 2, label: '3 Months Ago to Now', months: 3 },
+                    { value: 3, label: '6 Months Ago to Now', months: 6 },
+                    { value: 4, label: '1 Year Ago to Now', months: 12 },
+                    { value: 5, label: '2 Years Ago to Now', months: 24 },
+                    { value: 6, label: 'All Time', months: Infinity }
+                ];
                 
                 this.init();
                 this.loadData();
@@ -545,6 +613,10 @@
                 if (this.solarOrbit) {
                     this.solarOrbit.visible = false;
                 }
+                
+                // Clear planet meshes
+                this.planetMeshes.forEach(planet => this.scene.remove(planet));
+                this.planetMeshes = [];
                 if (this.sunOutline) {
                     this.sunOutline.visible = false;
                 }
@@ -743,9 +815,8 @@
                     };
                     const color = statusColors[proposal.status] || statusColors['Other'];
 
-                    // Size based on total votes (ayes + nays)
-                    const totalVotes = proposal.ayes + proposal.nays;
-                    const size = Math.max(0.5, Math.min(3, Math.log(totalVotes + 1) * 0.3));
+                    // Uniform size for all proposals
+                    const size = 1.5;
 
                     // Create proposal sphere
                     const geometry = new THREE.SphereGeometry(size, 16, 16);
@@ -769,7 +840,7 @@
             createVoterNodes() {
                 if (!this.showVoters) return;
 
-                const voters = this.data.voters.slice(0, 500); // Increased to top 500 voters for complete dataset
+                const voters = this.data.voters; // Show all voters
                 
                 // Use the same concentric circle arrangement as in arrangeGalaxyView
                 const baseRadius = 150; // Starting radius for first circle
@@ -793,8 +864,8 @@
                     const z = Math.sin(angle) * currentRadius;
                     const y = 0; // All voters on the same horizontal plane
 
-                    // Size based on vote count
-                    const size = Math.max(0.3, Math.min(1.5, Math.log(voter.vote_count + 1) * 0.2));
+                    // Uniform size for all voters (same as proposals)
+                    const size = 1.5;
 
                     // Create voter sphere (smaller and white/gray)
                     const geometry = new THREE.SphereGeometry(size, 8, 8);
@@ -821,14 +892,64 @@
             createVoterConnections() {
                 if (!this.showVoterConnections) return;
 
-                // Create connections between voters and proposals they voted on
-                const relationships = this.data.relationships.slice(0, 10000); // Increased to 10K connections for complete dataset
+                // Clear existing connections
+                this.voterConnectionLines.forEach(line => this.scene.remove(line));
+                this.voterConnectionLines = [];
+                this.voterConnectionData = [];
+                this.allConnectionsData = [];
+
+                // Use ALL relationships for complete coverage
+                const relationships = this.data.relationships; // Use all relationships
                 
-                relationships.forEach(relationship => {
+                // Sort relationships by timestamp/proposal_id (latest first for reverse chronological)
+                const sortedRelationships = relationships.sort((a, b) => {
+                    // If there's a timestamp field, use it; otherwise use proposal_id as proxy for time
+                    const timeA = a.timestamp || a.proposal_id;
+                    const timeB = b.timestamp || b.proposal_id;
+                    return timeB - timeA; // Reverse order: latest first
+                });
+                
+                // Filter relationships based on timeline selection
+                let filteredRelationships;
+                if (this.timelineMonths === Infinity) {
+                    // Show all relationships
+                    filteredRelationships = sortedRelationships;
+                } else if (this.timelineMonths === 0) {
+                    // Show only most recent (top 1000 relationships)
+                    filteredRelationships = sortedRelationships.slice(0, 1000);
+                } else {
+                    // Calculate approximate cutoff based on months
+                    // Since we don't have actual timestamps, we'll use a proportion of total relationships
+                    const totalRelationships = sortedRelationships.length;
+                    const monthlyProportion = this.timelineMonths / 24; // Assume 24 months total span
+                    const cutoffIndex = Math.min(totalRelationships, Math.floor(totalRelationships * monthlyProportion));
+                    filteredRelationships = sortedRelationships.slice(0, cutoffIndex);
+                }
+                
+                let connectionsCreated = 0;
+                let voterNotFound = 0;
+                let proposalNotFound = 0;
+                
+                filteredRelationships.forEach(relationship => {
                     const voter = this.voterMeshes.find(m => m.userData.voter_address === relationship.voter_address);
                     const proposal = this.proposalMeshes.find(m => m.userData.proposal_id === relationship.proposal_id);
                     
+                    if (!voter) voterNotFound++;
+                    if (!proposal) proposalNotFound++;
+                    
                     if (voter && proposal) {
+                        connectionsCreated++;
+                        
+                        // Color based on proposal status (match proposal orb color)
+                        const statusColors = {
+                            'Executed': 0x00ff88,
+                            'Rejected': 0xff4444,
+                            'TimedOut': 0xffaa00,
+                            'Other': 0x4488ff
+                        };
+                        const proposalStatus = proposal.userData.status;
+                        const lineColor = statusColors[proposalStatus] || statusColors['Other'];
+                        
                         // Create geometry with initial positions
                         const geometry = new THREE.BufferGeometry();
                         const positions = new Float32Array([
@@ -836,11 +957,6 @@
                             proposal.position.x, proposal.position.y, proposal.position.z
                         ]);
                         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-                        
-                        // Color based on vote type
-                        let lineColor = 0x00ff00; // Green for AYE
-                        if (relationship.vote_type === 'NAY') lineColor = 0xff0000; // Red for NAY
-                        else if (relationship.vote_type === 'ABSTAIN') lineColor = 0xffff00; // Yellow for ABSTAIN
                         
                         const material = new THREE.LineBasicMaterial({ 
                             color: lineColor,
@@ -852,15 +968,30 @@
                         this.scene.add(line);
                         this.voterConnectionLines.push(line);
                         
-                        // Store connection data for dynamic updates
-                        this.voterConnectionData.push({
+                        // Store connection data for dynamic updates and focus mode
+                        const connectionData = {
                             line: line,
                             voter: voter,
                             proposal: proposal,
-                            geometry: geometry
-                        });
+                            geometry: geometry,
+                            relationship: relationship,
+                            originalOpacity: material.opacity
+                        };
+                        
+                        this.voterConnectionData.push(connectionData);
+                        this.allConnectionsData.push(connectionData);
                     }
                 });
+                
+                // Log connection statistics for debugging
+                console.log(`Connection Statistics:
+                    - Total relationships: ${relationships.length}
+                    - Time-filtered relationships: ${filteredRelationships.length}
+                    - Connections created: ${connectionsCreated}
+                    - Voter meshes available: ${this.voterMeshes.length}
+                    - Proposal meshes available: ${this.proposalMeshes.length}
+                    - Voters not found: ${voterNotFound}
+                    - Proposals not found: ${proposalNotFound}`);
             }
 
             setupControls() {
@@ -891,6 +1022,17 @@
                 document.getElementById('particleDensity').addEventListener('input', (e) => {
                     this.updateParticleDensity(parseFloat(e.target.value));
                 });
+
+                document.getElementById('timelineSlider').addEventListener('input', (e) => {
+                    const selectedOption = this.timelineOptions[parseInt(e.target.value)];
+                    this.timelineMonths = selectedOption.months;
+                    this.updateTimelineDisplay(selectedOption.label);
+                    this.createVoterConnections(); // Recreate connections with new timeline
+                });
+
+                document.getElementById('clearFocus').addEventListener('click', () => {
+                    this.clearFocusMode();
+                });
             }
 
             setupTooltip() {
@@ -903,7 +1045,7 @@
                     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
                     raycaster.setFromCamera(mouse, this.camera);
-                    const allMeshes = [...this.proposalMeshes, ...this.voterMeshes];
+                    const allMeshes = [...this.proposalMeshes, ...this.voterMeshes, ...this.planetMeshes];
                     const intersects = raycaster.intersectObjects(allMeshes);
 
                     if (intersects.length > 0) {
@@ -917,6 +1059,14 @@
                                 ${data.voter_name ? `<strong>Name:</strong> ${data.voter_name}<br>` : ''}
                                 <strong>Total Votes:</strong> ${data.vote_count.toLocaleString()}<br>
                                 <strong>Avg Voting Power:</strong> ${data.avg_voting_power.toFixed(4)}
+                            `;
+                        } else if (data.type === 'planet') {
+                            // Planet tooltip
+                            tooltip.innerHTML = `
+                                <strong>${data.status} Planet</strong><br>
+                                <strong>Proposals:</strong> ${data.proposalCount.toLocaleString()}<br>
+                                <strong>Planet Radius:</strong> ${data.radius.toFixed(1)} units<br>
+                                <strong>Status:</strong> ${data.status}
                             `;
                         } else {
                             // Proposal tooltip
@@ -940,6 +1090,24 @@
 
                 this.renderer.domElement.addEventListener('mouseleave', () => {
                     tooltip.classList.add('hidden');
+                });
+
+                // Add click handler for focus mode
+                this.renderer.domElement.addEventListener('click', (event) => {
+                    const mouse = new THREE.Vector2();
+                    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                    raycaster.setFromCamera(mouse, this.camera);
+                    const allMeshes = [...this.proposalMeshes, ...this.voterMeshes, ...this.planetMeshes];
+                    const intersects = raycaster.intersectObjects(allMeshes);
+
+                    if (intersects.length > 0) {
+                        const clickedObject = intersects[0].object;
+                        this.setFocusMode(clickedObject);
+                    } else {
+                        this.clearFocusMode();
+                    }
                 });
             }
 
@@ -1043,6 +1211,10 @@
                 // Create solar system visual elements
                 this.createSolarSystemRings();
                 
+                // Clear existing planet meshes
+                this.planetMeshes.forEach(planet => this.scene.remove(planet));
+                this.planetMeshes = [];
+                
                 // Central Sun: Arrange voters on a sphere using latitude-longitude grid
                 const sunRadius = 60;
                 const totalVoters = this.voterMeshes.length;
@@ -1084,18 +1256,50 @@
                 });
 
                 const orbitRadius = 180; // Distance from center
-                const planetRadius = 25;  // Radius of each planet sphere
                 const statusOrder = ['Executed', 'Other', 'TimedOut', 'Rejected'];
                 
                 statusOrder.forEach((status, planetIndex) => {
                     const proposals = statusGroups[status];
                     if (proposals.length === 0) return;
 
+                    // Dynamic planet size based on square root of proposal count
+                    const minPlanetRadius = 15;
+                    const maxPlanetRadius = 50;
+                    const planetRadius = Math.max(minPlanetRadius, Math.min(maxPlanetRadius, Math.sqrt(proposals.length) * 4));
+
                     // Calculate planet center position in orbit
                     const planetAngle = (planetIndex / statusOrder.length) * Math.PI * 2;
                     const planetCenterX = Math.cos(planetAngle) * orbitRadius;
                     const planetCenterZ = Math.sin(planetAngle) * orbitRadius;
                     const planetCenterY = 0;
+
+                    // Create visual planet representation
+                    const statusColors = {
+                        'Executed': 0x00ff88,
+                        'Rejected': 0xff4444,
+                        'TimedOut': 0xffaa00,
+                        'Other': 0x4488ff
+                    };
+                    
+                    const planetGeometry = new THREE.SphereGeometry(planetRadius, 32, 32);
+                    const planetMaterial = new THREE.MeshPhongMaterial({
+                        color: statusColors[status],
+                        transparent: true,
+                        opacity: 0.2,
+                        wireframe: true
+                    });
+                    
+                    const planetMesh = new THREE.Mesh(planetGeometry, planetMaterial);
+                    planetMesh.position.set(planetCenterX, planetCenterY, planetCenterZ);
+                    planetMesh.userData = { 
+                        type: 'planet', 
+                        status: status, 
+                        proposalCount: proposals.length,
+                        radius: planetRadius
+                    };
+                    
+                    this.scene.add(planetMesh);
+                    this.planetMeshes.push(planetMesh);
 
                     // Arrange proposals on this planet's sphere using grid system
                     const totalProposals = proposals.length;
@@ -1220,6 +1424,77 @@
 
                 this.controls.update();
                 this.renderer.render(this.scene, this.camera);
+            }
+
+            setFocusMode(focusedObject) {
+                this.focusedObject = focusedObject;
+                
+                // Get all connections related to the focused object
+                const relatedConnections = this.allConnectionsData.filter(connection => {
+                    return connection.voter === focusedObject || connection.proposal === focusedObject;
+                });
+                
+                // Get all related objects (voters and proposals connected to the focused object)
+                const relatedObjects = new Set();
+                relatedConnections.forEach(connection => {
+                    relatedObjects.add(connection.voter);
+                    relatedObjects.add(connection.proposal);
+                });
+                
+                // Dim all objects and connections
+                this.proposalMeshes.forEach(mesh => {
+                    mesh.material.opacity = relatedObjects.has(mesh) ? 0.8 : 0.1;
+                });
+                
+                this.voterMeshes.forEach(mesh => {
+                    mesh.material.opacity = relatedObjects.has(mesh) ? 0.6 : 0.1;
+                });
+                
+                this.planetMeshes.forEach(mesh => {
+                    mesh.material.opacity = 0.05; // Dim planets in focus mode
+                });
+                
+                // Show only related connections
+                this.allConnectionsData.forEach(connection => {
+                    if (relatedConnections.includes(connection)) {
+                        connection.line.material.opacity = connection.originalOpacity;
+                        connection.line.visible = true;
+                    } else {
+                        connection.line.material.opacity = 0.02;
+                        connection.line.visible = true;
+                    }
+                });
+                
+                console.log(`Focus mode: ${relatedConnections.length} connections, ${relatedObjects.size} related objects`);
+            }
+            
+            clearFocusMode() {
+                this.focusedObject = null;
+                
+                // Restore all objects to normal opacity
+                this.proposalMeshes.forEach(mesh => {
+                    mesh.material.opacity = 0.8;
+                });
+                
+                this.voterMeshes.forEach(mesh => {
+                    mesh.material.opacity = 0.6;
+                });
+                
+                this.planetMeshes.forEach(mesh => {
+                    mesh.material.opacity = 0.2;
+                });
+                
+                // Restore all connections to normal opacity
+                this.allConnectionsData.forEach(connection => {
+                    connection.line.material.opacity = connection.originalOpacity;
+                    connection.line.visible = this.showVoterConnections;
+                });
+                
+                console.log('Focus mode cleared');
+            }
+            
+            updateTimelineDisplay(label) {
+                document.getElementById('timelineLabel').textContent = label;
             }
 
             onWindowResize() {

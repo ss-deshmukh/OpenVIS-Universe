@@ -190,3 +190,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the decentralized future**
 
 *Explore governance like never before - where data meets the cosmos* ✨
+ 
