@@ -61,6 +61,101 @@
             z-index: 100;
         }
 
+        /* Add referendum table styles */
+        #referendum-table-panel {
+            position: absolute;
+            top: 20px;
+            left: 390px; /* Position next to info panel */
+            width: 500px;
+            max-height: 80vh;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            display: none;
+            overflow-y: auto;
+        }
+
+        #referendum-table-panel .panel-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #e6007a, #552bbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #referendum-table-panel .voter-info {
+            font-size: 12px;
+            color: #ccc;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+
+        #referendum-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        #referendum-table th {
+            background: rgba(230, 0, 122, 0.2);
+            color: #fff;
+            padding: 8px 6px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+
+        #referendum-table td {
+            padding: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        #referendum-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-executed { background: #00ff88; color: #000; }
+        .status-rejected { background: #ff4444; color: #fff; }
+        .status-timedout { background: #ffaa00; color: #000; }
+        .status-other { background: #4488ff; color: #fff; }
+
+        .close-panel {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #ccc;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .close-panel:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
         .title {
             font-size: 24px;
             font-weight: bold;
@@ -184,6 +279,80 @@
             max-width: 300px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        /* Search bar styles */
+        #search-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: 400px;
+        }
+
+        #voter-search {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        #voter-search:focus {
+            border-color: #e6007a;
+            box-shadow: 0 0 15px rgba(230, 0, 122, 0.3);
+        }
+
+        #voter-search::placeholder {
+            color: #aaa;
+        }
+
+        #search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-top: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+            display: none;
+        }
+
+        .search-suggestion {
+            padding: 10px 16px;
+            color: #ddd;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+        }
+
+        .search-suggestion:hover {
+            background: rgba(230, 0, 122, 0.2);
+            color: white;
+        }
+
+        .search-suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .search-suggestion .address {
+            font-family: monospace;
+            color: #e6007a;
+        }
+
+        .search-suggestion .stats {
+            color: #aaa;
+            font-size: 11px;
+        }
     </style>
 </head>
 <body>
@@ -191,6 +360,12 @@
         <div id="loading">
             <div class="spinner"></div>
             <div>Loading Polkadot OpenGov Data...</div>
+        </div>
+
+        <!-- Search Bar -->
+        <div id="search-container">
+            <input type="text" id="voter-search" placeholder="Search voter by address (e.g., 1FRMM8PEiWXYax...)">
+            <div id="search-suggestions"></div>
         </div>
 
         <div id="info-panel">
@@ -264,8 +439,6 @@
                 <input type="range" id="particleDensity" min="0.1" max="2" step="0.1" value="1">
             </div>
             
-
-            
             <div class="control-group">
                 <label>Show Voter Connections</label>
                 <input type="checkbox" id="showVoterConnections" checked>
@@ -280,8 +453,6 @@
                 <label>Auto Rotate</label>
                 <input type="checkbox" id="autoRotate">
             </div>
-            
-
             
             <div class="control-group">
                 <label>Focus Mode</label>
@@ -302,19 +473,44 @@
                 <span>Voting Relationships: </span>
                 <span class="stat-value" id="votingRelationships">-</span>
             </div>
+        </div>
 
+        <!-- Referendum Table Panel -->
+        <div id="referendum-table-panel">
+            <button class="close-panel" onclick="document.getElementById('referendum-table-panel').style.display = 'none'">&times;</button>
+            <div class="panel-title">Voter Referendum History</div>
+            <div class="voter-info" id="selected-voter-info">
+                <!-- Voter info will be populated here -->
+            </div>
+            <div style="overflow-x: auto;">
+                <table id="referendum-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Status</th>
+                            <th>Vote</th>
+                            <th>Weight</th>
+                            <th>Requested Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="referendum-table-body">
+                        <!-- Table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div id="tooltip" class="hidden"></div>
         
-        <!-- Timeline Slider at Bottom -->
-        <div id="timeline-container" style="
+        <!-- Referendum Filter at Bottom -->
+        <div id="referendum-container" style="
             position: absolute;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
-            max-width: 800px;
+            max-width: 900px;
             background: rgba(0, 0, 0, 0.8);
             padding: 15px 20px;
             border-radius: 10px;
@@ -322,35 +518,123 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 100;
         ">
-            <div style="text-align: center; margin-bottom: 10px; color: white; font-size: 14px; font-weight: bold;">
-                Timeline: <span id="timelineLabel">3 Months Ago to Now</span>
+            <div style="text-align: center; margin-bottom: 15px; color: white; font-size: 14px; font-weight: bold;">
+                Referendum Filter: <span id="referendumLabel">Showing Latest 50 Referendums</span>
             </div>
             
-            <div style="position: relative; margin: 10px 0;">
-                <input type="range" id="timelineSlider" min="0" max="6" step="1" value="2" style="
-                    width: 100%;
-                    height: 6px;
-                    background: linear-gradient(to right, #333, #e6007a);
-                    border-radius: 3px;
-                    outline: none;
-                    -webkit-appearance: none;
-                ">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <!-- Start Referendum -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <label style="color: #ccc; font-size: 12px; margin-bottom: 5px;">Start Referendum</label>
+                    <input type="number" id="startReferendum" min="0" max="9999" value="0" style="
+                        width: 100px;
+                        padding: 8px;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 5px;
+                        background: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        font-size: 12px;
+                        text-align: center;
+                    ">
+                </div>
                 
-                <!-- Timeline Markings -->
-                <div style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 8px;
-                    font-size: 10px;
-                    color: #ccc;
-                ">
-                    <span>Now</span>
-                    <span>1M</span>
-                    <span>3M</span>
-                    <span>6M</span>
-                    <span>1Y</span>
-                    <span>2Y</span>
-                    <span>All Time</span>
+                <!-- End Referendum -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <label style="color: #ccc; font-size: 12px; margin-bottom: 5px;">End Referendum</label>
+                    <input type="number" id="endReferendum" min="0" max="9999" value="50" disabled style="
+                        width: 100px;
+                        padding: 8px;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 5px;
+                        background: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        font-size: 12px;
+                        text-align: center;
+                        opacity: 0.5;
+                    ">
+                </div>
+                
+                <!-- Custom Checkbox -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <label style="color: #ccc; font-size: 12px; margin-bottom: 5px;">Custom Range</label>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="customRange" style="
+                            width: 18px;
+                            height: 18px;
+                            accent-color: #e6007a;
+                        ">
+                        <span style="color: #ccc; font-size: 11px;">Enable</span>
+                    </div>
+                </div>
+                
+                <!-- Apply Button -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <label style="color: transparent; font-size: 12px; margin-bottom: 5px;">.</label>
+                    <button id="applyFilter" style="
+                        padding: 8px 16px;
+                        background: #e6007a;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        font-weight: bold;
+                    ">Apply Filter</button>
+                </div>
+            </div>
+            
+            <!-- Info Text -->
+            <div style="text-align: center; margin-top: 10px; font-size: 11px; color: #aaa;">
+                <span id="filterInfo">Showing referendums 0-50 (50 referendums total)</span>
+            </div>
+        </div>
+
+        <!-- Performance Warning Modal -->
+        <div id="performanceWarning" style="
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        ">
+            <div style="
+                background: rgba(20, 20, 20, 0.95);
+                padding: 30px;
+                border-radius: 15px;
+                border: 2px solid #e6007a;
+                max-width: 500px;
+                text-align: center;
+                backdrop-filter: blur(10px);
+            ">
+                <h3 style="color: #e6007a; margin-bottom: 15px; font-size: 18px;">⚠️ Performance Warning</h3>
+                <p style="color: white; margin-bottom: 20px; line-height: 1.5;">
+                    Large amounts of data can be difficult for your browser to process and may slow down the visualization. 
+                    <br><br>
+                    <strong>We recommend viewing 100 referendums at maximum</strong> for optimal performance.
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button id="cancelCustom" style="
+                        padding: 10px 20px;
+                        background: #666;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    ">Cancel</button>
+                    <button id="confirmCustom" style="
+                        padding: 10px 20px;
+                        background: #e6007a;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-weight: bold;
+                    ">I Understand, Continue</button>
                 </div>
             </div>
         </div>
@@ -376,18 +660,14 @@
                 this.animationSpeed = 1;
                 this.showVoterConnections = true;
                 this.showVoters = true;
-                this.timelineMonths = 3; // Default to 3 months back
                 this.focusedObject = null; // Currently focused voter or proposal
                 this.allConnectionsData = []; // Store all connections for filtering
-                this.timelineOptions = [
-                    { value: 0, label: 'Now', months: 0 },
-                    { value: 1, label: '1 Month Ago to Now', months: 1 },
-                    { value: 2, label: '3 Months Ago to Now', months: 3 },
-                    { value: 3, label: '6 Months Ago to Now', months: 6 },
-                    { value: 4, label: '1 Year Ago to Now', months: 12 },
-                    { value: 5, label: '2 Years Ago to Now', months: 24 },
-                    { value: 6, label: 'All Time', months: Infinity }
-                ];
+                
+                // Referendum filtering system
+                this.startReferendum = 0;
+                this.endReferendum = 50;
+                this.customRangeEnabled = false;
+                this.maxReferendum = 0; // Will be set after data loads
                 
                 this.init();
                 this.loadData();
@@ -500,9 +780,9 @@
             createPlanetaryRings() {
                 // Create subtle ring guides to show the orbital structure
                 // Match the voter circle arrangement
-                const baseRadius = 150;
-                const radiusIncrement = 25;
-                const maxCircles = Math.ceil(100 / 80); // Assuming max 100 voters, 80 per circle
+                const baseRadius = 100; // Match new voter arrangement (was 150)
+                const radiusIncrement = 8; // Match new voter arrangement (was 25)
+                const maxCircles = 5; // Exactly 5 circles to match voter arrangement (was 3)
                 const ringRadii = [];
                 
                 // Generate ring radii based on voter circle arrangement
@@ -515,13 +795,14 @@
                     const ringMaterial = new THREE.MeshBasicMaterial({ 
                         color: 0x333333,
                         transparent: true,
-                        opacity: 0.1,
+                        opacity: 0.0, // Make invisible to prevent overlap
                         side: THREE.DoubleSide
                     });
                     
                     const ring = new THREE.Mesh(ringGeometry, ringMaterial);
                     ring.rotation.x = Math.PI / 2; // Rotate to horizontal
                     ring.userData = { type: 'planetRing' };
+                    ring.visible = false; // Make completely invisible
                     this.scene.add(ring);
                 });
                 
@@ -533,12 +814,13 @@
                 const sphereMaterial = new THREE.MeshBasicMaterial({ 
                     color: 0x444444,
                     transparent: true,
-                    opacity: 0.05,
+                    opacity: 0.0, // Make invisible to prevent overlap
                     wireframe: true
                 });
                 
                 const sphereOutline = new THREE.Mesh(sphereGeometry, sphereMaterial);
                 sphereOutline.userData = { type: 'planetOutline' };
+                sphereOutline.visible = false; // Make completely invisible
                 this.scene.add(sphereOutline);
                 
                 // Store references for later manipulation
@@ -561,10 +843,10 @@
                 
                 // Hide planet grid lines
                 if (this.latitudeLines) {
-                    this.latitudeLines.forEach(line => line.visible = false);
+                    this.latitudeLines.forEach(line => line.visible = false); // Keep invisible
                 }
                 if (this.longitudeLines) {
-                    this.longitudeLines.forEach(line => line.visible = false);
+                    this.longitudeLines.forEach(line => line.visible = false); // Keep invisible
                 }
                 
                 // Create orbital ring for the planets
@@ -573,7 +855,7 @@
                 const orbitMaterial = new THREE.MeshBasicMaterial({ 
                     color: 0x666666,
                     transparent: true,
-                    opacity: 0.2,
+                    opacity: 0.0, // Make invisible to prevent overlap
                     side: THREE.DoubleSide
                 });
                 
@@ -582,10 +864,11 @@
                     const orbitRing = new THREE.Mesh(orbitGeometry, orbitMaterial);
                     orbitRing.rotation.x = Math.PI / 2;
                     orbitRing.userData = { type: 'solarOrbit' };
+                    orbitRing.visible = false; // Make completely invisible
                     this.scene.add(orbitRing);
                     this.solarOrbit = orbitRing;
                 } else {
-                    this.solarOrbit.visible = true;
+                    this.solarOrbit.visible = false; // Make invisible instead of visible
                 }
                 
                 // Create or show central sun outline
@@ -595,16 +878,17 @@
                     const sunMaterial = new THREE.MeshBasicMaterial({ 
                         color: 0xffaa00,
                         transparent: true,
-                        opacity: 0.1,
+                        opacity: 0.0, // Make invisible to prevent overlap
                         wireframe: true
                     });
                     
                     const sunOutline = new THREE.Mesh(sunGeometry, sunMaterial);
                     sunOutline.userData = { type: 'sunOutline' };
+                    sunOutline.visible = false; // Make completely invisible
                     this.scene.add(sunOutline);
                     this.sunOutline = sunOutline;
                 } else {
-                    this.sunOutline.visible = true;
+                    this.sunOutline.visible = false; // Make invisible instead of visible
                 }
             }
 
@@ -623,20 +907,20 @@
                 
                 // Show planet grid lines
                 if (this.latitudeLines) {
-                    this.latitudeLines.forEach(line => line.visible = true);
+                    this.latitudeLines.forEach(line => line.visible = false); // Keep invisible
                 }
                 if (this.longitudeLines) {
-                    this.longitudeLines.forEach(line => line.visible = true);
+                    this.longitudeLines.forEach(line => line.visible = false); // Keep invisible
                 }
                 
                 // Show planet system rings (recreate if needed to match voter circles)
                 if (this.planetRings && this.planetRings.length > 0) {
-                    this.planetRings.forEach(ring => ring.visible = true);
+                    this.planetRings.forEach(ring => ring.visible = false); // Keep invisible
                 } else {
                     // Recreate rings to match voter arrangement
-                    const baseRadius = 150;
-                    const radiusIncrement = 25;
-                    const maxCircles = Math.ceil(100 / 80);
+                    const baseRadius = 100; // Match new voter arrangement (was 150)
+                    const radiusIncrement = 8; // Match new voter arrangement (was 25)
+                    const maxCircles = 5; // Exactly 5 circles to match voter arrangement (was 3)
                     this.planetRings = [];
                     
                     for (let i = 0; i < maxCircles; i++) {
@@ -645,13 +929,14 @@
                         const ringMaterial = new THREE.MeshBasicMaterial({ 
                             color: 0x333333,
                             transparent: true,
-                            opacity: 0.1,
+                            opacity: 0.0, // Make invisible to prevent overlap
                             side: THREE.DoubleSide
                         });
                         
                         const ring = new THREE.Mesh(ringGeometry, ringMaterial);
                         ring.rotation.x = Math.PI / 2;
                         ring.userData = { type: 'planetRing' };
+                        ring.visible = false; // Keep invisible
                         this.scene.add(ring);
                         this.planetRings.push(ring);
                     }
@@ -659,7 +944,7 @@
                 
                 // Show planet outline
                 if (this.planetOutline) {
-                    this.planetOutline.visible = true;
+                    this.planetOutline.visible = false; // Keep invisible
                 }
             }
 
@@ -681,7 +966,7 @@
                     const material = new THREE.MeshBasicMaterial({
                         color: 0x666666,
                         transparent: true,
-                        opacity: 0.15,
+                        opacity: 0.0, // Make invisible to prevent overlap
                         side: THREE.DoubleSide
                     });
                     
@@ -689,6 +974,7 @@
                     latLine.position.y = y;
                     latLine.rotation.x = Math.PI / 2;
                     latLine.userData = { type: 'planetGrid' };
+                    latLine.visible = false; // Make completely invisible
                     this.scene.add(latLine);
                     this.latitudeLines.push(latLine);
                 }
@@ -710,11 +996,12 @@
                     const material = new THREE.LineBasicMaterial({
                         color: 0x666666,
                         transparent: true,
-                        opacity: 0.15
+                        opacity: 0.0 // Make invisible to prevent overlap
                     });
                     
                     const lonLine = new THREE.Line(geometry, material);
                     lonLine.userData = { type: 'planetGrid' };
+                    lonLine.visible = false; // Make completely invisible
                     this.scene.add(lonLine);
                     this.longitudeLines.push(lonLine);
                 }
@@ -725,8 +1012,22 @@
                     const response = await fetch('polkadot_voting_data.json');
                     this.data = await response.json();
                     
+                    // Find max referendum number
+                    this.maxReferendum = Math.max(...this.data.proposals.map(p => p.proposal_id));
+                    
+                    // Update input constraints
+                    document.getElementById('startReferendum').max = this.maxReferendum;
+                    document.getElementById('endReferendum').max = this.maxReferendum;
+                    
+                    // Set default end referendum to latest 50
+                    this.startReferendum = Math.max(0, this.maxReferendum - 49);
+                    this.endReferendum = this.maxReferendum;
+                    document.getElementById('startReferendum').value = this.startReferendum;
+                    document.getElementById('endReferendum').value = this.endReferendum;
+                    
                     this.updateStats();
                     this.createVisualization();
+                    this.updateFilterDisplay();
                     
                     document.getElementById('loading').classList.add('hidden');
                 } catch (error) {
@@ -842,30 +1143,51 @@
 
                 const voters = this.data.voters; // Show all voters
                 
-                // Use the same concentric circle arrangement as in arrangeGalaxyView
-                const baseRadius = 150; // Starting radius for first circle
-                const radiusIncrement = 25; // Distance between concentric circles
-                const maxVotersPerCircle = 80; // Increased for closer spacing (2x diameter spacing)
+                // Create dynamic circles based on voter count to prevent clumping
+                const baseRadius = 100; // Much closer to center (was 150)
+                const radiusIncrement = 8; // Much smaller gaps between circles (was 25)
+                const maxVotersPerCircle = 120; // More voters per circle for denser packing (was 80)
+                
+                // Calculate how many circles we actually need
+                const minCircles = 5; // Minimum for visual appeal
+                const neededCircles = Math.ceil(voters.length / maxVotersPerCircle);
+                const actualCircles = Math.max(minCircles, Math.min(neededCircles, 10)); // Cap at 10 circles max
+                
+                console.log(`Voter Distribution: ${voters.length} voters across ${actualCircles} circles (${maxVotersPerCircle} per circle)`);
 
                 voters.forEach((voter, index) => {
-                    // Determine which circle this voter belongs to
+                    // Distribute voters evenly across all circles
                     const circleIndex = Math.floor(index / maxVotersPerCircle);
                     const positionInCircle = index % maxVotersPerCircle;
-                    const votersInThisCircle = Math.min(maxVotersPerCircle, voters.length - (circleIndex * maxVotersPerCircle));
+                    
+                    // Ensure we don't exceed our circle count
+                    const actualCircleIndex = Math.min(circleIndex, actualCircles - 1);
+                    
+                    // For the last circle, calculate actual voters in this circle
+                    let adjustedIndex = positionInCircle;
+                    let votersInThisCircle = maxVotersPerCircle;
+                    
+                    if (actualCircleIndex === actualCircles - 1) {
+                        // Last circle - calculate how many voters actually belong here
+                        const votersInPreviousCircles = (actualCircles - 1) * maxVotersPerCircle;
+                        const remainingVoters = voters.length - votersInPreviousCircles;
+                        votersInThisCircle = remainingVoters;
+                        adjustedIndex = index - votersInPreviousCircles;
+                    }
                     
                     // Calculate radius for this circle
-                    const currentRadius = baseRadius + (circleIndex * radiusIncrement);
+                    const currentRadius = baseRadius + (actualCircleIndex * radiusIncrement);
                     
                     // Calculate equidistant angle for this position
-                    const angle = (positionInCircle / votersInThisCircle) * Math.PI * 2;
+                    const angle = (adjustedIndex / Math.max(1, votersInThisCircle)) * Math.PI * 2;
                     
                     // Position on the same Z-axis (Y = 0)
                     const x = Math.cos(angle) * currentRadius;
                     const z = Math.sin(angle) * currentRadius;
                     const y = 0; // All voters on the same horizontal plane
 
-                    // Uniform size for all voters (same as proposals)
-                    const size = 1.5;
+                    // Slightly smaller voter spheres for denser packing
+                    const size = 1.2; // Reduced from 1.5
 
                     // Create voter sphere (smaller and white/gray)
                     const geometry = new THREE.SphereGeometry(size, 8, 8);
@@ -887,8 +1209,6 @@
                 });
             }
 
-
-
             createVoterConnections() {
                 if (!this.showVoterConnections) return;
 
@@ -899,32 +1219,13 @@
                 this.allConnectionsData = [];
 
                 // Use ALL relationships for complete coverage
-                const relationships = this.data.relationships; // Use all relationships
+                const relationships = this.data.relationships;
                 
-                // Sort relationships by timestamp/proposal_id (latest first for reverse chronological)
-                const sortedRelationships = relationships.sort((a, b) => {
-                    // If there's a timestamp field, use it; otherwise use proposal_id as proxy for time
-                    const timeA = a.timestamp || a.proposal_id;
-                    const timeB = b.timestamp || b.proposal_id;
-                    return timeB - timeA; // Reverse order: latest first
+                // Filter relationships based on referendum range
+                const filteredRelationships = relationships.filter(relationship => {
+                    const proposalId = relationship.proposal_id;
+                    return proposalId >= this.startReferendum && proposalId <= this.endReferendum;
                 });
-                
-                // Filter relationships based on timeline selection
-                let filteredRelationships;
-                if (this.timelineMonths === Infinity) {
-                    // Show all relationships
-                    filteredRelationships = sortedRelationships;
-                } else if (this.timelineMonths === 0) {
-                    // Show only most recent (top 1000 relationships)
-                    filteredRelationships = sortedRelationships.slice(0, 1000);
-                } else {
-                    // Calculate approximate cutoff based on months
-                    // Since we don't have actual timestamps, we'll use a proportion of total relationships
-                    const totalRelationships = sortedRelationships.length;
-                    const monthlyProportion = this.timelineMonths / 24; // Assume 24 months total span
-                    const cutoffIndex = Math.min(totalRelationships, Math.floor(totalRelationships * monthlyProportion));
-                    filteredRelationships = sortedRelationships.slice(0, cutoffIndex);
-                }
                 
                 let connectionsCreated = 0;
                 let voterNotFound = 0;
@@ -983,10 +1284,14 @@
                     }
                 });
                 
+                // Update filter info display
+                this.updateFilterDisplay();
+                
                 // Log connection statistics for debugging
-                console.log(`Connection Statistics:
+                console.log(`Referendum Filter Statistics:
                     - Total relationships: ${relationships.length}
-                    - Time-filtered relationships: ${filteredRelationships.length}
+                    - Referendum range: ${this.startReferendum} - ${this.endReferendum}
+                    - Filtered relationships: ${filteredRelationships.length}
                     - Connections created: ${connectionsCreated}
                     - Voter meshes available: ${this.voterMeshes.length}
                     - Proposal meshes available: ${this.proposalMeshes.length}
@@ -1002,8 +1307,6 @@
                 document.getElementById('animationSpeed').addEventListener('input', (e) => {
                     this.animationSpeed = parseFloat(e.target.value);
                 });
-
-
 
                 document.getElementById('showVoterConnections').addEventListener('change', (e) => {
                     this.showVoterConnections = e.target.checked;
@@ -1023,16 +1326,60 @@
                     this.updateParticleDensity(parseFloat(e.target.value));
                 });
 
-                document.getElementById('timelineSlider').addEventListener('input', (e) => {
-                    const selectedOption = this.timelineOptions[parseInt(e.target.value)];
-                    this.timelineMonths = selectedOption.months;
-                    this.updateTimelineDisplay(selectedOption.label);
-                    this.createVoterConnections(); // Recreate connections with new timeline
+                // Referendum filter controls
+                document.getElementById('customRange').addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        this.showPerformanceWarning();
+                    } else {
+                        this.customRangeEnabled = false;
+                        document.getElementById('endReferendum').disabled = true;
+                        document.getElementById('endReferendum').style.opacity = '0.5';
+                        this.endReferendum = this.startReferendum + 50;
+                        document.getElementById('endReferendum').value = this.endReferendum;
+                        this.updateFilterDisplay();
+                    }
+                });
+
+                document.getElementById('startReferendum').addEventListener('input', (e) => {
+                    this.startReferendum = parseInt(e.target.value);
+                    if (!this.customRangeEnabled) {
+                        this.endReferendum = this.startReferendum + 50;
+                        document.getElementById('endReferendum').value = this.endReferendum;
+                    }
+                    this.updateFilterDisplay();
+                });
+
+                document.getElementById('endReferendum').addEventListener('input', (e) => {
+                    if (this.customRangeEnabled) {
+                        this.endReferendum = parseInt(e.target.value);
+                        this.updateFilterDisplay();
+                    }
+                });
+
+                document.getElementById('applyFilter').addEventListener('click', () => {
+                    this.createVoterConnections();
+                });
+
+                // Performance warning modal controls
+                document.getElementById('cancelCustom').addEventListener('click', () => {
+                    document.getElementById('customRange').checked = false;
+                    this.hidePerformanceWarning();
+                });
+
+                document.getElementById('confirmCustom').addEventListener('click', () => {
+                    this.customRangeEnabled = true;
+                    document.getElementById('endReferendum').disabled = false;
+                    document.getElementById('endReferendum').style.opacity = '1';
+                    this.hidePerformanceWarning();
+                    this.updateFilterDisplay();
                 });
 
                 document.getElementById('clearFocus').addEventListener('click', () => {
                     this.clearFocusMode();
                 });
+
+                // Search functionality
+                this.setupVoterSearch();
             }
 
             setupTooltip() {
@@ -1181,22 +1528,41 @@
                     this.animateToPosition(mesh, targetX, targetY, targetZ);
                 });
                 
-                // Arrange voters in concentric circles on the same Z-axis
-                const baseRadius = 150; // Starting radius for first circle
-                const radiusIncrement = 25; // Distance between concentric circles
-                const maxVotersPerCircle = 80; // Increased for closer spacing (2x diameter spacing)
+                // Arrange voters in concentric circles on the same Z-axis with dynamic calculation
+                const baseRadius = 100; // Much closer to center (was 150)
+                const radiusIncrement = 8; // Much smaller gaps between circles (was 25)
+                const maxVotersPerCircle = 120; // More voters per circle for denser packing (was 80)
                 
+                // Calculate how many circles we actually need (same logic as createVoterNodes)
+                const minCircles = 5; // Minimum for visual appeal
+                const neededCircles = Math.ceil(this.voterMeshes.length / maxVotersPerCircle);
+                const actualCircles = Math.max(minCircles, Math.min(neededCircles, 10)); // Cap at 10 circles max
+
                 this.voterMeshes.forEach((mesh, index) => {
-                    // Determine which circle this voter belongs to
+                    // Distribute voters evenly across all circles
                     const circleIndex = Math.floor(index / maxVotersPerCircle);
                     const positionInCircle = index % maxVotersPerCircle;
-                    const votersInThisCircle = Math.min(maxVotersPerCircle, this.voterMeshes.length - (circleIndex * maxVotersPerCircle));
+                    
+                    // Ensure we don't exceed our circle count
+                    const actualCircleIndex = Math.min(circleIndex, actualCircles - 1);
+                    
+                    // For the last circle, calculate actual voters in this circle
+                    let adjustedIndex = positionInCircle;
+                    let votersInThisCircle = maxVotersPerCircle;
+                    
+                    if (actualCircleIndex === actualCircles - 1) {
+                        // Last circle - calculate how many voters actually belong here
+                        const votersInPreviousCircles = (actualCircles - 1) * maxVotersPerCircle;
+                        const remainingVoters = this.voterMeshes.length - votersInPreviousCircles;
+                        votersInThisCircle = remainingVoters;
+                        adjustedIndex = index - votersInPreviousCircles;
+                    }
                     
                     // Calculate radius for this circle
-                    const currentRadius = baseRadius + (circleIndex * radiusIncrement);
+                    const currentRadius = baseRadius + (actualCircleIndex * radiusIncrement);
                     
                     // Calculate equidistant angle for this position
-                    const angle = (positionInCircle / votersInThisCircle) * Math.PI * 2;
+                    const angle = (adjustedIndex / Math.max(1, votersInThisCircle)) * Math.PI * 2;
                     
                     // Position on the same Z-axis (Y = 0)
                     const targetX = Math.cos(angle) * currentRadius;
@@ -1355,8 +1721,6 @@
                 return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
             }
 
-
-
             toggleVoterConnections() {
                 this.voterConnectionLines.forEach(line => {
                     line.visible = this.showVoterConnections;
@@ -1429,6 +1793,9 @@
             setFocusMode(focusedObject) {
                 this.focusedObject = focusedObject;
                 
+                // Check if the focused object is a voter
+                const isVoter = focusedObject.userData.type === 'voter';
+                
                 // Get all connections related to the focused object
                 const relatedConnections = this.allConnectionsData.filter(connection => {
                     return connection.voter === focusedObject || connection.proposal === focusedObject;
@@ -1441,35 +1808,138 @@
                     relatedObjects.add(connection.proposal);
                 });
                 
-                // Dim all objects and connections
-                this.proposalMeshes.forEach(mesh => {
-                    mesh.material.opacity = relatedObjects.has(mesh) ? 0.8 : 0.1;
-                });
-                
-                this.voterMeshes.forEach(mesh => {
-                    mesh.material.opacity = relatedObjects.has(mesh) ? 0.6 : 0.1;
-                });
+                if (isVoter) {
+                    // Enhanced voter focus mode with stronger dimming
+                    this.proposalMeshes.forEach(mesh => {
+                        mesh.material.opacity = relatedObjects.has(mesh) ? 0.9 : 0.05; // Stronger dimming
+                    });
+                    
+                    this.voterMeshes.forEach(mesh => {
+                        if (mesh === focusedObject) {
+                            mesh.material.opacity = 1.0; // Fully highlight the selected voter
+                        } else {
+                            mesh.material.opacity = 0.05; // Strongly dim other voters
+                        }
+                    });
+                    
+                    // Enhanced connection line handling for voters
+                    this.allConnectionsData.forEach(connection => {
+                        if (connection.voter === focusedObject) {
+                            // Highlight connections from the selected voter
+                            connection.line.material.opacity = Math.min(0.8, connection.originalOpacity * 3);
+                            connection.line.visible = true;
+                        } else {
+                            // Strongly dim all other connections
+                            connection.line.material.opacity = 0.01;
+                            connection.line.visible = true;
+                        }
+                    });
+                    
+                    // Show referendum table for the voter
+                    this.showVoterReferendumTable(focusedObject);
+                } else {
+                    // Original focus mode for non-voter objects
+                    this.proposalMeshes.forEach(mesh => {
+                        mesh.material.opacity = relatedObjects.has(mesh) ? 0.8 : 0.1;
+                    });
+                    
+                    this.voterMeshes.forEach(mesh => {
+                        mesh.material.opacity = relatedObjects.has(mesh) ? 0.6 : 0.1;
+                    });
+                    
+                    // Show only related connections
+                    this.allConnectionsData.forEach(connection => {
+                        if (relatedConnections.includes(connection)) {
+                            connection.line.material.opacity = connection.originalOpacity;
+                            connection.line.visible = true;
+                        } else {
+                            connection.line.material.opacity = 0.02;
+                            connection.line.visible = true;
+                        }
+                    });
+                }
                 
                 this.planetMeshes.forEach(mesh => {
                     mesh.material.opacity = 0.05; // Dim planets in focus mode
                 });
                 
-                // Show only related connections
-                this.allConnectionsData.forEach(connection => {
-                    if (relatedConnections.includes(connection)) {
-                        connection.line.material.opacity = connection.originalOpacity;
-                        connection.line.visible = true;
-                    } else {
-                        connection.line.material.opacity = 0.02;
-                        connection.line.visible = true;
-                    }
+                console.log(`Focus mode: ${relatedConnections.length} connections, ${relatedObjects.size} related objects${isVoter ? ' (Voter focused)' : ''}`);
+            }
+            
+            showVoterReferendumTable(voterMesh) {
+                const voterData = voterMesh.userData;
+                
+                // Get all connections for this voter
+                const voterConnections = this.allConnectionsData.filter(connection => 
+                    connection.voter === voterMesh
+                );
+                
+                // Extract referendum data from connections
+                const referendums = voterConnections.map(connection => {
+                    const proposalData = connection.proposal.userData;
+                    const relationshipData = connection.relationship;
+                    
+                    return {
+                        id: proposalData.proposal_id,
+                        title: proposalData.proposal_title || 'N/A',
+                        status: proposalData.status,
+                        vote: relationshipData.vote === 1 ? 'Aye' : relationshipData.vote === 0 ? 'Nay' : 'Abstain',
+                        weight: relationshipData.vote_weight,
+                        requestedAmount: proposalData.requested_amount || 0,
+                        ayes: proposalData.ayes || 0,
+                        nays: proposalData.nays || 0
+                    };
+                }).sort((a, b) => b.id - a.id); // Sort by ID descending (latest first)
+                
+                // Populate voter info
+                document.getElementById('selected-voter-info').innerHTML = `
+                    <strong>Address:</strong> ${voterData.voter_address}<br>
+                    ${voterData.voter_name ? `<strong>Name:</strong> ${voterData.voter_name}<br>` : ''}
+                    <strong>Total Votes:</strong> ${voterData.vote_count.toLocaleString()}<br>
+                    <strong>Referendums in Current View:</strong> ${referendums.length}<br>
+                    <strong>Average Voting Power:</strong> ${voterData.avg_voting_power.toFixed(4)}
+                `;
+                
+                // Populate table
+                const tableBody = document.getElementById('referendum-table-body');
+                tableBody.innerHTML = '';
+                
+                referendums.forEach(ref => {
+                    const row = document.createElement('tr');
+                    
+                    // Create status badge
+                    const statusClass = `status-${ref.status.toLowerCase().replace(' ', '')}`;
+                    const statusBadge = `<span class="status-badge ${statusClass}">${ref.status}</span>`;
+                    
+                    // Format requested amount
+                    const formattedAmount = ref.requestedAmount > 0 ? 
+                        `${ref.requestedAmount.toLocaleString()} DOT` : '-';
+                    
+                    // Truncate title if too long
+                    const truncatedTitle = ref.title.length > 40 ? 
+                        ref.title.substring(0, 40) + '...' : ref.title;
+                    
+                    row.innerHTML = `
+                        <td><strong>#${ref.id}</strong></td>
+                        <td title="${ref.title}">${truncatedTitle}</td>
+                        <td>${statusBadge}</td>
+                        <td><strong style="color: ${ref.vote === 'Aye' ? '#00ff88' : ref.vote === 'Nay' ? '#ff4444' : '#ffaa00'}">${ref.vote}</strong></td>
+                        <td>${ref.weight.toFixed(4)}</td>
+                        <td>${formattedAmount}</td>
+                    `;
+                    
+                    tableBody.appendChild(row);
                 });
                 
-                console.log(`Focus mode: ${relatedConnections.length} connections, ${relatedObjects.size} related objects`);
+                // Show the panel
+                document.getElementById('referendum-table-panel').style.display = 'block';
             }
             
             clearFocusMode() {
                 this.focusedObject = null;
+                
+                // Hide referendum table panel
+                document.getElementById('referendum-table-panel').style.display = 'none';
                 
                 // Restore all objects to normal opacity
                 this.proposalMeshes.forEach(mesh => {
@@ -1493,14 +1963,248 @@
                 console.log('Focus mode cleared');
             }
             
-            updateTimelineDisplay(label) {
-                document.getElementById('timelineLabel').textContent = label;
+            updateFilterDisplay() {
+                const total = this.endReferendum - this.startReferendum + 1;
+                document.getElementById('referendumLabel').textContent = 
+                    `Showing Referendums ${this.startReferendum}-${this.endReferendum}`;
+                document.getElementById('filterInfo').textContent = 
+                    `Showing referendums ${this.startReferendum}-${this.endReferendum} (${total} referendums total)`;
+            }
+
+            showPerformanceWarning() {
+                document.getElementById('performanceWarning').style.display = 'flex';
+            }
+
+            hidePerformanceWarning() {
+                document.getElementById('performanceWarning').style.display = 'none';
             }
 
             onWindowResize() {
                 this.camera.aspect = window.innerWidth / window.innerHeight;
                 this.camera.updateProjectionMatrix();
                 this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+
+            setupVoterSearch() {
+                const searchInput = document.getElementById('voter-search');
+                const suggestionsContainer = document.getElementById('search-suggestions');
+                let searchTimeout;
+
+                // Handle input changes with debouncing
+                searchInput.addEventListener('input', (e) => {
+                    clearTimeout(searchTimeout);
+                    const query = e.target.value.trim();
+                    
+                    if (query.length < 3) {
+                        this.hideSuggestions();
+                        return;
+                    }
+
+                    // Debounce search to avoid too many operations
+                    searchTimeout = setTimeout(() => {
+                        this.searchVoters(query);
+                    }, 300);
+                });
+
+                // Handle Enter key
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const query = e.target.value.trim();
+                        if (query.length >= 3) {
+                            this.performVoterSearch(query);
+                        }
+                    } else if (e.key === 'Escape') {
+                        this.hideSuggestions();
+                        searchInput.blur();
+                    }
+                });
+
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('#search-container')) {
+                        this.hideSuggestions();
+                    }
+                });
+            }
+
+            searchVoters(query) {
+                if (!this.voterMeshes || this.voterMeshes.length === 0) return;
+
+                const suggestions = [];
+                const queryLower = query.toLowerCase();
+
+                // Search through all voters
+                this.voterMeshes.forEach(voterMesh => {
+                    const voterData = voterMesh.userData;
+                    const address = voterData.voter_address.toLowerCase();
+                    const name = voterData.voter_name ? voterData.voter_name.toLowerCase() : '';
+
+                    // Check if address starts with query or contains it
+                    if (address.includes(queryLower) || name.includes(queryLower)) {
+                        suggestions.push({
+                            mesh: voterMesh,
+                            address: voterData.voter_address,
+                            name: voterData.voter_name,
+                            voteCount: voterData.vote_count,
+                            avgVotingPower: voterData.avg_voting_power
+                        });
+                    }
+                });
+
+                // Sort by relevance (exact start matches first, then by vote count)
+                suggestions.sort((a, b) => {
+                    const aStartsWithQuery = a.address.toLowerCase().startsWith(queryLower);
+                    const bStartsWithQuery = b.address.toLowerCase().startsWith(queryLower);
+                    
+                    if (aStartsWithQuery && !bStartsWithQuery) return -1;
+                    if (!aStartsWithQuery && bStartsWithQuery) return 1;
+                    
+                    // If both start with query or neither do, sort by vote count
+                    return b.voteCount - a.voteCount;
+                });
+
+                // Limit to top 8 suggestions
+                const limitedSuggestions = suggestions.slice(0, 8);
+                this.showSuggestions(limitedSuggestions);
+            }
+
+            showSuggestions(suggestions) {
+                const container = document.getElementById('search-suggestions');
+                container.innerHTML = '';
+
+                if (suggestions.length === 0) {
+                    container.innerHTML = '<div class="search-suggestion">No voters found</div>';
+                } else {
+                    suggestions.forEach(suggestion => {
+                        const div = document.createElement('div');
+                        div.className = 'search-suggestion';
+                        
+                        const displayName = suggestion.name ? ` (${suggestion.name})` : '';
+                        const truncatedAddress = suggestion.address.length > 20 ? 
+                            suggestion.address.substring(0, 20) + '...' : suggestion.address;
+                        
+                        div.innerHTML = `
+                            <div class="address">${truncatedAddress}${displayName}</div>
+                            <div class="stats">Votes: ${suggestion.voteCount.toLocaleString()} | Avg Power: ${suggestion.avgVotingPower.toFixed(4)}</div>
+                        `;
+                        
+                        div.addEventListener('click', () => {
+                            this.selectVoter(suggestion.mesh, suggestion.address);
+                        });
+                        
+                        container.appendChild(div);
+                    });
+                }
+
+                container.style.display = 'block';
+            }
+
+            hideSuggestions() {
+                document.getElementById('search-suggestions').style.display = 'none';
+            }
+
+            performVoterSearch(query) {
+                if (!this.voterMeshes || this.voterMeshes.length === 0) return;
+
+                const queryLower = query.toLowerCase();
+                let foundVoter = null;
+
+                // Find exact or best match
+                for (const voterMesh of this.voterMeshes) {
+                    const address = voterMesh.userData.voter_address.toLowerCase();
+                    const name = voterMesh.userData.voter_name ? voterMesh.userData.voter_name.toLowerCase() : '';
+
+                    if (address.startsWith(queryLower) || address === queryLower || name === queryLower) {
+                        foundVoter = voterMesh;
+                        break;
+                    }
+                }
+
+                // If no exact match, find first containing match
+                if (!foundVoter) {
+                    for (const voterMesh of this.voterMeshes) {
+                        const address = voterMesh.userData.voter_address.toLowerCase();
+                        const name = voterMesh.userData.voter_name ? voterMesh.userData.voter_name.toLowerCase() : '';
+
+                        if (address.includes(queryLower) || name.includes(queryLower)) {
+                            foundVoter = voterMesh;
+                            break;
+                        }
+                    }
+                }
+
+                if (foundVoter) {
+                    this.selectVoter(foundVoter, foundVoter.userData.voter_address);
+                } else {
+                    // Show error message
+                    this.showSearchError(query);
+                }
+            }
+
+            selectVoter(voterMesh, address) {
+                // Hide suggestions
+                this.hideSuggestions();
+                
+                // Update search input with selected address
+                const searchInput = document.getElementById('voter-search');
+                const truncatedAddress = address.length > 30 ? address.substring(0, 30) + '...' : address;
+                searchInput.value = truncatedAddress;
+                
+                // Trigger focus mode (same as clicking on the voter orb)
+                this.setFocusMode(voterMesh);
+                
+                // Optionally, smoothly move camera to the voter
+                this.focusCameraOnVoter(voterMesh);
+                
+                console.log(`Selected voter: ${address}`);
+            }
+
+            focusCameraOnVoter(voterMesh) {
+                // Smoothly move camera to focus on the selected voter
+                const voterPosition = voterMesh.position;
+                const targetPosition = new THREE.Vector3(
+                    voterPosition.x + 50,
+                    voterPosition.y + 30,
+                    voterPosition.z + 50
+                );
+
+                // Store current camera position
+                const startPosition = this.camera.position.clone();
+                const startTarget = this.controls.target.clone();
+                
+                // Animate camera movement
+                const duration = 1500;
+                const startTime = Date.now();
+                
+                const animateCamera = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = this.easeInOutCubic(progress);
+                    
+                    // Interpolate camera position
+                    this.camera.position.lerpVectors(startPosition, targetPosition, eased);
+                    
+                    // Interpolate camera target to look at the voter
+                    this.controls.target.lerpVectors(startTarget, voterPosition, eased);
+                    this.controls.update();
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animateCamera);
+                    }
+                };
+                
+                animateCamera();
+            }
+
+            showSearchError(query) {
+                const container = document.getElementById('search-suggestions');
+                container.innerHTML = `<div class="search-suggestion">No voter found matching "${query}"</div>`;
+                container.style.display = 'block';
+                
+                setTimeout(() => {
+                    this.hideSuggestions();
+                }, 3000);
             }
         }
 
